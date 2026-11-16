@@ -18,18 +18,30 @@ Diapo es una cámara de película para tu móvil. Eliges la película antes de d
 ## Descargas
 
 <p>
-  <img src="https://img.shields.io/badge/Google_Play-Pr%C3%B3ximamente-414141?logo=googleplay&amp;style=for-the-badge" alt="Google Play: próximamente">
+  <a href="https://play.google.com/apps/testing/es.diapo.app"><img src="https://img.shields.io/badge/Google_Play-Beta-414141?logo=googleplay&amp;style=for-the-badge" alt="Beta en Google Play"></a>
   <a href="https://github.com/dferrandizmont/diapo/releases/latest"><img src="https://img.shields.io/badge/Disponible_en-GitHub-181717?logo=github&amp;style=for-the-badge" alt="Disponible en GitHub"></a>
+  <img src="https://img.shields.io/badge/App_Store-Pr%C3%B3ximamente-414141?logo=appstore&amp;style=for-the-badge" alt="App Store: próximamente">
 </p>
 
-Por ahora solo Android. Google Play está en pruebas internas y después vendrá una prueba cerrada; la App Store llegará más adelante. Diapo está disponible en español, catalán e inglés.
+Por ahora solo Android: en prueba cerrada en Google Play y como APK en GitHub. La App Store llegará pronto. Diapo está disponible en español, catalán e inglés.
+
+<details>
+<summary>Únete a la beta de Google Play</summary>
+
+Diapo está en prueba cerrada en Google Play y cualquiera puede apuntarse:
+
+1. Únete al grupo de testers: [diapo-testers](https://groups.google.com/g/diapo-testers). Con tu cuenta de Google, pulsa «Unirse al grupo».
+2. Acepta la prueba desde el móvil o el ordenador: [play.google.com/apps/testing/es.diapo.app](https://play.google.com/apps/testing/es.diapo.app).
+3. Instala Diapo desde Google Play. Se actualizará sola.
+
+Si puedes, quédate en la prueba al menos 14 días y haz alguna foto de vez en cuando: Google exige 12 testers durante 14 días para publicarla para todo el mundo. Los comentarios, a diapo@mainshai.com.
+
+</details>
 
 <details>
 <summary>Instala el APK desde GitHub</summary>
 
-1. Descarga el APK de la [última versión](https://github.com/dferrandizmont/diapo/releases/latest). Su SHA-256 se publica junto a él.
-2. Abre el archivo en el móvil y permite la instalación cuando Android lo pida.
-3. Abre Diapo y permite la cámara.
+También puedes descargar el APK de la [última versión](https://github.com/dferrandizmont/diapo/releases/latest) e instalarlo a mano (hay que permitir «instalar aplicaciones de origen desconocido» cuando Android lo pida). Su SHA-256 se publica junto a él. Va firmado con la misma clave que la versión de Google Play, así que una actualiza a la otra sin desinstalar y sin perder tus fotos; Android solo no deja volver a una versión más antigua.
 
 </details>
 

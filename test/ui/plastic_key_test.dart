@@ -1,5 +1,5 @@
-import 'package:carrete/ui/theme/carrete_tokens.dart';
-import 'package:carrete/ui/widgets/plastic_key.dart';
+import 'package:diapo/ui/theme/carrete_tokens.dart';
+import 'package:diapo/ui/widgets/plastic_key.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

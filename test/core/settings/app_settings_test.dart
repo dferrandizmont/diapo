@@ -1,4 +1,4 @@
-import 'package:carrete/core/settings/app_settings.dart';
+import 'package:diapo/core/settings/app_settings.dart';
 import 'package:flutter/material.dart' show Locale, ThemeMode;
 import 'package:flutter_test/flutter_test.dart';
 

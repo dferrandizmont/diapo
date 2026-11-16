@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:carrete/location/photo_location.dart';
-import 'package:carrete/platform/media_store.dart';
+import 'package:diapo/location/photo_location.dart';
+import 'package:diapo/platform/media_store.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 

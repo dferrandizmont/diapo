@@ -1,11 +1,11 @@
-import 'package:carrete/camera/camera_flash.dart';
-import 'package:carrete/l10n/app_localizations.dart';
-import 'package:carrete/screens/viewfinder/top_bar.dart';
-import 'package:carrete/ui/theme/carrete_tokens.dart';
-import 'package:carrete/ui/widgets/carrete_icon.dart';
-import 'package:carrete/ui/widgets/plastic_controls.dart';
-import 'package:carrete/ui/widgets/plastic_key.dart';
-import 'package:carrete/ui/widgets/seven_segment.dart';
+import 'package:diapo/camera/camera_flash.dart';
+import 'package:diapo/l10n/app_localizations.dart';
+import 'package:diapo/screens/viewfinder/top_bar.dart';
+import 'package:diapo/ui/theme/carrete_tokens.dart';
+import 'package:diapo/ui/widgets/carrete_icon.dart';
+import 'package:diapo/ui/widgets/plastic_controls.dart';
+import 'package:diapo/ui/widgets/plastic_key.dart';
+import 'package:diapo/ui/widgets/seven_segment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -336,13 +336,35 @@ void main() {
       expect(heights[3], closeTo(44 * 1.3, 0.5));
     });
 
-    testWidgets('a long film name takes two lines and ends with an ellipsis', (
+    testWidgets(
+      'a film name that needs more than two lines shrinks to the floor and '
+      'ends with an ellipsis',
+      (tester) async {
+        await _pump(
+          tester,
+          const LcdCounter(
+            filmName: 'Una película con un nombre muy largo de verdad y más',
+            width: CarreteSizes.lcdMinWidth,
+          ),
+          textScale: 1.3,
+          language: 'es',
+        );
+        final render = tester.renderObject<RenderParagraph>(
+          find.byKey(const ValueKey('lcd-film-name')),
+        );
+        expect(render.didExceedMaxLines, isTrue);
+        final size = render.textScaler.scale(render.text.style?.fontSize ?? 0);
+        expect(size, closeTo(CarreteSizes.nameMinSize, 0.5));
+      },
+    );
+
+    testWidgets('a word wider than the window is ellipsized, not broken', (
       tester,
     ) async {
       await _pump(
         tester,
         const LcdCounter(
-          filmName: 'Una película con un nombre larguísimo de verdad',
+          filmName: 'Anticonstitucionalmente',
           width: CarreteSizes.lcdMinWidth,
         ),
         textScale: 1.3,
@@ -351,11 +373,8 @@ void main() {
       final render = tester.renderObject<RenderParagraph>(
         find.byKey(const ValueKey('lcd-film-name')),
       );
-      expect(render.didExceedMaxLines, isTrue);
-      final size =
-          (render.text.style?.fontSize ?? 0) *
-          render.getTransformTo(null).getMaxScaleOnAxis();
-      expect(size, greaterThanOrEqualTo(12));
+      expect(render.maxLines, 1);
+      expect(render.softWrap, isFalse);
     });
 
     testWidgets('the rewind strip runs backwards after the last frame', (

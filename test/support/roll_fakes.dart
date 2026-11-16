@@ -2,17 +2,17 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:carrete/capture/capture_queue.dart';
-import 'package:carrete/core/database/app_database.dart';
-import 'package:carrete/core/database/converters.dart';
-import 'package:carrete/core/database/tables.dart';
-import 'package:carrete/gallery/photo_library.dart';
-import 'package:carrete/platform/gallery_images.dart';
-import 'package:carrete/platform/photo_actions.dart';
-import 'package:carrete/roll/roll_developer.dart';
-import 'package:carrete/roll/roll_name.dart';
-import 'package:carrete/roll/roll_reveal.dart';
-import 'package:carrete/roll/roll_service.dart';
+import 'package:diapo/capture/capture_queue.dart';
+import 'package:diapo/core/database/app_database.dart';
+import 'package:diapo/core/database/converters.dart';
+import 'package:diapo/core/database/tables.dart';
+import 'package:diapo/gallery/photo_library.dart';
+import 'package:diapo/platform/gallery_images.dart';
+import 'package:diapo/platform/photo_actions.dart';
+import 'package:diapo/roll/roll_developer.dart';
+import 'package:diapo/roll/roll_name.dart';
+import 'package:diapo/roll/roll_reveal.dart';
+import 'package:diapo/roll/roll_service.dart';
 
 /// A 1 x 1 PNG, so `Image.memory` has something it can decode.
 final Uint8List tinyPng = base64Decode(

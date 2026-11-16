@@ -1,7 +1,7 @@
-name: carrete
+name: diapo
 description: "Free film camera: live film looks, rolls that develop, no account, no watermark."
 publish_to: 'none'
-version: 0.1.0+7
+version: 0.1.1+8
 
 environment:
   sdk: ^3.13.5

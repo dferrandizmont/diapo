@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:carrete/roll/contact_sheet_layout.dart';
+import 'package:diapo/roll/contact_sheet_layout.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 /// Whether [inner] lies wholly inside [outer].

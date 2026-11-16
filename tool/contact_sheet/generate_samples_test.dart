@@ -9,7 +9,7 @@
 import 'dart:io';
 import 'dart:ui' as ui;
 
-import 'package:carrete/roll/contact_sheet_image.dart';
+import 'package:diapo/roll/contact_sheet_image.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 

@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:carrete/camera/camera_flash.dart';
-import 'package:carrete/camera/camera_service.dart';
-import 'package:carrete/camera/level_tilt.dart';
-import 'package:carrete/capture/capture_queue.dart';
-import 'package:carrete/platform/camera_sounds.dart';
-import 'package:carrete/platform/haptics.dart';
-import 'package:carrete/platform/system_settings.dart';
+import 'package:diapo/camera/camera_flash.dart';
+import 'package:diapo/camera/camera_service.dart';
+import 'package:diapo/camera/level_tilt.dart';
+import 'package:diapo/capture/capture_queue.dart';
+import 'package:diapo/platform/camera_sounds.dart';
+import 'package:diapo/platform/haptics.dart';
+import 'package:diapo/platform/system_settings.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';

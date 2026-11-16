@@ -111,7 +111,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Diapo is free software under the GPL-3.0-only licence. Source code: https://github.com/dferrandizmont/diapo';
 
   @override
-  String get settingsLicences => 'Licences';
+  String get settingsLicences => 'Licenses';
 
   @override
   String get settingsPrivacyPolicy => 'Privacy policy';
@@ -931,6 +931,15 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsRateSubtitle => 'A review helps others find it';
+
+  @override
+  String get settingsKofiTitle => 'Buy me a coffee';
+
+  @override
+  String get settingsKofiSubtitle => 'Ko-fi, opens in your browser';
+
+  @override
+  String get settingsKofiFailed => 'Could not open the browser';
 
   @override
   String onboardingStepSemantics(int step, int total) {

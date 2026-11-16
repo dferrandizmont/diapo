@@ -1,12 +1,12 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:carrete/core/backup/settings_backup_service.dart';
-import 'package:carrete/core/settings/review_state.dart';
-import 'package:carrete/core/settings/settings_provider.dart';
-import 'package:carrete/render/film_resources.dart';
-import 'package:carrete/review/review_service.dart';
-import 'package:carrete/roll/roll_providers.dart';
+import 'package:diapo/core/backup/settings_backup_service.dart';
+import 'package:diapo/core/settings/review_state.dart';
+import 'package:diapo/core/settings/settings_provider.dart';
+import 'package:diapo/render/film_resources.dart';
+import 'package:diapo/review/review_service.dart';
+import 'package:diapo/roll/roll_providers.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;

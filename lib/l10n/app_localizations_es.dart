@@ -938,6 +938,15 @@ class AppLocalizationsEs extends AppLocalizations {
       'Una reseña ayuda a que otros la encuentren';
 
   @override
+  String get settingsKofiTitle => 'Invítame a un café';
+
+  @override
+  String get settingsKofiSubtitle => 'Ko-fi, se abre en el navegador';
+
+  @override
+  String get settingsKofiFailed => 'No se ha podido abrir el navegador';
+
+  @override
   String onboardingStepSemantics(int step, int total) {
     return 'Paso $step de $total';
   }

@@ -1,5 +1,5 @@
-import 'package:carrete/core/settings/review_state.dart';
-import 'package:carrete/review/review_policy.dart';
+import 'package:diapo/core/settings/review_state.dart';
+import 'package:diapo/review/review_policy.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 const CivilDay _first = CivilDay(2026, 11, 1);

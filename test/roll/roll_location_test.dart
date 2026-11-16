@@ -1,19 +1,19 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:carrete/capture/capture_queue.dart';
-import 'package:carrete/capture/failed_shots.dart';
-import 'package:carrete/core/database/app_database.dart';
-import 'package:carrete/core/database/rolls_dao.dart';
-import 'package:carrete/core/database/tables.dart';
-import 'package:carrete/core/vault/encrypted_shot_vault.dart';
-import 'package:carrete/core/vault/vault_key_store.dart';
-import 'package:carrete/location/photo_location.dart';
-import 'package:carrete/roll/roll_developer.dart';
-import 'package:carrete/roll/roll_operations.dart';
-import 'package:carrete/roll/roll_recovery.dart';
-import 'package:carrete/roll/roll_service.dart';
-import 'package:carrete/roll/roll_vault_payload.dart';
+import 'package:diapo/capture/capture_queue.dart';
+import 'package:diapo/capture/failed_shots.dart';
+import 'package:diapo/core/database/app_database.dart';
+import 'package:diapo/core/database/rolls_dao.dart';
+import 'package:diapo/core/database/tables.dart';
+import 'package:diapo/core/vault/encrypted_shot_vault.dart';
+import 'package:diapo/core/vault/vault_key_store.dart';
+import 'package:diapo/location/photo_location.dart';
+import 'package:diapo/roll/roll_developer.dart';
+import 'package:diapo/roll/roll_operations.dart';
+import 'package:diapo/roll/roll_recovery.dart';
+import 'package:diapo/roll/roll_service.dart';
+import 'package:diapo/roll/roll_vault_payload.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter_test/flutter_test.dart';
 

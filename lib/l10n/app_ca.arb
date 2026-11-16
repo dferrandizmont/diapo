@@ -3,7 +3,7 @@
   "appTitle": "Diapo",
   "galleryTitle": "Galeria",
   "settingsTitle": "Configuració",
-  "rollTitle": "Carret",
+  "rollTitle": "Rodet",
   "settingCameraSounds": "Sons de la càmera",
   "settingSaveOriginal": "Desa també l'original",
   "settingSaveOriginalHint": "Si es pot, també desa la foto sense pel·lícula.",
@@ -70,7 +70,7 @@
   "shotSaveFailed": "No s'ha pogut desar la foto.",
   "filmsLoadFailed": "No s'han pogut carregar les pel·lícules.",
   "filmsLoading": "S'estan carregant les pel·lícules",
-  "rollReadyTitle": "Ja pots revelar el teu carret",
+  "rollReadyTitle": "Ja pots revelar el teu rodet",
   "rollReadyBody": "{count, plural, =1{Obre l'app per revelar la teva foto. Mantén-la oberta fins que acabi.} other{Obre l'app per revelar les teves {count} fotos. Mantén-la oberta fins que acabi.}}",
   "@rollReadyBody": {
     "placeholders": {
@@ -80,8 +80,8 @@
     },
     "description": "Readiness notification; count is the photos taken, fewer than the roll length when it was closed early. Photos develop when the app is open."
   },
-  "rollKeyLoad": "Carregar carret",
-  "rollKeyOpen": "Carret carregat, {count, plural, =1{queda una foto} other{queden {count} fotos}}",
+  "rollKeyLoad": "Carregar rodet",
+  "rollKeyOpen": "Rodet carregat, {count, plural, =1{queda una foto} other{queden {count} fotos}}",
   "@rollKeyOpen": {
     "placeholders": {
       "count": {
@@ -115,10 +115,10 @@
       }
     }
   },
-  "rollFilmLocked": "La pel·lícula queda fixada mentre hi hagi un carret carregat",
-  "rollClosedNotice": "Carret acabat",
+  "rollFilmLocked": "La pel·lícula queda fixada mentre hi hagi un rodet carregat",
+  "rollClosedNotice": "Rodet acabat",
   "rollActionFailed": "No s'ha pogut completar. Torna-ho a provar.",
-  "rollLoadTitle": "Carregar un carret",
+  "rollLoadTitle": "Carregar un rodet",
   "rollFilmRow": "Pel·lícula",
   "rollLengthLabel": "Fotos",
   "rollDelayLabel": "Espera per revelar",
@@ -126,13 +126,13 @@
   "delayOneHour": "1 hora",
   "delayNextMorning": "Demà al matí",
   "delayThreeDays": "3 dies",
-  "rollLoadAction": "Carregar carret",
-  "rollLoadNote": "Mentre hi hagi un carret carregat no veuràs les teves fotos, només quantes en queden.",
-  "rollLossWarning": "Les fotos d'un carret sense revelar només existeixen en aquest mòbil. Si desinstal·les l'app, n'esborres les dades o canvies de mòbil, es perden.",
+  "rollLoadAction": "Carregar rodet",
+  "rollLoadNote": "Mentre hi hagi un rodet carregat no veuràs les teves fotos, només quantes en queden.",
+  "rollLossWarning": "Les fotos d'un rodet sense revelar només existeixen en aquest mòbil. Si desinstal·les l'app, n'esborres les dades o canvies de mòbil, es perden.",
   "disposableOption": "Càmera d'un sol ús",
   "disposableOptionNote": "27 fotos per compartir la càmera",
   "disposableStartTitle": "Càmera d'un sol ús",
-  "disposableStartBody": "Té 27 fotos i una pel·lícula fixa. Ningú no veu les fotos ni toca els ajustos: per sortir cal mantenir premut el segell de sortida uns segons. En acabar, la reveles com un carret.",
+  "disposableStartBody": "Té 27 fotos i una pel·lícula fixa. Ningú no veu les fotos ni toca els ajustos: per sortir cal mantenir premut el segell de sortida uns segons. En acabar, la reveles com un rodet.",
   "disposableStartAction": "Començar",
   "disposableCounterCaption": "Fotos que queden",
   "disposableFlashLabel": "Flaix",
@@ -140,7 +140,7 @@
   "disposableExitHint": "Mantén premut",
   "disposableExitSemantics": "Sortir de la càmera d'un sol ús. Mantén premut durant dos segons.",
   "disposableExitTitle": "Sortir de la càmera d'un sol ús?",
-  "disposableExitBody": "{count, plural, =0{No queden fotos.} =1{Queda 1 foto, que es guarda per més tard.} other{Queden {count} fotos, que es guarden per més tard.}} Podràs continuar des de la clau del carret.",
+  "disposableExitBody": "{count, plural, =0{No queden fotos.} =1{Queda 1 foto, que es guarda per més tard.} other{Queden {count} fotos, que es guarden per més tard.}} Podràs continuar des de la clau del rodet.",
   "@disposableExitBody": {
     "placeholders": {
       "count": {
@@ -161,13 +161,13 @@
   "disposableDone": "S'ha acabat la càmera d'un sol ús",
   "disposableResume": "Tornar a la càmera d'un sol ús",
   "disposableAdvanceLabel": "Avança",
-  "disposableFinishAction": "Acabar el carret",
+  "disposableFinishAction": "Acabar el rodet",
   "disposableFinishInstantNote": "Aquesta càmera d'un sol ús es revela a l'instant, tan bon punt l'acabis.",
   "disposableFinishWarning": "Un cop acabada, ja no s'hi poden fer més fotos.",
   "disposableFinishKeepWait": "Mantenir l'espera",
-  "disposablePausedNote": "La càmera d'un sol ús és a mitges: la càmera no la fa servir. Per carregar un altre carret, continua-hi, acaba-la o llença-la.",
+  "disposablePausedNote": "La càmera d'un sol ús és a mitges: la càmera no la fa servir. Per carregar un altre rodet, continua-hi, acaba-la o llença-la.",
   "rollRowSubtitle": "{date} · {count}",
-  "rollRecentTitle": "Últims carrets",
+  "rollRecentTitle": "Últims rodets",
   "rollStateWaiting": "Esperant",
   "rollStateDeveloping": "Revelant",
   "rollStateDeveloped": "Revelat",
@@ -197,7 +197,7 @@
       }
     }
   },
-  "rollOpenTitle": "Carret a la càmera",
+  "rollOpenTitle": "Rodet a la càmera",
   "rollOpenSummary": "{film} · {length} fotos",
   "@rollOpenSummary": {
     "placeholders": {
@@ -217,20 +217,20 @@
       }
     }
   },
-  "rollCloseAction": "Tancar carret",
+  "rollCloseAction": "Tancar rodet",
   "rollDevelopNowAction": "Revelar ara",
-  "rollDiscardAction": "Llençar el carret",
+  "rollDiscardAction": "Llençar el rodet",
   "rollDevelopNowTitle": "Revelar ara?",
-  "rollDevelopNowBody": "{count, plural, =0{Aquest carret no té fotos.} =1{Es revelarà ara la foto d'aquest carret.} other{Es revelaran ara les {count} fotos d'aquest carret.}} L'espera acaba ara i no es pot desfer.",
+  "rollDevelopNowBody": "{count, plural, =0{Aquest rodet no té fotos.} =1{Es revelarà ara la foto d'aquest rodet.} other{Es revelaran ara les {count} fotos d'aquest rodet.}} L'espera acaba ara i no es pot desfer.",
   "rollDevelopKeepWaiting": "Continuar esperant",
-  "rollDiscardTitle": "Llençar el carret?",
-  "rollDiscardBody": "Les fotos d'aquest carret es perdran per sempre. No es pot desfer.",
+  "rollDiscardTitle": "Llençar el rodet?",
+  "rollDiscardBody": "Les fotos d'aquest rodet es perdran per sempre. No es pot desfer.",
   "rollDiscardConfirm": "Llençar",
   "dialogCancel": "Cancel·lar",
-  "rollNameEdit": "Edita el nom del carret",
-  "rollNameTitle": "Nom del carret",
+  "rollNameEdit": "Edita el nom del rodet",
+  "rollNameTitle": "Nom del rodet",
   "rollNameLabel": "Nom",
-  "rollNameNote": "És opcional. Sense nom, el carret es diu \"{fallback}\".",
+  "rollNameNote": "És opcional. Sense nom, el rodet es diu \"{fallback}\".",
   "@rollNameNote": {
     "placeholders": {
       "fallback": {
@@ -250,7 +250,7 @@
       }
     }
   },
-  "rollWaitingTitle": "Carret en espera",
+  "rollWaitingTitle": "Rodet en espera",
   "rollReadyOn": "Pots revelar a partir del {date} a les {time}",
   "@rollReadyOn": {
     "placeholders": {
@@ -276,16 +276,16 @@
     }
   },
   "rollKeepOpen": "Mantén l'app oberta fins que acabi.",
-  "rollStillOpenTitle": "Aquest carret encara és a la càmera",
-  "rollLostTitle": "Aquest carret no es pot revelar",
+  "rollStillOpenTitle": "Aquest rodet encara és a la càmera",
+  "rollLostTitle": "Aquest rodet no es pot revelar",
   "rollLostBody": "Es va perdre la clau que protegia les seves fotos, així que no es poden recuperar.",
-  "rollDiscardedTitle": "Aquest carret es va llençar",
-  "rollMissingTitle": "No trobo aquest carret",
+  "rollDiscardedTitle": "Aquest rodet es va llençar",
+  "rollMissingTitle": "No trobo aquest rodet",
   "rollShareSheetAction": "Comparteix el full",
   "rollShareSheetRendering": "Preparant el full",
   "rollShareSheetError": "No s'ha pogut preparar el full. Torna-ho a provar.",
   "rollShareSheetFailed": "No s'ha pogut obrir el menú de compartir.",
-  "rollShareSheetPreview": "Vista prèvia del full de contactes del carret {number}",
+  "rollShareSheetPreview": "Vista prèvia del full de contactes del rodet {number}",
   "@rollShareSheetPreview": {
     "placeholders": {
       "number": {
@@ -360,7 +360,7 @@
     }
   },
   "viewerUnavailable": "No es pot mostrar la foto.",
-  "rollNumberTitle": "Carret {number}",
+  "rollNumberTitle": "Rodet {number}",
   "@rollNumberTitle": {
     "placeholders": {
       "number": {
@@ -369,7 +369,7 @@
     }
   },
   "galleryEmptyTitle": "Encara no hi ha fotos",
-  "galleryEmptyBody": "Les fotos que facis apareixeran aquí. Les d'un carret, quan les revelis.",
+  "galleryEmptyBody": "Les fotos que facis apareixeran aquí. Les d'un rodet, quan les revelis.",
   "galleryDevelopingLabel": "En revelat",
   "galleryLooseLabel": "Fotos soltes",
   "galleryToday": "Avui",
@@ -556,8 +556,8 @@
   "onboardingBody1": "Tries la pel·lícula abans de disparar i la veus en directe al visor. Les teves fotos no surten del mòbil.",
   "onboardingTitle2": "Tria la pel·lícula.",
   "onboardingBody2": "Fes lliscar els cartutxos per canviar de pel·lícula i mira el resultat en directe al visor.",
-  "onboardingTitle3": "Un carret: fotos sense mirar.",
-  "onboardingBody3": "Amb un carret les fotos queden amagades fins que el reveles. Quan passi l'espera que triïs, t'avisem i obres l'app per revelar-les.",
+  "onboardingTitle3": "Un rodet: fotos sense mirar.",
+  "onboardingBody3": "Amb un rodet les fotos queden amagades fins que el reveles. Quan passi l'espera que triïs, t'avisem i obres l'app per revelar-les.",
   "onboardingSkip": "Saltar",
   "onboardingNext": "Següent",
   "onboardingStart": "Començar a disparar",
@@ -568,10 +568,13 @@
   "onboardingArtFilm": "Un visor amb una escena en pel·lícula i, a sota, cinc cartutxos de pel·lícula.",
   "onboardingRollHidden": "Fetes · amagades fins a revelar",
   "onboardingReminder": "Avís quan puguis revelar",
-  "onboardingArtRoll": "El comptador d'un carret amb 9 de 24 fotos fetes i amagades, l'espera per revelar a triar i un avís opcional.",
+  "onboardingArtRoll": "El comptador d'un rodet amb 9 de 24 fotos fetes i amagades, l'espera per revelar a triar i un avís opcional.",
   "settingsHowItWorks": "Com funciona",
   "settingsRateTitle": "Valorar Diapo",
   "settingsRateSubtitle": "Una ressenya ajuda que altres la trobin",
+  "settingsKofiTitle": "Convida'm a un cafè",
+  "settingsKofiSubtitle": "Ko-fi, s'obre al navegador",
+  "settingsKofiFailed": "No s'ha pogut obrir el navegador",
   "onboardingStepSemantics": "Pas {step} de {total}",
   "settingSaveLocationHint": "El lloc es desa a les dades de la foto (EXIF), només amb la càmera oberta, i no s'envia enlloc. Desactivat per defecte.",
   "@settingSaveLocationHint": {
@@ -691,8 +694,8 @@
     "description": "Error: the operation was interrupted."
   },
   "flashKeyHint": "Toca per passar al mode següent",
-  "rollSheetIntro": "Una pel·lícula per a tot el carret. Les fotos queden amagades fins que el reveles.",
-  "rollDelayNote": "L'espera comença quan tanques el carret.",
+  "rollSheetIntro": "Una pel·lícula per a tot el rodet. Les fotos queden amagades fins que el reveles.",
+  "rollDelayNote": "L'espera comença quan tanques el rodet.",
   "@cameraCounterSemantics": {
     "placeholders": {
       "film": {
@@ -701,8 +704,8 @@
     }
   },
   "viewfinderSwipeHint": "Fes lliscar els cartutxos per canviar de pel·lícula",
-  "rollOfferTitle": "Prova un carret de 12",
-  "rollOfferBody": "Amb {film}. Les fotos queden amagades fins que tanquis el carret. Aleshores les reveles al moment, sense espera.",
+  "rollOfferTitle": "Prova un rodet de 12",
+  "rollOfferBody": "Amb {film}. Les fotos queden amagades fins que tanquis el rodet. Aleshores les reveles al moment, sense espera.",
   "@rollOfferBody": {
     "placeholders": {
       "film": {
@@ -710,7 +713,7 @@
       }
     }
   },
-  "rollOfferAction": "Carregar carret de 12",
+  "rollOfferAction": "Carregar rodet de 12",
   "rollOfferDismiss": "Ara no",
   "rollLossNote": "Només existeixen en aquest mòbil: es perden si desinstal·les, esborres les dades o canvies de mòbil.",
   "@rollDevelopNowBody": {

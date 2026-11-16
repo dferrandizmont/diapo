@@ -1,4 +1,4 @@
-appId: io.github.dferrandizmont.carrete
+appId: es.diapo.app
 ---
 - runFlow: common/start_camera.yaml
 # The first three recipe names; hints may be merged into Flutter labels.
@@ -31,22 +31,15 @@ appId: io.github.dferrandizmont.carrete
 - assertVisible: "Formato 16:9.*"
 - tapOn: "Formato 16:9.*"
 - assertVisible: "Formato 3:2.*"
-- tapOn: "Flash: Automático"
-- assertVisible:
-    text: "Flash: Automático"
-    selected: true
-- tapOn: "Flash: Encendido"
-- assertVisible:
-    text: "Flash: Encendido"
-    selected: true
-- tapOn: "Flash: Fiesta"
-- assertVisible:
-    text: "Flash: Fiesta"
-    selected: true
-- tapOn: "Flash: Apagado"
-- assertVisible:
-    text: "Flash: Apagado"
-    selected: true
+# 0.1.0: one flash key that cycles Off > Auto > On > Party > Off.
+- tapOn: "Flash: Apagado.*"
+- assertVisible: "Flash: Automático.*"
+- tapOn: "Flash: Automático.*"
+- assertVisible: "Flash: Encendido.*"
+- tapOn: "Flash: Encendido.*"
+- assertVisible: "Flash: Fiesta.*"
+- tapOn: "Flash: Fiesta.*"
+- assertVisible: "Flash: Apagado.*"
 - tapOn: "Ajustes"
 - tapOn: "Cuadrícula"
 - assertVisible:

@@ -1,5 +1,5 @@
-import 'package:carrete/render/look_adjust.dart';
-import 'package:carrete/screens/viewfinder/film_shader_view.dart';
+import 'package:diapo/render/look_adjust.dart';
+import 'package:diapo/screens/viewfinder/film_shader_view.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';

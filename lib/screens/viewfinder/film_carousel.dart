@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import '../../core/l10n/localized_text.dart';
 import '../../l10n/app_localizations.dart';
 import '../../ui/theme/carrete_tokens.dart';
+import '../../ui/widgets/fit_name_text.dart';
 import '../../ui/widgets/plastic_controls.dart';
 import 'viewfinder_state.dart';
 
@@ -25,8 +26,13 @@ class FilmCarousel extends StatefulWidget {
     required this.thumbnailBuilder,
     this.locked = false,
     this.onSettled,
+    this.onSwiped,
     super.key,
   });
+
+  /// Called when a finger starts moving the list: the user is swiping the
+  /// films, which is what the hint of the first minute asks for.
+  final VoidCallback? onSwiped;
 
   /// Called once each time a cartridge settles: after a tap, when the chosen
   /// cartridge has come to its place, and after a swipe, when the list stops.
@@ -183,6 +189,7 @@ class _FilmCarouselState extends State<FilmCarousel> {
     if (notification is ScrollStartNotification &&
         notification.dragDetails != null) {
       _swipeStart = notification.metrics.pixels;
+      widget.onSwiped?.call();
       // A drag that starts while a tap is still centring the list cancels that
       // pending move: its onSettled must not fire while the finger moves.
       _move++;
@@ -386,8 +393,8 @@ class FilmCartridge extends StatelessWidget {
                         ),
                         const SizedBox(height: CarreteSizes.hair),
                         Expanded(
-                          child: _CartridgeName(
-                            name: name,
+                          child: FitNameText(
+                            name,
                             style: selected
                                 ? CarreteText.cartridgeSelected.copyWith(
                                     color: colors.cartridgeSelectedInk,
@@ -406,48 +413,6 @@ class FilmCartridge extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-/// The film name on a cartridge: up to two lines, never broken inside a
-/// word. When the longest word is wider than the cartridge (long names, large
-/// system text), the text shrinks just enough for that word to fit.
-class _CartridgeName extends StatelessWidget {
-  const _CartridgeName({required this.name, required this.style});
-
-  final String name;
-  final TextStyle style;
-
-  @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        final scaler = MediaQuery.textScalerOf(context);
-        final direction = Directionality.of(context);
-        var widest = 0.0;
-        for (final word in name.split(RegExp(r'\s+'))) {
-          final painter = TextPainter(
-            text: TextSpan(text: word, style: style),
-            textDirection: direction,
-            textScaler: scaler,
-            maxLines: 1,
-          )..layout();
-          if (painter.width > widest) widest = painter.width;
-          painter.dispose();
-        }
-        final fit = widest > constraints.maxWidth && widest > 0
-            ? constraints.maxWidth / widest
-            : 1.0;
-        final size = (style.fontSize ?? 14) * fit;
-        return Text(
-          name,
-          textAlign: TextAlign.center,
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-          style: style.copyWith(fontSize: size),
-        );
-      },
     );
   }
 }

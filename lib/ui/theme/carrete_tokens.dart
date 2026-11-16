@@ -1107,6 +1107,11 @@ abstract final class CarreteSizes {
   /// The width of the key that opens the settings of the system.
   static const double wideKey = 200;
 
+  /// The smallest size, as painted (the text scale of the phone included),
+  /// that a film name shrinks to on a cartridge or the LCD before it ends with
+  /// an ellipsis instead.
+  static const double nameMinSize = 9;
+
   // The carousel.
 
   /// The height of the carousel.

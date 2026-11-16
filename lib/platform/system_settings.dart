@@ -5,7 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 /// Opens the page of the system settings that belongs to this app (where the
 /// user can grant the camera permission again).
 ///
-/// Android only for now: the method lives in `MainActivity.kt`. Where it is
+/// Available on Android and iOS. Where it is
 /// not available [canOpen] is false and the screens show text only.
 class SystemSettings {
   const SystemSettings();
@@ -14,7 +14,9 @@ class SystemSettings {
 
   /// Whether this platform can open the settings of the app.
   bool get canOpen =>
-      !kIsWeb && defaultTargetPlatform == TargetPlatform.android;
+      !kIsWeb &&
+      (defaultTargetPlatform == TargetPlatform.android ||
+          defaultTargetPlatform == TargetPlatform.iOS);
 
   /// Opens the settings of the app. False when the system could not.
   Future<bool> open() async {
@@ -29,7 +31,7 @@ class SystemSettings {
   }
 
   /// Whether the system says the camera permission is granted. Null when it
-  /// cannot tell (not Android, or the call failed): the camera plugin then
+  /// cannot tell (unsupported platform, or the call failed): the camera plugin then
   /// answers for itself.
   Future<bool?> cameraPermissionGranted() async {
     if (!canOpen) return null;

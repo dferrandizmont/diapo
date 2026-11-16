@@ -1,8 +1,8 @@
-import 'package:carrete/capture/capture_providers.dart';
-import 'package:carrete/capture/capture_queue.dart';
-import 'package:carrete/capture/loose_photo_tracker.dart';
-import 'package:carrete/core/settings/first_minute.dart';
-import 'package:carrete/core/settings/settings_provider.dart';
+import 'package:diapo/capture/capture_providers.dart';
+import 'package:diapo/capture/capture_queue.dart';
+import 'package:diapo/capture/loose_photo_tracker.dart';
+import 'package:diapo/core/settings/first_minute.dart';
+import 'package:diapo/core/settings/settings_provider.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

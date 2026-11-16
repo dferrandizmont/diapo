@@ -50,7 +50,7 @@ The code, the shader and the film recipes belong to the owner and are published 
 
 The names of the films in the app (for example "Summer 98" or "Cold slide") are invented names that describe a look. They are not trademarks of any film or camera manufacturer, they do not reproduce their logos or packaging, and the app is **not affiliated with, sponsored or endorsed by** any of them. Any resemblance to a real product is an aesthetic reference, not a commercial imitation.
 
-The app bundles the Chakra Petch, Barlow Semi Condensed, Bowlby One, Space Mono and Caveat typefaces, published under the SIL Open Font License, version 1.1, whose full texts are included in the app. It also uses open source libraries, with their licences listed under Settings > Licences.
+The app bundles the Chakra Petch, Barlow Semi Condensed, Bowlby One, Space Mono and Caveat typefaces, published under the SIL Open Font License, version 1.1, whose full texts are included in the app. It also uses open source libraries, with their licences listed under Settings > Licenses.
 
 The photos you take with the app, and the ones you import to develop with a film, are yours. The owner acquires no rights over them and, since they never leave your device, has no access to them either. If you import other people's photos, make sure you are allowed to use them.
 

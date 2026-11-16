@@ -1,8 +1,8 @@
-import 'package:carrete/core/settings/settings_provider.dart';
-import 'package:carrete/l10n/app_localizations.dart';
-import 'package:carrete/render/film_resources.dart';
-import 'package:carrete/screens/settings/settings_screen.dart';
-import 'package:carrete/ui/theme/carrete_tokens.dart';
+import 'package:diapo/core/settings/settings_provider.dart';
+import 'package:diapo/l10n/app_localizations.dart';
+import 'package:diapo/render/film_resources.dart';
+import 'package:diapo/screens/settings/settings_screen.dart';
+import 'package:diapo/ui/theme/carrete_tokens.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -39,7 +39,7 @@ Future<void> _openLicences(WidgetTester tester, ThemeMode mode) async {
   );
   await tester.pump();
   await tester.pump();
-  await tester.tap(find.text('Licences'));
+  await tester.tap(find.text('Licenses'));
   await tester.pumpAndSettle();
 }
 

@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:carrete/camera/frame_geometry.dart';
+import 'package:diapo/camera/frame_geometry.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter_test/flutter_test.dart';
 

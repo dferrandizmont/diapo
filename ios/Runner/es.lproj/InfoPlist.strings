@@ -1,0 +1,14 @@
+/* Shown when Diapo requests camera access to take photos. */
+"NSCameraUsageDescription" = "Diapo usa la cámara para hacer fotos con la película que eliges.";
+
+/* Shown when Diapo requests permission to save developed photos to Photos. */
+"NSPhotoLibraryAddUsageDescription" = "Diapo guarda tus fotos reveladas en el álbum Diapo de Fotos.";
+
+/* Shown when Diapo requests access to its saved photos for its gallery. */
+"NSPhotoLibraryUsageDescription" = "Diapo solo usa sus propias fotos: las guarda en el álbum Diapo y las abre para compartirlas o borrarlas.";
+
+/* Shown when Diapo requests location access after Save location is enabled. */
+"NSLocationWhenInUseUsageDescription" = "Si activas «Guardar la ubicación», Diapo escribe el lugar en tus fotos. La ubicación nunca sale del iPhone.";
+
+/* Shown as the app name on the Home Screen and in system UI. */
+"CFBundleDisplayName" = "Diapo";

@@ -31,7 +31,7 @@ class ContactSheetFrame {
 
 /// Turns the painted sheet into the bytes of an image file.
 ///
-/// Android uses native JPEG encoding; other platforms and native failures
+/// Android and iOS use native JPEG encoding; other platforms and native failures
 /// fall back to PNG. Neither encoder writes to the system gallery.
 abstract interface class ContactSheetEncoder {
   /// The extension of the last encoded image, without the dot (`jpg`).
@@ -112,7 +112,8 @@ class JpegContactSheetEncoder implements ContactSheetEncoder {
 }
 
 ContactSheetEncoder _defaultEncoder() =>
-    defaultTargetPlatform == TargetPlatform.android
+    defaultTargetPlatform == TargetPlatform.android ||
+        defaultTargetPlatform == TargetPlatform.iOS
     ? JpegContactSheetEncoder()
     : const PngContactSheetEncoder();
 

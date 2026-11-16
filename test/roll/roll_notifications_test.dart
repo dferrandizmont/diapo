@@ -1,8 +1,8 @@
-import 'package:carrete/core/database/app_database.dart';
-import 'package:carrete/core/database/tables.dart';
-import 'package:carrete/l10n/app_localizations_en.dart';
-import 'package:carrete/l10n/app_localizations_es.dart';
-import 'package:carrete/roll/roll_notifications.dart';
+import 'package:diapo/core/database/app_database.dart';
+import 'package:diapo/core/database/tables.dart';
+import 'package:diapo/l10n/app_localizations_en.dart';
+import 'package:diapo/l10n/app_localizations_es.dart';
+import 'package:diapo/roll/roll_notifications.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_test/flutter_test.dart';

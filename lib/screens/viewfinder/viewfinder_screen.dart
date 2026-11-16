@@ -796,6 +796,9 @@ class _ViewfinderScreenState extends ConsumerState<ViewfinderScreen>
                         selectedId: recipe.id,
                         locked: rollFilm != null,
                         onSettled: _cartridgeSettled,
+                        onSwiped: ref
+                            .read(firstMinuteProvider.notifier)
+                            .markSwipeHintSeen,
                         onSelected: (r) {
                           // Swiping the films is what the hint asked for.
                           ref

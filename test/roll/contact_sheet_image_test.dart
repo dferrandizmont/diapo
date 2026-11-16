@@ -3,9 +3,9 @@ import 'dart:io';
 import 'dart:typed_data' show Endian;
 import 'dart:ui' as ui;
 
-import 'package:carrete/roll/contact_sheet_image.dart';
-import 'package:carrete/roll/contact_sheet_layout.dart';
-import 'package:carrete/ui/theme/carrete_tokens.dart';
+import 'package:diapo/roll/contact_sheet_image.dart';
+import 'package:diapo/roll/contact_sheet_layout.dart';
+import 'package:diapo/ui/theme/carrete_tokens.dart';
 import 'package:flutter/foundation.dart'
     show TargetPlatform, debugDefaultTargetPlatformOverride;
 import 'package:flutter/services.dart';
@@ -194,52 +194,54 @@ void main() {
       });
     }
 
-    for (final nativeWorks in [true, false]) {
-      testWidgets('Android cache file extension follows native $nativeWorks', (
-        tester,
-      ) async {
-        debugDefaultTargetPlatformOverride = TargetPlatform.android;
-        try {
-          await tester.runAsync(() async {
-            if (!nativeWorks) answer = (_) async => null;
-            final cache = await Directory.systemTemp.createTemp(
-              'carrete-sheet',
-            );
-            addTearDown(() => cache.delete(recursive: true));
-            final file = await renderContactSheet(
-              frames: const [ContactSheetFrame.missing(1)],
-              filmName: 'Test',
-              bandColor: _band,
-              date: _date,
-              cache: cache,
-              width: 600,
-            );
-            expect(calls, hasLength(1));
-            expect(file.path, endsWith(nativeWorks ? '.jpg' : '.png'));
-            if (nativeWorks) {
-              expect(await file.readAsBytes(), jpeg);
-            } else {
-              expect((await file.readAsBytes()).take(8), [
-                137,
-                80,
-                78,
-                71,
-                13,
-                10,
-                26,
-                10,
-              ]);
-            }
-          });
-        } finally {
-          debugDefaultTargetPlatformOverride = null;
-        }
-      });
+    for (final (platform, nativeWorks) in [
+      for (final platform in [TargetPlatform.android, TargetPlatform.iOS])
+        for (final nativeWorks in [true, false]) (platform, nativeWorks),
+    ]) {
+      testWidgets(
+        '$platform cache file extension follows native $nativeWorks',
+        (tester) async {
+          debugDefaultTargetPlatformOverride = platform;
+          try {
+            await tester.runAsync(() async {
+              if (!nativeWorks) answer = (_) async => null;
+              final cache = await Directory.systemTemp.createTemp(
+                'carrete-sheet',
+              );
+              addTearDown(() => cache.delete(recursive: true));
+              final file = await renderContactSheet(
+                frames: const [ContactSheetFrame.missing(1)],
+                filmName: 'Test',
+                bandColor: _band,
+                date: _date,
+                cache: cache,
+                width: 600,
+              );
+              expect(calls, hasLength(1));
+              expect(file.path, endsWith(nativeWorks ? '.jpg' : '.png'));
+              if (nativeWorks) {
+                expect(await file.readAsBytes(), jpeg);
+              } else {
+                expect((await file.readAsBytes()).take(8), [
+                  137,
+                  80,
+                  78,
+                  71,
+                  13,
+                  10,
+                  26,
+                  10,
+                ]);
+              }
+            });
+          } finally {
+            debugDefaultTargetPlatformOverride = null;
+          }
+        },
+      );
     }
 
-    testWidgets('iOS uses PNG without calling the native encoder', (
-      tester,
-    ) async {
+    testWidgets('iOS uses native JPEG', (tester) async {
       debugDefaultTargetPlatformOverride = TargetPlatform.iOS;
       try {
         await tester.runAsync(() async {
@@ -250,8 +252,9 @@ void main() {
             date: _date,
             width: 600,
           );
-          expect(bytes.take(8), [137, 80, 78, 71, 13, 10, 26, 10]);
-          expect(calls, isEmpty);
+          expect(bytes, jpeg);
+          expect(calls, hasLength(1));
+          expect(calls.single.getInt32(8, Endian.little), 88);
         });
       } finally {
         debugDefaultTargetPlatformOverride = null;

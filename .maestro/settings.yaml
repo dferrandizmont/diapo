@@ -1,4 +1,4 @@
-appId: io.github.dferrandizmont.carrete
+appId: es.diapo.app
 ---
 - runFlow: common/start_camera.yaml
 - tapOn: "Ajustes"
@@ -59,6 +59,7 @@ appId: io.github.dferrandizmont.carrete
 - scrollUntilVisible:
     element: "Oscuro"
     direction: DOWN
+    centerElement: true
 - tapOn: "Oscuro"
 - assertVisible:
     text: "Oscuro"
@@ -84,7 +85,7 @@ appId: io.github.dferrandizmont.carrete
     direction: DOWN
 - tapOn: "Licencias"
 # LicensePage merges the app name, version and Flutter attribution on new lines.
-- assertVisible: "(?s)Carrete.*"
+- assertVisible: "(?s)Diapo.*"
 - back
 - assertVisible: "Licencias"
 - back

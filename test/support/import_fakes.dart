@@ -1,4 +1,4 @@
-import 'package:carrete/platform/photo_actions.dart';
+import 'package:diapo/platform/photo_actions.dart';
 
 /// Photo actions that remember what was deleted and answer what they are told.
 class FakePhotoActions implements PhotoActions {

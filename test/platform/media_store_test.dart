@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:typed_data' show Endian;
 
-import 'package:carrete/platform/media_store.dart';
+import 'package:diapo/platform/media_store.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 

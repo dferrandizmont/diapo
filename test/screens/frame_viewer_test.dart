@@ -1,8 +1,8 @@
 import 'dart:typed_data';
 
-import 'package:carrete/gallery/photo_library.dart';
-import 'package:carrete/platform/photo_actions.dart';
-import 'package:carrete/screens/roll/frame_viewer.dart';
+import 'package:diapo/gallery/photo_library.dart';
+import 'package:diapo/platform/photo_actions.dart';
+import 'package:diapo/screens/roll/frame_viewer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

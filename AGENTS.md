@@ -3,8 +3,8 @@
 Carrete (code name; the commercial name is pending) is a free film camera for
 Android and iOS in Flutter: pick a film before shooting, see it live in the
 viewfinder, optionally wait for the roll to "develop". A camera, not a filter
-app. Product spec: private notes of the owner (Spanish)
-and shared rules.
+app. Product spec: private notes of the owner (Spanish; the path is in
+`CLAUDE.md`, which is not published) and their shared rules.
 
 ## Rules
 

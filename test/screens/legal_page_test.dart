@@ -1,12 +1,12 @@
-import 'package:carrete/core/settings/settings_provider.dart';
-import 'package:carrete/l10n/app_localizations.dart';
-import 'package:carrete/legal/app_licence.dart';
-import 'package:carrete/legal/legal_document.dart';
-import 'package:carrete/legal/legal_markdown.dart';
-import 'package:carrete/render/film_resources.dart';
-import 'package:carrete/screens/legal/legal_page.dart';
-import 'package:carrete/screens/settings/settings_screen.dart';
-import 'package:carrete/ui/theme/carrete_tokens.dart';
+import 'package:diapo/core/settings/settings_provider.dart';
+import 'package:diapo/l10n/app_localizations.dart';
+import 'package:diapo/legal/app_licence.dart';
+import 'package:diapo/legal/legal_document.dart';
+import 'package:diapo/legal/legal_markdown.dart';
+import 'package:diapo/render/film_resources.dart';
+import 'package:diapo/screens/legal/legal_page.dart';
+import 'package:diapo/screens/settings/settings_screen.dart';
+import 'package:diapo/ui/theme/carrete_tokens.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -165,22 +165,21 @@ void main() {
     );
   }
 
-  testWidgets('the licence of the app is registered with the full GPL text', (
+  testWidgets('the licence of the app is registered with the notice only', (
     tester,
   ) async {
     registerAppLicence();
     final entries = (await tester.runAsync(
       () => LicenseRegistry.licenses.toList(),
     ))!;
-    final own = entries.where((e) => e.packages.contains('Diapo')).toList();
+    final own = entries.where((e) => e.packages.contains('diapo')).toList();
     expect(own, hasLength(1));
     final text = own.single.paragraphs.map((p) => p.text).join('\n');
-    expect(text, contains('GNU GENERAL PUBLIC LICENSE'));
-    expect(text, contains('Version 3, 29 June 2007'));
     expect(
       text,
       contains('Additional permission under GNU GPL version 3 section 7'),
     );
+    expect(text, isNot(contains('Version 3, 29 June 2007')));
   });
 
   testWidgets('the page is selectable and scrolls', (tester) async {

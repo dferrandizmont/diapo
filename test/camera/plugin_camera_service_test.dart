@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:camera/camera.dart';
-import 'package:carrete/camera/camera_service.dart';
-import 'package:carrete/camera/plugin_camera_service.dart';
+import 'package:diapo/camera/camera_service.dart';
+import 'package:diapo/camera/plugin_camera_service.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 

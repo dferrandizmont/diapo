@@ -24,6 +24,7 @@ import '../../core/settings/settings_provider.dart';
 import '../../l10n/app_localizations.dart';
 import '../../platform/camera_sounds.dart';
 import '../../platform/haptics.dart';
+import '../../platform/system_settings.dart';
 import '../../render/film_resources.dart';
 import '../../roll/disposable.dart';
 import '../../roll/roll_service.dart';
@@ -579,6 +580,8 @@ class _DisposableScreenState extends ConsumerState<DisposableScreen>
       valueListenable: _camera.state,
       builder: (context, cam, _) {
         if (cam.failure != null) {
+          final denied = cam.failure == CameraFailure.permissionDenied;
+          final system = ref.read(systemSettingsProvider);
           return Center(
             child: Padding(
               padding: const EdgeInsets.all(CarreteSpacing.xl),
@@ -586,11 +589,21 @@ class _DisposableScreenState extends ConsumerState<DisposableScreen>
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   DisposableNotice(
-                    text: cam.failure == CameraFailure.permissionDenied
+                    text: denied
                         ? l10n.cameraPermissionDenied
                         : l10n.cameraUnavailable,
                   ),
                   const SizedBox(height: CarreteSpacing.l),
+                  // The same way out as the main camera: the system page
+                  // where the permission can be granted again.
+                  if (denied && system.canOpen) ...[
+                    PaperKey(
+                      key: const ValueKey('disposable-open-settings'),
+                      label: l10n.cameraOpenSettings,
+                      onPressed: () => unawaited(system.open()),
+                    ),
+                    const SizedBox(height: CarreteSpacing.m),
+                  ],
                   PaperKey(
                     label: l10n.cameraRetry,
                     onPressed: () => unawaited(_camera.start()),

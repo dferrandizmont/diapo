@@ -1,11 +1,11 @@
-appId: io.github.dferrandizmont.carrete
+appId: es.diapo.app
 ---
 - runFlow: common/start_camera.yaml
 # The shared start clears the app database, including earlier flows' photos.
 - tapOn: "Galería"
 - assertVisible: "(?s)Aún no hay fotos.*"
 - back
-- tapOn: "Cargar un carrete"
+- tapOn: "Cargar carrete"
 - tapOn: "12 fotos"
 - tapOn: "1 hora"
 - scrollUntilVisible:
@@ -23,7 +23,7 @@ appId: io.github.dferrandizmont.carrete
 - assertVisible: '¿Tirar el carrete\?'
 - tapOn: "Tirar"
 - extendedWaitUntil:
-    visible: "Cargar un carrete"
+    visible: "Cargar carrete"
     timeout: 30000
 - tapOn: "Galería"
 - assertVisible: "(?s)Aún no hay fotos.*"

@@ -1,7 +1,7 @@
-import 'package:carrete/capture/save_status.dart';
-import 'package:carrete/l10n/app_localizations.dart';
-import 'package:carrete/screens/viewfinder/save_status_chip.dart';
-import 'package:carrete/ui/theme/carrete_tokens.dart';
+import 'package:diapo/capture/save_status.dart';
+import 'package:diapo/l10n/app_localizations.dart';
+import 'package:diapo/screens/viewfinder/save_status_chip.dart';
+import 'package:diapo/ui/theme/carrete_tokens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

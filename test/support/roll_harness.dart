@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:carrete/core/database/app_database.dart';
-import 'package:carrete/l10n/app_localizations.dart';
-import 'package:carrete/platform/gallery_images.dart';
-import 'package:carrete/render/film_resources.dart';
-import 'package:carrete/roll/roll_developer.dart';
-import 'package:carrete/roll/roll_reveal.dart';
-import 'package:carrete/roll/roll_service.dart';
+import 'package:diapo/core/database/app_database.dart';
+import 'package:diapo/l10n/app_localizations.dart';
+import 'package:diapo/platform/gallery_images.dart';
+import 'package:diapo/render/film_resources.dart';
+import 'package:diapo/roll/roll_developer.dart';
+import 'package:diapo/roll/roll_reveal.dart';
+import 'package:diapo/roll/roll_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;

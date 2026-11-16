@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:carrete/core/database/app_database.dart';
-import 'package:carrete/core/database/converters.dart';
-import 'package:carrete/core/database/rolls_dao.dart';
-import 'package:carrete/core/database/shots_dao.dart';
-import 'package:carrete/core/database/tables.dart';
+import 'package:diapo/core/database/app_database.dart';
+import 'package:diapo/core/database/converters.dart';
+import 'package:diapo/core/database/rolls_dao.dart';
+import 'package:diapo/core/database/shots_dao.dart';
+import 'package:diapo/core/database/tables.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../support/test_database.dart';

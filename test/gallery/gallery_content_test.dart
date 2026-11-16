@@ -1,5 +1,5 @@
-import 'package:carrete/core/database/tables.dart';
-import 'package:carrete/gallery/gallery_content.dart';
+import 'package:diapo/core/database/tables.dart';
+import 'package:diapo/gallery/gallery_content.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../support/roll_fakes.dart';

@@ -1,11 +1,11 @@
 import 'dart:async';
 
-import 'package:carrete/core/database/app_database.dart';
-import 'package:carrete/core/database/converters.dart';
-import 'package:carrete/core/database/shots_dao.dart';
-import 'package:carrete/core/database/tables.dart';
-import 'package:carrete/gallery/photo_library.dart';
-import 'package:carrete/platform/photo_actions.dart';
+import 'package:diapo/core/database/app_database.dart';
+import 'package:diapo/core/database/converters.dart';
+import 'package:diapo/core/database/shots_dao.dart';
+import 'package:diapo/core/database/tables.dart';
+import 'package:diapo/gallery/photo_library.dart';
+import 'package:diapo/platform/photo_actions.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../support/test_database.dart';

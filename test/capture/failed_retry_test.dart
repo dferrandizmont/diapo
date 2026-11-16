@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:carrete/capture/capture_providers.dart';
-import 'package:carrete/capture/capture_queue.dart';
-import 'package:carrete/capture/failed_shots.dart';
-import 'package:carrete/render/film_resources.dart';
+import 'package:diapo/capture/capture_providers.dart';
+import 'package:diapo/capture/capture_queue.dart';
+import 'package:diapo/capture/failed_shots.dart';
+import 'package:diapo/render/film_resources.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

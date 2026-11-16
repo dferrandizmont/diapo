@@ -8,14 +8,16 @@ const String kAppLicenceAsset = 'LICENSE';
 /// for the Google Play libraries and the reserved name, icon and screenshots.
 const String kAppNoticeAsset = 'NOTICE.md';
 
-/// Diapo is free software under GPL-3.0-only with an additional permission:
-/// its own entry in the licences page carries the notice and the full text,
-/// both bundled as assets so they read offline.
+/// Diapo is free software under GPL-3.0-only with an additional permission.
+///
+/// Its own entry in the licences page carries only the notice (`NOTICE.md`):
+/// Flutter's tool-generated entry for the root package (registered under the
+/// package name `diapo`) already carries the full `LICENSE` text, so the two
+/// are grouped into a single entry and the GPL text is not shown twice.
 void registerAppLicence({AssetBundle? bundle}) {
   LicenseRegistry.addLicense(() async* {
     final assets = bundle ?? rootBundle;
     final notice = await assets.loadString(kAppNoticeAsset);
-    final licence = await assets.loadString(kAppLicenceAsset);
-    yield LicenseEntryWithLineBreaks(['Diapo'], '$notice\n\n$licence');
+    yield LicenseEntryWithLineBreaks(['diapo'], notice);
   });
 }

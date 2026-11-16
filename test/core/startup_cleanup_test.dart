@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:carrete/core/startup_cleanup.dart';
-import 'package:carrete/roll/contact_sheet_image.dart';
+import 'package:diapo/core/startup_cleanup.dart';
+import 'package:diapo/roll/contact_sheet_image.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

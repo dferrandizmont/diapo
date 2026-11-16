@@ -5,6 +5,32 @@ All notable changes to this project are documented here. The format follows
 
 ## Unreleased
 
+### Added
+
+- A "Buy me a coffee" row in the settings (Android) opens the Ko-fi page in
+  the browser; the app still has no internet permission.
+
+### Changed
+
+- Catalan now calls a roll of film "rodet" instead of "carret", everywhere in
+  the app, the privacy policy, the legal notice and the web page.
+- The English settings row reads "Licenses", like the title of the page it
+  opens.
+
+### Fixed
+
+- The Licenses page lists Diapo once, without the code name.
+- With large system text, the film name on the LCD and on the film cartridges
+  shrinks to fit instead of breaking in the middle of a word or being cut at
+  the edge; a name that still cannot fit ends with an ellipsis.
+- Swiping the films now dismisses the first-minute hint about swiping them, and
+  the hint does not come back.
+- The disposable camera, when the camera permission is denied, now has an
+  "Open settings" key that opens the system page of the app, like the main
+  camera.
+- Deleting the last photo of a day returns to the gallery instead of an empty day,
+  and Back from there still returns to the camera.
+
 ## [0.1.0] - 2026-11-16
 
 ### Added

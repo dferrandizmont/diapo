@@ -1,15 +1,15 @@
 import 'dart:async';
 
-import 'package:carrete/app.dart';
-import 'package:carrete/camera/camera_providers.dart';
-import 'package:carrete/camera/camera_service.dart';
-import 'package:carrete/capture/capture_providers.dart';
-import 'package:carrete/core/router.dart';
-import 'package:carrete/core/settings/settings_provider.dart';
-import 'package:carrete/location/camera_location_session.dart';
-import 'package:carrete/location/location_provider.dart';
-import 'package:carrete/render/film_resources.dart';
-import 'package:carrete/roll/roll_service.dart';
+import 'package:diapo/app.dart';
+import 'package:diapo/camera/camera_providers.dart';
+import 'package:diapo/camera/camera_service.dart';
+import 'package:diapo/capture/capture_providers.dart';
+import 'package:diapo/core/router.dart';
+import 'package:diapo/core/settings/settings_provider.dart';
+import 'package:diapo/location/camera_location_session.dart';
+import 'package:diapo/location/location_provider.dart';
+import 'package:diapo/render/film_resources.dart';
+import 'package:diapo/roll/roll_service.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

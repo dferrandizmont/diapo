@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:carrete/core/settings/settings_provider.dart';
-import 'package:carrete/location/location_provider.dart';
-import 'package:carrete/location/location_source.dart';
-import 'package:carrete/location/photo_location.dart';
+import 'package:diapo/core/settings/settings_provider.dart';
+import 'package:diapo/location/location_provider.dart';
+import 'package:diapo/location/location_source.dart';
+import 'package:diapo/location/photo_location.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

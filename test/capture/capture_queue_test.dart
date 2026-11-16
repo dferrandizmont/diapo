@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:carrete/capture/capture_queue.dart';
+import 'package:diapo/capture/capture_queue.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter_test/flutter_test.dart';
 

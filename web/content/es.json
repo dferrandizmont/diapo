@@ -73,7 +73,19 @@
     { "value": "27", "label": "Fotos en la desechable" },
     { "value": "0", "label": "Anuncios" }
   ],
-  "download_note": "Android 8 o superior. Gratis, sin compras dentro de la app.",
+  "download_note": "Android 8 o superior. Gratis, sin compras dentro de la app. En prueba cerrada en Google Play; el APK también está en GitHub.",
+  "testers_group_url": "https://groups.google.com/g/diapo-testers",
+  "tester": {
+    "title": "Prueba la app antes que nadie",
+    "lead": "Prueba cerrada de Google Play. De momento solo en Android; iPhone, próximamente.",
+    "steps": [
+      { "title": "Únete al grupo", "text": "Entra en el grupo de Google diapo-testers@googlegroups.com con la misma cuenta de Google que usas en el móvil." },
+      { "title": "Hazte tester", "text": "Abre la página de la prueba y pulsa «Convertirme en tester»." },
+      { "title": "Instala la app", "text": "Instala Diapo desde Google Play." }
+    ],
+    "links": ["Unirme al grupo", "Abrir la página de la prueba"],
+    "days": "Mantén la app instalada y sigue en la prueba al menos 14 días."
+  },
   "disposable": {
     "kicker": "Modo desechable",
     "stamps": ["27 fotos", "Una sola película", "Ocultas hasta revelar"],

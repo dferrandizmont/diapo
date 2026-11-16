@@ -1,7 +1,7 @@
-appId: io.github.dferrandizmont.carrete
+appId: es.diapo.app
 ---
 - runFlow: common/start_camera.yaml
-- tapOn: "Cargar un carrete"
+- tapOn: "Cargar carrete"
 - tapOn: "12 fotos"
 - tapOn: "Al momento"
 - scrollUntilVisible:
@@ -14,10 +14,10 @@ appId: io.github.dferrandizmont.carrete
 - runFlow: common/shoot_once.yaml
 - assertVisible: "Quedan 10 fotos"
 - tapOn: "Carrete cargado, quedan 10 fotos"
-- scrollUntilVisible:
-    element: "Cerrar y revelar"
-    direction: DOWN
-- tapOn: "Cerrar y revelar"
+# 0.1.0: the roll sheet offers "Revelar ahora" and asks for confirmation.
+- tapOn: "Revelar ahora"
+- assertVisible: '¿Revelar ahora\?'
+- tapOn: "Revelar ahora"
 # Closing by hand opens the roll screen; foreground developing runs there.
 - extendedWaitUntil:
     visible: ".*Fotograma 2.*"

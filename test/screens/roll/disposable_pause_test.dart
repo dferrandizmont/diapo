@@ -1,6 +1,6 @@
-import 'package:carrete/core/database/app_database.dart';
-import 'package:carrete/core/database/tables.dart';
-import 'package:carrete/screens/roll/roll_sheet.dart';
+import 'package:diapo/core/database/app_database.dart';
+import 'package:diapo/core/database/tables.dart';
+import 'package:diapo/screens/roll/roll_sheet.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;

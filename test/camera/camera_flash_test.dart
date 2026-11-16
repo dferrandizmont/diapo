@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:carrete/camera/camera_flash.dart';
-import 'package:carrete/camera/camera_service.dart';
-import 'package:carrete/render/look_adjust.dart';
+import 'package:diapo/camera/camera_flash.dart';
+import 'package:diapo/camera/camera_service.dart';
+import 'package:diapo/render/look_adjust.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter_test/flutter_test.dart';
 

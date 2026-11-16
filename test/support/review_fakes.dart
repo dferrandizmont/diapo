@@ -1,6 +1,6 @@
-import 'package:carrete/core/settings/review_state.dart';
-import 'package:carrete/core/settings/settings_provider.dart';
-import 'package:carrete/review/review_service.dart';
+import 'package:diapo/core/settings/review_state.dart';
+import 'package:diapo/core/settings/settings_provider.dart';
+import 'package:diapo/review/review_service.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

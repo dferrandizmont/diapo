@@ -1,16 +1,16 @@
 import 'dart:async';
 
-import 'package:carrete/camera/camera_providers.dart';
-import 'package:carrete/camera/level_tilt.dart';
-import 'package:carrete/capture/capture_providers.dart';
-import 'package:carrete/core/settings/settings_provider.dart';
-import 'package:carrete/l10n/app_localizations.dart';
-import 'package:carrete/platform/camera_sounds.dart';
-import 'package:carrete/platform/system_settings.dart';
-import 'package:carrete/render/film_resources.dart';
-import 'package:carrete/screens/viewfinder/level_overlay.dart';
-import 'package:carrete/screens/viewfinder/viewfinder_screen.dart';
-import 'package:carrete/ui/theme/carrete_tokens.dart';
+import 'package:diapo/camera/camera_providers.dart';
+import 'package:diapo/camera/level_tilt.dart';
+import 'package:diapo/capture/capture_providers.dart';
+import 'package:diapo/core/settings/settings_provider.dart';
+import 'package:diapo/l10n/app_localizations.dart';
+import 'package:diapo/platform/camera_sounds.dart';
+import 'package:diapo/platform/system_settings.dart';
+import 'package:diapo/render/film_resources.dart';
+import 'package:diapo/screens/viewfinder/level_overlay.dart';
+import 'package:diapo/screens/viewfinder/viewfinder_screen.dart';
+import 'package:diapo/ui/theme/carrete_tokens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

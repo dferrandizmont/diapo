@@ -1,5 +1,5 @@
-import 'package:carrete/core/database/develop_schedule.dart';
-import 'package:carrete/core/database/tables.dart';
+import 'package:diapo/core/database/develop_schedule.dart';
+import 'package:diapo/core/database/tables.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 /// True when the zone of the machine follows the rules of Europe/Madrid:

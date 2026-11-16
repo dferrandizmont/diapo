@@ -2,12 +2,12 @@ import 'dart:io';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 
-import 'package:carrete/capture/cinema_bands.dart';
-import 'package:carrete/capture/date_stamp.dart';
-import 'package:carrete/camera/frame_geometry.dart';
-import 'package:carrete/capture/film_still_renderer.dart';
-import 'package:carrete/render/look_adjust.dart';
-import 'package:carrete/ui/widgets/seven_segment.dart';
+import 'package:diapo/capture/cinema_bands.dart';
+import 'package:diapo/capture/date_stamp.dart';
+import 'package:diapo/camera/frame_geometry.dart';
+import 'package:diapo/capture/film_still_renderer.dart';
+import 'package:diapo/render/look_adjust.dart';
+import 'package:diapo/ui/widgets/seven_segment.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';

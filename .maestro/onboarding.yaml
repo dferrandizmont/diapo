@@ -1,23 +1,20 @@
-appId: io.github.dferrandizmont.carrete
+appId: es.diapo.app
 ---
-- launchApp:
-    clearState: true
-    permissions:
-      camera: allow
-      notifications: allow
+# 0.1.0: the tutorial is reached from Settings > "Cómo funciona".
+- runFlow: common/start_camera.yaml
+- tapOn: "Ajustes"
+- scrollUntilVisible:
+    element: "Cómo funciona"
+    direction: DOWN
+- tapOn: "Cómo funciona"
 - assertVisible: "Paso 1 de 3"
 - assertVisible: 'Una cámara, no un filtro\.'
 - tapOn: "Siguiente"
 - assertVisible: "Paso 2 de 3"
-- assertVisible: 'Elige la película y afínala\.'
+- assertVisible: 'Elige la película\.'
 - tapOn: "Siguiente"
 - assertVisible: "Paso 3 de 3"
 - assertVisible: 'Un carrete: fotos sin mirar\.'
 - tapOn: "Empezar a disparar"
-- extendedWaitUntil:
-    visible:
-      text: "Disparar"
-      enabled: true
-    timeout: 30000
-- assertVisible: "Ninguna foto en esta sesión"
-- assertVisible: "Cargar un carrete"
+# From Settings the tutorial returns to Settings.
+- assertVisible: "Cómo funciona"

@@ -1,4 +1,4 @@
-import 'package:carrete/core/database/app_database.dart';
+import 'package:diapo/core/database/app_database.dart';
 import 'package:drift/drift.dart' hide isNull;
 import 'package:drift_dev/api/migrations_native.dart';
 import 'package:flutter_test/flutter_test.dart';

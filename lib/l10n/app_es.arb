@@ -1205,6 +1205,18 @@
   "@settingsRateSubtitle": {
     "description": "Sentence under the rate row of the settings."
   },
+  "settingsKofiTitle": "Invítame a un café",
+  "@settingsKofiTitle": {
+    "description": "Row of the settings that opens the Ko-fi page of the developer in the browser to leave a tip."
+  },
+  "settingsKofiSubtitle": "Ko-fi, se abre en el navegador",
+  "@settingsKofiSubtitle": {
+    "description": "Sentence under the Ko-fi row of the settings; says the page opens outside the app."
+  },
+  "settingsKofiFailed": "No se ha podido abrir el navegador",
+  "@settingsKofiFailed": {
+    "description": "Shown when the browser of the system could not open the Ko-fi page."
+  },
   "onboardingStepSemantics": "Paso {step} de {total}",
   "@onboardingStepSemantics": {
     "description": "Screen reader text of the step counter of the first-use flow.",

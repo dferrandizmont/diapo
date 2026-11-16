@@ -2,9 +2,9 @@ import 'dart:io';
 import 'dart:math';
 import 'dart:typed_data';
 
-import 'package:carrete/core/vault/encrypted_shot_vault.dart';
-import 'package:carrete/core/vault/vault_exceptions.dart';
-import 'package:carrete/core/vault/vault_key_store.dart';
+import 'package:diapo/core/vault/encrypted_shot_vault.dart';
+import 'package:diapo/core/vault/vault_exceptions.dart';
+import 'package:diapo/core/vault/vault_key_store.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 /// A fake JPEG: the marker, then a recognisable run of bytes.

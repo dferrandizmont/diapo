@@ -42,6 +42,23 @@
     </div>{% endfor %}
     <p class="dl-note">{{ c.download_note }}</p>
   </div>
+  {% for item in site.downloads %}{% if item.kind == 'play' and item.state == 'closed_test' %}{% set tt = c.tester %}{% set tester_urls = [c.testers_group_url, item.url] %}
+  <div class="plate tester">
+    <div class="tester-h">
+      <h3>{{ tt.title }}</h3>
+      <p>{{ tt.lead }}</p>
+    </div>
+    <ol class="steps">
+      {% for step in tt.steps %}<li class="step">
+        <span class="lcd" aria-hidden="true">{{ loop.index }}</span>
+        <h4>{{ step.title }}</h4>
+        <p>{{ step.text }}</p>
+        {% if loop.index0 < tt.links | length %}<a class="key" href="{{ tester_urls[loop.index0] }}">{{ tt.links[loop.index0] }}</a>{% endif %}
+      </li>{% endfor %}
+    </ol>
+    <p class="tester-note">{{ tt.days }}</p>
+  </div>
+  {% endif %}{% endfor %}
 </section>
 
 <section id="screenshots" aria-labelledby="h-shots">

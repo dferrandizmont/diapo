@@ -1,4 +1,4 @@
-import 'package:carrete/platform/system_settings.dart';
+import 'package:diapo/platform/system_settings.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -32,11 +32,27 @@ void main() {
   });
 
   test('does not know when the platform cannot say', () async {
-    debugDefaultTargetPlatformOverride = TargetPlatform.iOS;
+    debugDefaultTargetPlatformOverride = TargetPlatform.linux;
     expect(await const SystemSettings().cameraPermissionGranted(), isNull);
     debugDefaultTargetPlatformOverride = TargetPlatform.android;
     // No handler: the method is missing.
     expect(await const SystemSettings().cameraPermissionGranted(), isNull);
+  });
+
+  test('iOS opens app settings and reports camera permission', () async {
+    debugDefaultTargetPlatformOverride = TargetPlatform.iOS;
+    final calls = <String>[];
+    answer((call) {
+      calls.add(call.method);
+      return true;
+    });
+    const settings = SystemSettings();
+    expect(settings.canOpen, isTrue);
+    expect(await settings.open(), isTrue);
+    expect(await settings.cameraPermissionGranted(), isTrue);
+    expect(calls, ['openAppSettings', 'cameraPermission']);
+    answer((call) => false);
+    expect(await settings.cameraPermissionGranted(), isFalse);
   });
 
   test('a failing call is "unknown", not a denial', () async {

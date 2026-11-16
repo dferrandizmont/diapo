@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:carrete/core/database/app_database.dart';
-import 'package:carrete/core/database/tables.dart';
-import 'package:carrete/gallery/gallery_content.dart';
-import 'package:carrete/gallery/photo_library.dart';
-import 'package:carrete/screens/gallery/gallery_day_screen.dart';
-import 'package:carrete/screens/gallery/gallery_screen.dart';
-import 'package:carrete/screens/roll/frame_viewer.dart';
+import 'package:diapo/core/database/app_database.dart';
+import 'package:diapo/core/database/tables.dart';
+import 'package:diapo/gallery/gallery_content.dart';
+import 'package:diapo/gallery/photo_library.dart';
+import 'package:diapo/screens/gallery/gallery_day_screen.dart';
+import 'package:diapo/screens/gallery/gallery_screen.dart';
+import 'package:diapo/screens/roll/frame_viewer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;
 import 'package:flutter_test/flutter_test.dart';

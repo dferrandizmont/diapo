@@ -1,11 +1,11 @@
-appId: io.github.dferrandizmont.carrete
+appId: es.diapo.app
 ---
 - runFlow: common/start_camera.yaml
-- tapOn: "Cargar un carrete"
+- tapOn: "Cargar carrete"
 - scrollUntilVisible:
-    element: "Cámara desechable"
+    element: "Cámara desechable.*"
     direction: DOWN
-- tapOn: "Cámara desechable"
+- tapOn: "Cámara desechable.*"
 - assertVisible: 'Tiene 27 fotos y una película fija\..*'
 - tapOn: "Al momento"
 - scrollUntilVisible:
@@ -40,5 +40,7 @@ appId: io.github.dferrandizmont.carrete
     timeout: 30000
 - assertVisible: "Disparar"
 # The unfinished disposable remains available after leaving the lock.
-- tapOn: "Cargar un carrete"
+# 0.1.0: the roll key says the disposable is paused.
+- assertVisible: "Cámara desechable en pausa, quedan 26 fotos"
+- tapOn: "Cámara desechable en pausa.*"
 - assertVisible: "Seguir con la desechable"

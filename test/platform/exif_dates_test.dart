@@ -1,5 +1,5 @@
-import 'package:carrete/platform/exif_dates.dart';
-import 'package:carrete/platform/media_store.dart';
+import 'package:diapo/platform/exif_dates.dart';
+import 'package:diapo/platform/media_store.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 

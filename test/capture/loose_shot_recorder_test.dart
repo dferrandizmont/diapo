@@ -1,10 +1,10 @@
-import 'package:carrete/capture/capture_queue.dart';
-import 'package:carrete/capture/film_capture_processor.dart';
-import 'package:carrete/capture/loose_shot_recorder.dart';
-import 'package:carrete/core/database/app_database.dart';
-import 'package:carrete/core/database/converters.dart';
-import 'package:carrete/core/database/shots_dao.dart';
-import 'package:carrete/core/database/tables.dart';
+import 'package:diapo/capture/capture_queue.dart';
+import 'package:diapo/capture/film_capture_processor.dart';
+import 'package:diapo/capture/loose_shot_recorder.dart';
+import 'package:diapo/core/database/app_database.dart';
+import 'package:diapo/core/database/converters.dart';
+import 'package:diapo/core/database/shots_dao.dart';
+import 'package:diapo/core/database/tables.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter_test/flutter_test.dart';
 

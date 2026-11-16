@@ -16,8 +16,9 @@ screenshots = [
   "05-gallery",
 ]
 privacy = { es = "docs/legal/politica-privacidad.md", ca = "docs/legal/politica-privacidad.ca.md", en = "docs/legal/politica-privacidad.en.md" }
-# Not installable yet: Google Play internal testing is not public. Both platforms stay "soon" without a link.
+# Google Play closed test (opt-in page, group diapo-testers) and the signed APK on GitHub, same key as Play. iPhone is not out yet.
 downloads = [
-  { kind = "play", state = "soon" },
+  { kind = "play", state = "closed_test", url = "https://play.google.com/apps/testing/es.diapo.app" },
+  { kind = "apk", state = "available", url = "https://github.com/dferrandizmont/diapo/releases/latest" },
   { kind = "app_store", state = "soon" },
 ]

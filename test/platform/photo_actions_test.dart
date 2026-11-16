@@ -1,4 +1,4 @@
-import 'package:carrete/platform/photo_actions.dart';
+import 'package:diapo/platform/photo_actions.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 

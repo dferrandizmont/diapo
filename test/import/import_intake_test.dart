@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:carrete/capture/still_bounds.dart';
-import 'package:carrete/import/import_intake.dart';
-import 'package:carrete/platform/exif_dates.dart';
+import 'package:diapo/capture/still_bounds.dart';
+import 'package:diapo/import/import_intake.dart';
+import 'package:diapo/platform/exif_dates.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 /// A picker that "copies" photos into folders of the cache, like the plugin.

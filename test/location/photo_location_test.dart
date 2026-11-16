@@ -1,4 +1,4 @@
-import 'package:carrete/location/photo_location.dart';
+import 'package:diapo/location/photo_location.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

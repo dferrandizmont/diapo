@@ -1,5 +1,5 @@
-import 'package:carrete/l10n/app_localizations.dart';
-import 'package:carrete/screens/viewfinder/film_carousel.dart';
+import 'package:diapo/l10n/app_localizations.dart';
+import 'package:diapo/screens/viewfinder/film_carousel.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

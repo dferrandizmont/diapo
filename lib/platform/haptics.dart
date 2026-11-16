@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -11,8 +12,8 @@ import 'camera_sounds.dart';
 ///
 /// Nothing is played when the "Vibration" setting is off or the phone is on
 /// silent. Vibrate mode is fine: the user asked for vibration there. When the
-/// ringer mode cannot be read (no native side, e.g. iOS) there is no native
-/// ringer check yet, so haptics stay off until one exists.
+/// ringer mode cannot be read, haptics stay off. On iOS only the setting is
+/// checked; the system applies its own haptics preference.
 ///
 /// Call without awaiting: a haptic never delays the shutter or a screen.
 class Haptics {
@@ -35,6 +36,10 @@ class Haptics {
 
   Future<void> _play(Future<void> Function() haptic) async {
     if (!enabled()) return;
+    if (!kIsWeb && defaultTargetPlatform == TargetPlatform.iOS) {
+      await haptic();
+      return;
+    }
     final mode = await ringerMode();
     // The setting and the ringer are checked again after the wait.
     // Unknown ringer mode (null, no native side) means no vibration: we

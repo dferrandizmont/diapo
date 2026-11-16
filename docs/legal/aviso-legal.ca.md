@@ -37,7 +37,7 @@ L'app s'ofereix gratuïtament i «tal com és», sense cap garantia en la mesura
 
 En particular, el titular no respon de:
 
-- la pèrdua de fotos d'un carret sense revelar, també d'una càmera d'un sol ús, si desinstal·les l'app, n'esborres les dades, canvies de dispositiu o aquest s'espatlla abans del revelat; l'app t'ho adverteix en començar el carret i és una característica del mode carret, explicada a la [Política de privacitat](politica-privacidad.ca.md);
+- la pèrdua de fotos d'un rodet sense revelar, també d'una càmera d'un sol ús, si desinstal·les l'app, n'esborres les dades, canvies de dispositiu o aquest s'espatlla abans del revelat; l'app t'ho adverteix en començar el rodet i és una característica del mode rodet, explicada a la [Política de privacitat](politica-privacidad.ca.md);
 - la pèrdua o el deteriorament de fotos ja desades a la teva galeria, que gestiones tu amb el teu sistema i les teves còpies de seguretat, incloses les que esborris des de la galeria de l'app;
 - els danys derivats d'un ús contrari a aquestes condicions o a la llei;
 - la disponibilitat de les botigues d'aplicacions o dels serveis de tercers als quals enllaci el servei.

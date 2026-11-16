@@ -11,12 +11,13 @@ enum RingerMode { silent, vibrate, normal }
 
 /// The shutter, film advance and roll-handling sounds.
 ///
-/// The sounds are played by `CameraSounds.kt` (a `SoundPool`, which decodes
-/// them once when they are loaded) over the `carrete/system` channel. Nothing
+/// The sounds are preloaded by the native player (SoundPool on Android,
+/// AVAudioPlayer on iOS) over the `carrete/system` channel. Nothing
 /// here waits for the sound: the screens call [playShot] and move on.
 ///
 /// Nothing is played when the phone is on silent or vibrate, or when the
-/// platform has no native side (iOS for now). The tests pass `supported: true`
+/// platform has no native side. On iOS the audio session applies the silent switch.
+/// The tests can pass `supported: true`
 /// and mock the channel.
 class CameraSounds {
   CameraSounds({
@@ -25,7 +26,9 @@ class CameraSounds {
     this.soundsEnabled,
   }) : _supported =
            supported ??
-           (!kIsWeb && defaultTargetPlatform == TargetPlatform.android);
+           (!kIsWeb &&
+               (defaultTargetPlatform == TargetPlatform.android ||
+                   defaultTargetPlatform == TargetPlatform.iOS));
 
   /// The name of the shutter click. `CameraSounds.kt` maps the names to the
   /// files in `assets/sounds/`; no path crosses the channel.

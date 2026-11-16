@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:carrete/core/settings/film_tuning.dart';
-import 'package:carrete/core/settings/film_tuning_provider.dart';
-import 'package:carrete/core/settings/film_tuning_repository.dart';
-import 'package:carrete/core/settings/settings_provider.dart';
+import 'package:diapo/core/settings/film_tuning.dart';
+import 'package:diapo/core/settings/film_tuning_provider.dart';
+import 'package:diapo/core/settings/film_tuning_repository.dart';
+import 'package:diapo/core/settings/settings_provider.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

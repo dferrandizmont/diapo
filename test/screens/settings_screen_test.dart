@@ -1,22 +1,40 @@
 import 'dart:io';
 import 'dart:ui' show Tristate;
 
-import 'package:carrete/core/app_info.dart';
-import 'package:carrete/core/settings/app_settings.dart';
-import 'package:carrete/core/settings/settings_provider.dart';
-import 'package:carrete/l10n/app_localizations.dart';
-import 'package:carrete/render/film_resources.dart';
-import 'package:carrete/screens/settings/settings_parts.dart';
-import 'package:carrete/screens/settings/settings_screen.dart';
-import 'package:carrete/ui/theme/carrete_tokens.dart';
-import 'package:carrete/ui/widgets/plastic_controls.dart';
-import 'package:carrete/ui/widgets/plastic_key.dart';
+import 'package:diapo/core/app_info.dart';
+import 'package:diapo/core/settings/app_settings.dart';
+import 'package:diapo/core/settings/settings_provider.dart';
+import 'package:diapo/l10n/app_localizations.dart';
+import 'package:diapo/platform/external_links.dart';
+import 'package:diapo/render/film_resources.dart';
+import 'package:diapo/screens/settings/settings_parts.dart';
+import 'package:diapo/screens/settings/settings_screen.dart';
+import 'package:diapo/ui/theme/carrete_tokens.dart';
+import 'package:diapo/ui/widgets/plastic_controls.dart';
+import 'package:diapo/ui/widgets/plastic_key.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../support/fakes.dart';
+
+class _FakeLinks extends ExternalLinks {
+  _FakeLinks({this.available = true, this.opens = true});
+
+  final bool available;
+  final bool opens;
+  int kofiCalls = 0;
+
+  @override
+  bool get canOpen => available;
+
+  @override
+  Future<bool> openKofi() async {
+    kofiCalls++;
+    return opens;
+  }
+}
 
 class _Harness {
   _Harness(this.prefs);
@@ -43,6 +61,7 @@ Future<_Harness> _pump(
   ThemeMode theme = ThemeMode.light,
   Size size = const Size(412, 3000),
   bool reducedMotion = false,
+  ExternalLinks? links,
 }) async {
   SharedPreferences.setMockInitialValues(prefs);
   final preferences = await SharedPreferences.getInstance();
@@ -56,6 +75,7 @@ Future<_Harness> _pump(
       overrides: [
         sharedPreferencesProvider.overrideWithValue(preferences),
         recipeBookProvider.overrideWith((ref) async => testBook()),
+        if (links != null) externalLinksProvider.overrideWithValue(links),
       ],
       child: MaterialApp(
         locale: Locale(language),
@@ -96,7 +116,7 @@ void main() {
         'Language',
         'Your settings, no photos',
         'Version',
-        'Licences',
+        'Licenses',
       ]) {
         expect(find.text(text), findsWidgets, reason: text);
       }
@@ -136,7 +156,7 @@ void main() {
       // Nothing else comes after it.
       expect(
         tester.getTopLeft(find.text('Your settings, no photos')).dy,
-        greaterThan(tester.getTopLeft(find.text('Licences')).dy),
+        greaterThan(tester.getTopLeft(find.text('Licenses')).dy),
       );
     });
 
@@ -501,7 +521,7 @@ void main() {
 
     testWidgets('licences opens the licence page of Flutter', (tester) async {
       await _pump(tester);
-      await tester.tap(find.text('Licences'));
+      await tester.tap(find.text('Licenses'));
       await tester.pumpAndSettle();
       expect(find.byType(LicensePage), findsOneWidget);
     });
@@ -608,7 +628,7 @@ void main() {
         'Català',
         'English',
         'Version',
-        'Licences',
+        'Licenses',
       ]) {
         expect(find.bySemanticsLabel(label), findsWidgets, reason: label);
       }
@@ -652,6 +672,52 @@ void main() {
       await tester.tap(find.byType(PlasticSwitch).first);
       await tester.pump();
       expect(tester.binding.hasScheduledFrame, isFalse);
+    });
+
+    group('Ko-fi row', () {
+      final row = find.byKey(const ValueKey('settings-kofi'));
+
+      testWidgets('shows with its label and hint where it can open', (
+        tester,
+      ) async {
+        await _pump(tester, links: _FakeLinks());
+        expect(row, findsOneWidget);
+        expect(find.text('Buy me a coffee'), findsOneWidget);
+        expect(find.text('Ko-fi, opens in your browser'), findsOneWidget);
+      });
+
+      testWidgets('is in the language of the app', (tester) async {
+        await _pump(tester, language: 'ca', links: _FakeLinks());
+        expect(find.text("Convida'm a un cafè"), findsOneWidget);
+        expect(find.text("Ko-fi, s'obre al navegador"), findsOneWidget);
+      });
+
+      testWidgets('is absent where it cannot open', (tester) async {
+        await _pump(tester, links: _FakeLinks(available: false));
+        expect(row, findsNothing);
+        expect(find.text('Buy me a coffee'), findsNothing);
+      });
+
+      testWidgets('a tap opens the page and shows nothing else', (
+        tester,
+      ) async {
+        final links = _FakeLinks();
+        await _pump(tester, links: links);
+        await tester.tap(row);
+        await tester.pump();
+        expect(links.kofiCalls, 1);
+        expect(find.byType(SnackBar), findsNothing);
+      });
+
+      testWidgets('a failed open shows a short note', (tester) async {
+        final links = _FakeLinks(opens: false);
+        await _pump(tester, links: links);
+        await tester.tap(row);
+        await tester.pump();
+        await tester.pump();
+        expect(links.kofiCalls, 1);
+        expect(find.text('Could not open the browser'), findsOneWidget);
+      });
     });
   });
 }

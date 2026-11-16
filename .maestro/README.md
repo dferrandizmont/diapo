@@ -1,6 +1,6 @@
 # Carrete Maestro smoke flows
 
-Requires Maestro 2.12.1, an installed app (`io.github.dferrandizmont.carrete`),
+Requires Maestro 2.12.1, an installed app (`es.diapo.app`),
 and an Android emulator or phone in **Spanish**, portrait orientation. Each
 flow clears the app's data, grants camera/notification permissions, and starts
 independently. Use a QA installation: clearing data also loses undeveloped

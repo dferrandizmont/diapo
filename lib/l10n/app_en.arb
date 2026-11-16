@@ -32,7 +32,7 @@
   "settingsVersion": "Version",
   "settingsOfflineNote": "Works offline, with no accounts and no ads. Your photos never leave the phone.",
   "settingsFreeSoftwareNote": "Diapo is free software under the GPL-3.0-only licence. Source code: https://github.com/dferrandizmont/diapo",
-  "settingsLicences": "Licences",
+  "settingsLicences": "Licenses",
   "settingsPrivacyPolicy": "Privacy policy",
   "settingsLegalNotice": "Legal notice",
   "cameraCounterLabel": "Loose photos",
@@ -572,6 +572,9 @@
   "settingsHowItWorks": "How it works",
   "settingsRateTitle": "Rate Diapo",
   "settingsRateSubtitle": "A review helps others find it",
+  "settingsKofiTitle": "Buy me a coffee",
+  "settingsKofiSubtitle": "Ko-fi, opens in your browser",
+  "settingsKofiFailed": "Could not open the browser",
   "onboardingStepSemantics": "Step {step} of {total}",
   "settingSaveLocationHint": "The place is written into the photo's data (EXIF), only while the camera is open, and is never sent anywhere. Off by default.",
   "@settingSaveLocationHint": {

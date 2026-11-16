@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T12:24:41+01:00",
+  "generated": "2026-11-16T18:16:43+01:00",
   "shots_json": "../../../docs/store/shots.json",
   "images": [
     {
@@ -26,8 +26,8 @@
       "position": 3,
       "name": "03-roll.png",
       "source": "03-roll",
-      "sha256": "f5e4b0894bf489151084932e7b02c5a20562c2fa18eb0940a2c5f60fd8db3e35",
-      "title": "Dispara sense mirar. Descobreix el teu carret en revelar."
+      "sha256": "73494d18374f830744f2013dd5ed0d8cf99036432e7d814cfd312ea059f744ff",
+      "title": "Dispara sense mirar. Descobreix el teu rodet en revelar."
     },
     {
       "locale": "ca",

@@ -1581,6 +1581,24 @@ abstract class AppLocalizations {
   /// **'Una reseña ayuda a que otros la encuentren'**
   String get settingsRateSubtitle;
 
+  /// Row of the settings that opens the Ko-fi page of the developer in the browser to leave a tip.
+  ///
+  /// In es, this message translates to:
+  /// **'Invítame a un café'**
+  String get settingsKofiTitle;
+
+  /// Sentence under the Ko-fi row of the settings; says the page opens outside the app.
+  ///
+  /// In es, this message translates to:
+  /// **'Ko-fi, se abre en el navegador'**
+  String get settingsKofiSubtitle;
+
+  /// Shown when the browser of the system could not open the Ko-fi page.
+  ///
+  /// In es, this message translates to:
+  /// **'No se ha podido abrir el navegador'**
+  String get settingsKofiFailed;
+
   /// Screen reader text of the step counter of the first-use flow.
   ///
   /// In es, this message translates to:

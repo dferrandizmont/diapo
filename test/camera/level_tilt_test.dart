@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 
-import 'package:carrete/camera/level_tilt.dart';
+import 'package:diapo/camera/level_tilt.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 const double _g = 9.80665;

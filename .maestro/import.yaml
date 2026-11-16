@@ -1,4 +1,4 @@
-appId: io.github.dferrandizmont.carrete
+appId: es.diapo.app
 ---
 - runFlow: common/start_camera.yaml
 # Seed MediaStore independently of suite order and wait until export completes.

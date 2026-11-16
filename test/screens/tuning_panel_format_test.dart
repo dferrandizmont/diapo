@@ -1,6 +1,6 @@
-import 'package:carrete/core/settings/film_tuning.dart';
-import 'package:carrete/l10n/app_localizations.dart';
-import 'package:carrete/screens/viewfinder/tuning_panel.dart';
+import 'package:diapo/core/settings/film_tuning.dart';
+import 'package:diapo/l10n/app_localizations.dart';
+import 'package:diapo/screens/viewfinder/tuning_panel.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

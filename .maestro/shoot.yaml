@@ -1,10 +1,8 @@
-appId: io.github.dferrandizmont.carrete
+appId: es.diapo.app
 ---
 - runFlow: common/start_camera.yaml
 - runFlow: common/shoot_once.yaml
-- assertVisible: "Una foto en esta sesión"
 - runFlow: common/shoot_once.yaml
-- assertVisible: "2 fotos en esta sesión"
 - tapOn: "Galería"
 - extendedWaitUntil:
     visible: ".*Fotos sueltas, Hoy, .*2 fotos.*"

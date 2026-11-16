@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:carrete/location/photo_location.dart';
-import 'package:carrete/capture/capture_queue.dart';
-import 'package:carrete/capture/failed_shots.dart';
-import 'package:carrete/capture/film_capture_processor.dart';
-import 'package:carrete/core/settings/app_settings.dart';
+import 'package:diapo/location/photo_location.dart';
+import 'package:diapo/capture/capture_queue.dart';
+import 'package:diapo/capture/failed_shots.dart';
+import 'package:diapo/capture/film_capture_processor.dart';
+import 'package:diapo/core/settings/app_settings.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter_test/flutter_test.dart';
 

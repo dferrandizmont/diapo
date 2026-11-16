@@ -1,20 +1,20 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:carrete/capture/capture_queue.dart';
-import 'package:carrete/capture/film_capture_processor.dart';
-import 'package:carrete/capture/loose_shot_recorder.dart';
-import 'package:carrete/core/database/app_database.dart';
-import 'package:carrete/core/database/converters.dart';
-import 'package:carrete/core/database/shots_dao.dart';
-import 'package:carrete/core/database/tables.dart';
-import 'package:carrete/core/settings/app_settings.dart';
-import 'package:carrete/core/settings/film_tuning.dart';
-import 'package:carrete/import/import_developer.dart';
-import 'package:carrete/import/import_intake.dart';
-import 'package:carrete/import/import_job.dart';
-import 'package:carrete/platform/exif_dates.dart';
-import 'package:carrete/platform/photo_actions.dart';
+import 'package:diapo/capture/capture_queue.dart';
+import 'package:diapo/capture/film_capture_processor.dart';
+import 'package:diapo/capture/loose_shot_recorder.dart';
+import 'package:diapo/core/database/app_database.dart';
+import 'package:diapo/core/database/converters.dart';
+import 'package:diapo/core/database/shots_dao.dart';
+import 'package:diapo/core/database/tables.dart';
+import 'package:diapo/core/settings/app_settings.dart';
+import 'package:diapo/core/settings/film_tuning.dart';
+import 'package:diapo/import/import_developer.dart';
+import 'package:diapo/import/import_intake.dart';
+import 'package:diapo/import/import_job.dart';
+import 'package:diapo/platform/exif_dates.dart';
+import 'package:diapo/platform/photo_actions.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../support/fakes.dart';

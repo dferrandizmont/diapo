@@ -6,6 +6,7 @@ import '../../camera/camera_flash.dart';
 import '../../l10n/app_localizations.dart';
 import '../../ui/theme/carrete_tokens.dart';
 import '../../ui/widgets/carrete_icon.dart';
+import '../../ui/widgets/fit_name_text.dart';
 import '../../ui/widgets/plastic_controls.dart';
 import '../../ui/widgets/plastic_key.dart';
 import '../../ui/widgets/seven_segment.dart';
@@ -532,8 +533,9 @@ class _FlashKey extends StatelessWidget {
 /// frames runs along the bottom in dry motor steps; after the last frame of a
 /// roll the strip runs backwards, like a rewind.
 ///
-/// A long film name takes two lines and ends with an ellipsis; it is never
-/// shrunk below the size of the text of the LCD.
+/// A film name takes up to two lines and is never broken inside a word: it
+/// shrinks to fit the window (to a legible floor) and, beyond that, ends with
+/// an ellipsis.
 class LcdCounter extends StatelessWidget {
   const LcdCounter({
     required this.width,
@@ -596,12 +598,9 @@ class LcdCounter extends StatelessWidget {
       content = null;
     } else {
       content = Center(
-        child: Text(
+        child: FitNameText(
           CarreteText.upper(filmName, locale),
-          key: const ValueKey('lcd-film-name'),
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-          textAlign: TextAlign.center,
+          textKey: const ValueKey('lcd-film-name'),
           style: CarreteText.lcdSmall,
         ),
       );

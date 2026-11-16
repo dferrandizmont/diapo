@@ -1,16 +1,16 @@
 import 'dart:async';
 
-import 'package:carrete/camera/camera_providers.dart';
-import 'package:carrete/capture/capture_providers.dart';
-import 'package:carrete/core/database/app_database.dart';
-import 'package:carrete/core/settings/first_minute.dart';
-import 'package:carrete/core/settings/settings_provider.dart';
-import 'package:carrete/l10n/app_localizations.dart';
-import 'package:carrete/platform/system_settings.dart';
-import 'package:carrete/render/film_resources.dart';
-import 'package:carrete/screens/viewfinder/film_carousel.dart';
-import 'package:carrete/screens/viewfinder/viewfinder_screen.dart';
-import 'package:carrete/ui/widgets/plastic_controls.dart';
+import 'package:diapo/camera/camera_providers.dart';
+import 'package:diapo/capture/capture_providers.dart';
+import 'package:diapo/core/database/app_database.dart';
+import 'package:diapo/core/settings/first_minute.dart';
+import 'package:diapo/core/settings/settings_provider.dart';
+import 'package:diapo/l10n/app_localizations.dart';
+import 'package:diapo/platform/system_settings.dart';
+import 'package:diapo/render/film_resources.dart';
+import 'package:diapo/screens/viewfinder/film_carousel.dart';
+import 'package:diapo/screens/viewfinder/viewfinder_screen.dart';
+import 'package:diapo/ui/widgets/plastic_controls.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -149,6 +149,23 @@ void main() {
       await tester.tap(find.text('Beta'));
       await tester.pump(const Duration(milliseconds: 400));
       expect(_hint, findsNothing);
+    });
+
+    testWidgets('swiping the films closes it and it is remembered', (
+      tester,
+    ) async {
+      // Narrow enough for the three cartridges to need a scroll.
+      final h = await _pump(tester, size: const Size(200, 915));
+      expect(_hint, findsOneWidget);
+      await tester.drag(find.byType(FilmCarousel), const Offset(-120, 0));
+      await tester.pump(const Duration(milliseconds: 400));
+      expect(_hint, findsNothing);
+      expect(h.firstMinute.swipeHintSeen, isTrue);
+      await tester.pump(const Duration(milliseconds: 50));
+      expect(
+        h.preferences.getBool('carrete.firstMinute.swipeHintSeen'),
+        isTrue,
+      );
     });
 
     testWidgets('it does not come back once it was seen', (tester) async {

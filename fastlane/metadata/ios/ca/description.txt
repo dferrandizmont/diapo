@@ -1,0 +1,45 @@
+La teva càmera de pel·lícula, amb visor en directe. Gratis i sense anuncis.
+
+Diapo és una càmera de pel·lícula per al mòbil: tries la pel·lícula abans de disparar, veus el resultat al visor mentre enquadres i fas la foto. No és una app de filtres per retocar després. És una càmera.
+
+VISOR EN DIRECTE
+• Llisca els cartutxos per canviar de pel·lícula i mira l'efecte en temps real: color, gra, vinyetatge, fugues de llum i halo.
+• La foto desada es veu com el visor, a la resolució de la teva càmera.
+• Ajust fi de cada pel·lícula (quantitat de gra, vinyetatge i més) i flaix en mode automàtic, activat, apagat i de festa.
+
+DEU PEL·LÍCULES, TOTES GRATIS
+• Estiu 98: colors càlids d'un estiu dels noranta.
+• Instantània: format quadrat amb marc blanc i colors rentats.
+• Cinema: format panoràmic, pells càlides i ombres verdoses, amb bandes opcionals.
+• Diapositiva freda, Caducada, Nit de flaix, B/N clàssic, B/N de premsa, D'un sol ús i Càmera de joguina.
+Cap pel·lícula, format ni funció està darrere d'un pagament.
+
+RODETS QUE ES REVELEN
+Carrega un rodet amb una sola pel·lícula i dispara sense mirar. Mentre duri el rodet no veus les fotos: es desen xifrades al teu mòbil. Quan el tanquis, tria revelar de seguida, després d'una espera o l'endemà al matí. Un cop revelat, l'obres com un full de contactes i el pots compartir sencer com una imatge. Pots posar nom a cada rodet.
+
+CÀMERA D'UN SOL ÚS
+Una càmera de 27 fotos amb una sola pel·lícula, sense pantalla de fotos ni ajustos, per passar-la de mà en mà en un sopar o en un viatge. Les fotos es revelen quan s'acaba el rodet. Per sortir cal mantenir premut el segell de sortida.
+
+REVELA LES FOTOS QUE JA TENS
+Tria fotos amb el selector del sistema, mira com queden amb cada pel·lícula i revela-les a màxima resolució. Mantén el dit sobre la foto per veure l'original.
+
+LA TEVA PRÒPIA GALERIA
+Rodets revelats i dies de fotos soltes, com tires de pel·lícula. Cada foto mostra la seva pel·lícula i la data, i la pots compartir o esborrar des d'allà.
+
+DETALLS DE CÀMERA
+• Data impresa a l'estil de les càmeres d'abans, opcional.
+• Formats 3:2, 4:3, 1:1 i 16:9.
+• Sons d'obturador i d'avanç de rodet, i vibracions suaus, que pots apagar.
+• Nivell al visor, també amb el mòbil de costat.
+• Desar l'original sense pel·lícula al costat de la foto, si vols.
+• Ubicació opcional: s'escriu només a la teva foto i ve apagada.
+
+PRIVACITAT
+• Sense comptes, sense anuncis i sense marca d'aigua.
+• L'app no es connecta a internet: les teves fotos no surten del mòbil.
+• Codi obert (GPL-3.0): qualsevol pot comprovar al codi que és així.
+• Les fotos d'un rodet sense revelar es desen xifrades i no arriben a l'app Fotos fins que les reveles.
+• Sense analítiques ni rastrejadors.
+• Si desinstal·les l'app abans de revelar un rodet, aquestes fotos es perden.
+
+Disponible en castellà, català i anglès.

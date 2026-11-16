@@ -166,7 +166,9 @@ class _PocScreenState extends State<PocScreen>
     // Only the benchmark builds write it.
     if (!_bench) return;
     unawaited(() async {
-      final dir = await getExternalStorageDirectory();
+      final dir = Platform.isIOS
+          ? await getApplicationSupportDirectory()
+          : await getExternalStorageDirectory();
       if (dir == null) return;
       await File('${dir.path}/perf.log').writeAsString(
         '${DateTime.now().toIso8601String()} $line\n',

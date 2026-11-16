@@ -1,5 +1,5 @@
-import 'package:carrete/core/settings/app_settings.dart';
-import 'package:carrete/core/settings/settings_repository.dart';
+import 'package:diapo/core/settings/app_settings.dart';
+import 'package:diapo/core/settings/settings_repository.dart';
 import 'package:flutter/material.dart' show Locale, ThemeMode;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

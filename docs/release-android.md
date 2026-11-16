@@ -17,9 +17,13 @@ nor the keystore belongs in version control. Back up the keystore securely, neve
 share it or its passwords, and keep the passwords in a password manager, apart
 from the keystore backup.
 
-In Play Console, enrol the app in **Play App Signing**, let Google manage the
-app signing key, and register this separate upload key's public certificate.
-Keep using that upload key to sign bundles. Without `android/key.properties`,
+The app is enrolled in **Play App Signing** with this same key as its app
+signing key (checked on 2026-11-16: the universal APK Google Play serves for
+build 7 and the GitHub APK both have the certificate SHA-256
+`11:F0:F9:73:9F:4C:F0:91:7B:76:C2:8C:B2:F5:BC:B2:15:96:2D:09:E2:A9:D0:37:E5:59:1E:1E:34:01:04:B5`),
+so a Play install and the GitHub APK update each other. Keep signing bundles
+and APKs with it; `play-upload.py apk --version-code N` downloads the APK Google
+serves to check the certificate again. Without `android/key.properties`,
 release APKs deliberately use the debug key and print a Gradle warning for
 private prereleases; `bundleRelease` fails instead, so no debug-signed bundle
 can be built for Play. An existing but

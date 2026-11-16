@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:carrete/capture/error_log.dart';
+import 'package:diapo/capture/error_log.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 

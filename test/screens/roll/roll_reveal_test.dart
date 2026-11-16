@@ -1,13 +1,13 @@
 import 'dart:async';
 
-import 'package:carrete/core/database/app_database.dart';
-import 'package:carrete/core/database/tables.dart';
-import 'package:carrete/core/router.dart';
-import 'package:carrete/platform/camera_sounds.dart';
-import 'package:carrete/platform/haptics.dart';
-import 'package:carrete/roll/roll_developer.dart';
-import 'package:carrete/roll/roll_reveal.dart';
-import 'package:carrete/screens/roll/roll_screen.dart';
+import 'package:diapo/core/database/app_database.dart';
+import 'package:diapo/core/database/tables.dart';
+import 'package:diapo/core/router.dart';
+import 'package:diapo/platform/camera_sounds.dart';
+import 'package:diapo/platform/haptics.dart';
+import 'package:diapo/roll/roll_developer.dart';
+import 'package:diapo/roll/roll_reveal.dart';
+import 'package:diapo/screens/roll/roll_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/misc.dart' show Override;
 import 'package:flutter_test/flutter_test.dart';

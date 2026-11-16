@@ -4,6 +4,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/after_build.dart';
 import '../../core/database/app_database.dart';
 import '../../l10n/app_localizations.dart';
 import '../../platform/gallery_images.dart';
@@ -21,6 +22,10 @@ class ContactSheet extends StatelessWidget {
     this.viewerShots,
     this.developing = false,
     this.reveal,
+    this.onLastPhotoDeleted,
+    this.popToGalleryOnLastDelete = false,
+    this.onViewerOpened,
+    this.onViewerClosed,
     super.key,
   });
 
@@ -42,6 +47,22 @@ class ContactSheet extends StatelessWidget {
   /// Null shows them all at once. While it is set the frames do not react to
   /// taps (the screen puts a layer over the sheet that skips the reveal).
   final Animation<double>? reveal;
+
+  /// Called when the viewer closes because its last photo was deleted. The
+  /// screen that owns this sheet can then leave (for example back to the
+  /// gallery) when that photo was the last one of its content.
+  final void Function(PhotoDeletion outcome)? onLastPhotoDeleted;
+
+  /// Whether the owner wants to be taken to the gallery when the last photo
+  /// of the sheet is deleted. Kept for compatibility; navigation now lives in
+  /// the owner (see [GalleryDayScreen]).
+  final bool popToGalleryOnLastDelete;
+
+  /// Called just before the viewer is pushed onto the navigator.
+  final VoidCallback? onViewerOpened;
+
+  /// Called when the viewer closes, however it closed.
+  final VoidCallback? onViewerClosed;
 
   @override
   Widget build(BuildContext context) {
@@ -155,6 +176,7 @@ class ContactSheet extends StatelessWidget {
     final messenger = ScaffoldMessenger.maybeOf(context);
     final notice = AppLocalizations.of(context).viewerOriginalKept;
     final palette = CarretePalette.of(context);
+    onViewerOpened?.call();
     final closed = Navigator.of(context).push(
       MaterialPageRoute<PhotoDeletion>(
         builder: (context) => FrameViewer(
@@ -173,16 +195,26 @@ class ContactSheet extends StatelessWidget {
       ),
     );
     // Deleting the last photo closes the viewer: the notice that its original
-    // stayed behind is told here, on the screen the user returns to.
+    // stayed behind is told here, on the screen the user returns to. The owner
+    // of the sheet is also told, so it can leave when that photo was the last
+    // one of its content.
     unawaited(
       closed.then((outcome) {
-        if (outcome != PhotoDeletion.deletedKeptOriginal) return;
-        messenger?.showSnackBar(
-          SnackBar(
-            backgroundColor: palette.plate,
-            content: Text(notice, style: CarreteText.note(palette.ink)),
-          ),
-        );
+        onViewerClosed?.call();
+        if (outcome == null) return;
+        if (outcome == PhotoDeletion.deletedKeptOriginal) {
+          messenger?.showSnackBar(
+            SnackBar(
+              backgroundColor: palette.plate,
+              content: Text(notice, style: CarreteText.note(palette.ink)),
+            ),
+          );
+        }
+        if (outcome == PhotoDeletion.deleted ||
+            outcome == PhotoDeletion.gone ||
+            outcome == PhotoDeletion.deletedKeptOriginal) {
+          onLastPhotoDeleted?.call(outcome);
+        }
       }),
     );
   }
@@ -556,8 +588,11 @@ class _GalleryThumbnailState extends ConsumerState<GalleryThumbnail> {
   @override
   Widget build(BuildContext context) {
     ref.listen(galleryImagesProvider, (_, images) {
-      setState(() {
-        _bytes = images.thumbnail(widget.location);
+      runOutsideBuild(() {
+        if (!mounted) return;
+        setState(() {
+          _bytes = images.thumbnail(widget.location);
+        });
       });
     });
     return FutureBuilder<Uint8List?>(

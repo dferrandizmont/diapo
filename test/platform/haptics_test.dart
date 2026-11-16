@@ -1,5 +1,6 @@
-import 'package:carrete/platform/camera_sounds.dart';
-import 'package:carrete/platform/haptics.dart';
+import 'package:diapo/platform/camera_sounds.dart';
+import 'package:diapo/platform/haptics.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -17,10 +18,30 @@ void main() {
           return null;
         });
   });
-  tearDown(
-    () => TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
-        .setMockMethodCallHandler(SystemChannels.platform, null),
-  );
+  tearDown(() {
+    debugDefaultTargetPlatformOverride = null;
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(SystemChannels.platform, null);
+  });
+
+  test('iOS follows the setting without querying the ringer', () async {
+    debugDefaultTargetPlatformOverride = TargetPlatform.iOS;
+    var enabled = true;
+    final h = Haptics(
+      enabled: () => enabled,
+      ringerMode: () async => throw StateError('iOS must not query the ringer'),
+    );
+    await h.selectionClick();
+    await h.mediumImpact();
+    await h.lightImpact();
+    expect(played, hasLength(3));
+    enabled = false;
+    played.clear();
+    await h.selectionClick();
+    await h.mediumImpact();
+    await h.lightImpact();
+    expect(played, isEmpty);
+  });
 
   Haptics haptics({
     bool Function()? enabled,

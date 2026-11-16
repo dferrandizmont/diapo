@@ -1,6 +1,7 @@
 import 'dart:async';
 
-import 'package:carrete/platform/camera_sounds.dart';
+import 'package:diapo/platform/camera_sounds.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -51,6 +52,19 @@ _Native _install(String ringer) {
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+
+  tearDown(() => debugDefaultTargetPlatformOverride = null);
+
+  test('iOS defaults to native playback', () async {
+    debugDefaultTargetPlatformOverride = TargetPlatform.iOS;
+    final native = _install('normal');
+    final service = CameraSounds();
+    addTearDown(service.dispose);
+    await service.preload();
+    await service.playLoad();
+    expect(native.calls, ['loadSounds', 'ringerMode', 'playSound']);
+    expect(native.played, ['load']);
+  });
 
   CameraSounds sounds({Duration advance = const Duration(milliseconds: 50)}) =>
       CameraSounds(supported: true, advanceDelay: advance);

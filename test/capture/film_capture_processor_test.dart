@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:carrete/capture/capture_queue.dart';
-import 'package:carrete/capture/failed_shots.dart';
-import 'package:carrete/capture/film_capture_processor.dart';
+import 'package:diapo/capture/capture_queue.dart';
+import 'package:diapo/capture/failed_shots.dart';
+import 'package:diapo/capture/film_capture_processor.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter_test/flutter_test.dart';
 

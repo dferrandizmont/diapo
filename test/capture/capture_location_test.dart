@@ -2,16 +2,16 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:carrete/capture/film_capture_processor.dart';
-import 'package:carrete/capture/loose_shot_recorder.dart';
-import 'package:carrete/core/database/app_database.dart';
-import 'package:carrete/core/database/shots_dao.dart';
+import 'package:diapo/capture/film_capture_processor.dart';
+import 'package:diapo/capture/loose_shot_recorder.dart';
+import 'package:diapo/core/database/app_database.dart';
+import 'package:diapo/core/database/shots_dao.dart';
 import 'package:drift/native.dart';
 
-import 'package:carrete/capture/capture_queue.dart';
-import 'package:carrete/capture/failed_shots.dart';
-import 'package:carrete/location/photo_location.dart';
-import 'package:carrete/roll/roll_vault_payload.dart';
+import 'package:diapo/capture/capture_queue.dart';
+import 'package:diapo/capture/failed_shots.dart';
+import 'package:diapo/location/photo_location.dart';
+import 'package:diapo/roll/roll_vault_payload.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/services.dart';

@@ -1,8 +1,8 @@
 import 'dart:ui';
 
-import 'package:carrete/capture/date_stamp.dart';
-import 'package:carrete/core/settings/app_settings.dart';
-import 'package:carrete/ui/widgets/seven_segment.dart';
+import 'package:diapo/capture/date_stamp.dart';
+import 'package:diapo/core/settings/app_settings.dart';
+import 'package:diapo/ui/widgets/seven_segment.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

@@ -1,23 +1,25 @@
 import 'dart:async';
 
-import 'package:carrete/camera/camera_flash.dart';
-import 'package:carrete/camera/camera_providers.dart';
-import 'package:carrete/core/database/app_database.dart';
-import 'package:carrete/core/database/tables.dart';
-import 'package:carrete/core/settings/settings_provider.dart';
-import 'package:carrete/platform/camera_sounds.dart';
-import 'package:carrete/l10n/app_localizations.dart';
-import 'package:carrete/render/film_resources.dart';
-import 'package:carrete/roll/disposable.dart';
-import 'package:carrete/roll/roll_providers.dart';
+import 'package:diapo/camera/camera_flash.dart';
+import 'package:diapo/camera/camera_providers.dart';
+import 'package:diapo/camera/camera_service.dart';
+import 'package:diapo/core/database/app_database.dart';
+import 'package:diapo/core/database/tables.dart';
+import 'package:diapo/core/settings/settings_provider.dart';
+import 'package:diapo/platform/camera_sounds.dart';
+import 'package:diapo/platform/system_settings.dart';
+import 'package:diapo/l10n/app_localizations.dart';
+import 'package:diapo/render/film_resources.dart';
+import 'package:diapo/roll/disposable.dart';
+import 'package:diapo/roll/roll_providers.dart';
 import 'package:film_recipes/film_recipes.dart';
-import 'package:carrete/screens/disposable/disposable_parts.dart';
-import 'package:carrete/screens/disposable/disposable_screen.dart';
-import 'package:carrete/screens/viewfinder/film_carousel.dart';
-import 'package:carrete/screens/viewfinder/level_overlay.dart';
-import 'package:carrete/screens/viewfinder/top_bar.dart';
-import 'package:carrete/ui/theme/disposable_tokens.dart';
-import 'package:carrete/ui/widgets/plastic_key.dart';
+import 'package:diapo/screens/disposable/disposable_parts.dart';
+import 'package:diapo/screens/disposable/disposable_screen.dart';
+import 'package:diapo/screens/viewfinder/film_carousel.dart';
+import 'package:diapo/screens/viewfinder/level_overlay.dart';
+import 'package:diapo/screens/viewfinder/top_bar.dart';
+import 'package:diapo/ui/theme/disposable_tokens.dart';
+import 'package:diapo/ui/widgets/plastic_key.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -61,6 +63,8 @@ Future<_Harness> _pump(
   Future<RecipeBook> Function()? book,
   FakeCameraSounds? sounds,
   bool cameraSounds = true,
+  CameraServiceState? cameraState,
+  FakeSystemSettings? system,
 }) async {
   SharedPreferences.setMockInitialValues({
     if (locked) 'carrete.disposable.rollId': 7,
@@ -72,7 +76,9 @@ Future<_Harness> _pump(
   final controller = StreamController<RollRow?>();
   addTearDown(controller.close);
   final service = FakeRollService();
-  final camera = FakeCameraService();
+  final camera = cameraState == null
+      ? FakeCameraService()
+      : FakeCameraService(state: cameraState);
   final events = <String>[];
   controller.add(_disposable());
   tester.view
@@ -89,6 +95,7 @@ Future<_Harness> _pump(
       ),
       sharedPreferencesProvider.overrideWithValue(prefs),
       cameraServiceProvider.overrideWithValue(camera),
+      systemSettingsProvider.overrideWithValue(system ?? FakeSystemSettings()),
       if (sounds != null) cameraSoundsProvider.overrideWithValue(sounds),
       filmResourcesProvider.overrideWith((ref) async => null),
     ],
@@ -239,6 +246,70 @@ void main() {
       expect(h.camera.started, 1);
       expect(h.camera.flashes.last, CarreteFlash.auto);
       expect(h.camera.lensSwitches, 0);
+    });
+  });
+
+  group('the camera permission', () {
+    const settingsKey = ValueKey('disposable-open-settings');
+
+    testWidgets('a denied permission offers to open the system settings', (
+      tester,
+    ) async {
+      final system = FakeSystemSettings();
+      await _pump(
+        tester,
+        system: system,
+        cameraState: const CameraServiceState(
+          failure: CameraFailure.permissionDenied,
+        ),
+      );
+      expect(find.byKey(settingsKey), findsOneWidget);
+      expect(find.text('OPEN SETTINGS'), findsOneWidget);
+      expect(find.text('TRY AGAIN'), findsOneWidget);
+      await tester.tap(find.byKey(settingsKey));
+      await tester.pump();
+      expect(system.opened, 1);
+    });
+
+    testWidgets('the key is not there where the settings cannot be opened', (
+      tester,
+    ) async {
+      await _pump(
+        tester,
+        system: FakeSystemSettings(available: false),
+        cameraState: const CameraServiceState(
+          failure: CameraFailure.permissionDenied,
+        ),
+      );
+      expect(find.byKey(settingsKey), findsNothing);
+      expect(find.text('TRY AGAIN'), findsOneWidget);
+    });
+
+    testWidgets('both keys fit large text', (tester) async {
+      await _pump(
+        tester,
+        textScale: 2,
+        cameraState: const CameraServiceState(
+          failure: CameraFailure.permissionDenied,
+        ),
+      );
+      expect(tester.takeException(), isNull);
+      expect(find.byKey(settingsKey), findsOneWidget);
+      final screen = tester.view.physicalSize;
+      final rect = tester.getRect(find.byKey(settingsKey));
+      expect(rect.left, greaterThanOrEqualTo(0));
+      expect(rect.right, lessThanOrEqualTo(screen.width));
+      expect(rect.height, greaterThanOrEqualTo(44));
+    });
+
+    testWidgets('another failure has no settings key', (tester) async {
+      await _pump(
+        tester,
+        cameraState: const CameraServiceState(
+          failure: CameraFailure.unavailable,
+        ),
+      );
+      expect(find.byKey(settingsKey), findsNothing);
     });
   });
 

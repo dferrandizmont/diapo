@@ -73,7 +73,19 @@
     { "value": "27", "label": "Shots in the disposable" },
     { "value": "0", "label": "Ads" }
   ],
-  "download_note": "Android 8 or later. Free, with no in-app purchases.",
+  "download_note": "Android 8 or later. Free, with no in-app purchases. In closed testing on Google Play; the APK is also on GitHub.",
+  "testers_group_url": "https://groups.google.com/g/diapo-testers",
+  "tester": {
+    "title": "Try the app before anyone else",
+    "lead": "Google Play closed test. Android only for now; iPhone is coming soon.",
+    "steps": [
+      { "title": "Join the group", "text": "Join the Google group diapo-testers@googlegroups.com with the same Google account you use on your phone." },
+      { "title": "Become a tester", "text": "Open the test page and tap “Become a tester”." },
+      { "title": "Install the app", "text": "Install Diapo from Google Play." }
+    ],
+    "links": ["Join the group", "Open the test page"],
+    "days": "Keep the app installed and stay in the test for at least 14 days."
+  },
   "disposable": {
     "kicker": "Disposable mode",
     "stamps": ["27 shots", "One film", "Hidden until developed"],

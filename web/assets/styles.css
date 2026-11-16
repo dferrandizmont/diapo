@@ -150,6 +150,17 @@ section > h2 { margin-bottom: 1.25rem; }
 .dl .key { font-size: 1.0625rem; min-height: 3.25rem; }
 .dl-note { flex: 1 1 14rem; font-size: 1rem; color: var(--soft); }
 
+/* Closed test: the three steps to become a tester, under the download keys. */
+.tester { margin-top: 1.25rem; padding: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+.tester-h h3 { font-size: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem); }
+.tester-h p { margin-top: 0.375rem; color: var(--soft); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; }
+.step { display: flex; flex-direction: column; align-items: flex-start; gap: 0.625rem; min-width: 0; padding: 1.125rem; border-radius: 12px; background: var(--bg); border: 1px solid var(--hair); }
+.step h4 { margin: 0; font-family: var(--display); font-weight: 600; font-size: 1.1875rem; line-height: 1.2; }
+.step p { margin: 0; color: var(--soft); font-size: 1.0625rem; overflow-wrap: anywhere; }
+.step .key { margin-top: auto; }
+.tester-note { margin: 0; font-size: 1rem; color: var(--soft); }
+
 /* Screenshots: a row that scrolls sideways like the film carousel. */
 .shots { list-style: none; margin: 0; padding: 0.25rem 0.25rem 1rem; display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory; }
 .shots li { flex: 0 0 min(12.75rem, 60vw); scroll-snap-align: start; }

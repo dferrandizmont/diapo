@@ -1,17 +1,18 @@
-appId: io.github.dferrandizmont.carrete
+appId: es.diapo.app
 ---
+# 0.1.0: a new user goes straight to the camera; the swipe hint may show.
 - launchApp:
     clearState: true
     permissions:
       camera: allow
       notifications: allow
 - extendedWaitUntil:
-    visible: "Saltar"
-    timeout: 30000
-- tapOn: "Saltar"
-- extendedWaitUntil:
     visible:
       text: "Disparar"
       enabled: true
     timeout: 30000
-- assertVisible: "Ninguna foto en esta sesión"
+- runFlow:
+    when:
+      visible: "Cerrar consejo"
+    commands:
+      - tapOn: "Cerrar consejo"

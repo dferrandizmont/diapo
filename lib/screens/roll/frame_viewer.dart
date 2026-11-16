@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/after_build.dart';
 import '../../core/l10n/localized_text.dart';
 import '../../gallery/photo_library.dart';
 import '../../l10n/app_localizations.dart';
@@ -128,7 +129,7 @@ class _FrameViewerState extends ConsumerState<FrameViewer> {
     switch (outcome) {
       case PhotoDeletion.deleted:
       case PhotoDeletion.gone:
-        _remove(frame);
+        _remove(frame, closeWith: outcome);
       case PhotoDeletion.deletedKeptOriginal:
         // The last photo closes the viewer: the notice goes to the screen the
         // user returns to (see [FrameViewer]), not to one that is leaving.
@@ -352,8 +353,11 @@ class _PhotoState extends ConsumerState<_Photo> {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     ref.listen(galleryImagesProvider, (_, images) {
-      setState(() {
-        _bytes = images.full(widget.location);
+      runOutsideBuild(() {
+        if (!mounted) return;
+        setState(() {
+          _bytes = images.full(widget.location);
+        });
       });
     });
     return FutureBuilder<Uint8List?>(

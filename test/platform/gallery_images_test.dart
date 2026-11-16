@@ -1,4 +1,4 @@
-import 'package:carrete/platform/gallery_images.dart';
+import 'package:diapo/platform/gallery_images.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

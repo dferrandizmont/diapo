@@ -1,8 +1,7 @@
-appId: io.github.dferrandizmont.carrete
+appId: es.diapo.app
 ---
 - runFlow: common/start_camera.yaml
 - runFlow: common/shoot_once.yaml
-- assertVisible: "Una foto en esta sesión"
 - tapOn: "Galería"
 - extendedWaitUntil:
     visible: ".*Fotos sueltas, Hoy, .*1 foto.*"
@@ -13,11 +12,11 @@ appId: io.github.dferrandizmont.carrete
 - tapOn: "Borrar"
 - assertVisible: '¿Borrar esta foto\?'
 - tapOn: "Borrar"
-# Deleting the only photo closes the viewer; the day route stays open.
+# Deleting the only photo of the day closes the viewer and the day: back in
+# the gallery, which is empty.
 - extendedWaitUntil:
-    visible: "No encuentro este día"
+    visible: "(?s)Aún no hay fotos.*"
     timeout: 30000
 - assertNotVisible: ".*Fotograma 1.*"
-- back
-- assertVisible: "(?s)Aún no hay fotos.*"
+- assertNotVisible: "No encuentro este día"
 - assertNotVisible: ".*Fotos sueltas,.*"

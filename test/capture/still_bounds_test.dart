@@ -1,4 +1,4 @@
-import 'package:carrete/capture/still_bounds.dart';
+import 'package:diapo/capture/still_bounds.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

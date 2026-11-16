@@ -3,10 +3,10 @@ import 'dart:io';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 
-import 'package:carrete/capture/capture_queue.dart';
-import 'package:carrete/capture/failed_shots.dart';
-import 'package:carrete/location/photo_location.dart';
-import 'package:carrete/capture/film_capture_processor.dart';
+import 'package:diapo/capture/capture_queue.dart';
+import 'package:diapo/capture/failed_shots.dart';
+import 'package:diapo/location/photo_location.dart';
+import 'package:diapo/capture/film_capture_processor.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';

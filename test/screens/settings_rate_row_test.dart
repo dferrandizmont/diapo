@@ -1,8 +1,8 @@
-import 'package:carrete/core/settings/settings_provider.dart';
-import 'package:carrete/l10n/app_localizations.dart';
-import 'package:carrete/render/film_resources.dart';
-import 'package:carrete/review/review_service.dart';
-import 'package:carrete/screens/settings/settings_screen.dart';
+import 'package:diapo/core/settings/settings_provider.dart';
+import 'package:diapo/l10n/app_localizations.dart';
+import 'package:diapo/render/film_resources.dart';
+import 'package:diapo/review/review_service.dart';
+import 'package:diapo/screens/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

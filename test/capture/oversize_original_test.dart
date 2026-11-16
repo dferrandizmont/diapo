@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:carrete/capture/capture_queue.dart';
-import 'package:carrete/capture/film_capture_processor.dart';
-import 'package:carrete/capture/still_bounds.dart';
+import 'package:diapo/capture/capture_queue.dart';
+import 'package:diapo/capture/film_capture_processor.dart';
+import 'package:diapo/capture/still_bounds.dart';
 import 'package:film_recipes/film_recipes.dart';
 import 'package:flutter_test/flutter_test.dart';
 

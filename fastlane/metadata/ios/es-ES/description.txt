@@ -1,0 +1,45 @@
+Tu cámara de película, con visor en directo. Gratis y sin anuncios.
+
+Diapo es una cámara de película para tu móvil: eliges la película antes de disparar, ves el resultado en el visor mientras encuadras y haces la foto. No es una app de filtros para retocar después. Es una cámara.
+
+VISOR EN DIRECTO
+• Desliza los cartuchos para cambiar de película y mira el efecto en tiempo real: color, grano, viñeteado, fugas de luz y halo.
+• La foto guardada se ve como el visor, a la resolución de tu cámara.
+• Ajuste fino de cada película (cantidad de grano, viñeteado y más) y flash con modo automático, activado, apagado y de fiesta.
+
+DIEZ PELÍCULAS, TODAS GRATIS
+• Verano 98: colores cálidos de un verano de los noventa.
+• Instantánea: formato cuadrado con marco blanco y colores lavados.
+• Cine: formato panorámico, pieles cálidas y sombras verdosas, con bandas opcionales.
+• Diapositiva fría, Caducada, Noche de flash, B/N clásico, B/N de prensa, Desechable y Cámara de juguete.
+Ninguna película, formato ni función está detrás de un pago.
+
+CARRETES QUE SE REVELAN
+Carga un carrete con una sola película y dispara sin mirar. Mientras dure el carrete no ves las fotos: se guardan cifradas en tu móvil. Al cerrarlo, elige revelar enseguida, tras una espera o a la mañana siguiente. Una vez revelado lo abres como una hoja de contactos y puedes compartirla entera como una imagen. Puedes ponerle nombre a cada carrete.
+
+CÁMARA DESECHABLE
+Una cámara de 27 fotos con una sola película, sin pantalla de fotos ni ajustes, para pasarla de mano en mano en una cena o un viaje. Las fotos se revelan cuando se acaba el carrete. Para salir hay que mantener pulsado el sello de salida.
+
+REVELA LAS FOTOS QUE YA TIENES
+Elige fotos con el selector del sistema, mira cómo quedan con cada película y revélalas a máxima resolución. Mantén el dedo sobre la foto para ver el original.
+
+TU PROPIA GALERÍA
+Carretes revelados y días de fotos sueltas, como tiras de película. Cada foto muestra su película y su fecha, y puedes compartirla o borrarla desde ahí.
+
+DETALLES DE CÁMARA
+• Fecha impresa al estilo de las cámaras de antes, opcional.
+• Formatos 3:2, 4:3, 1:1 y 16:9.
+• Sonidos de obturador y de avance de carrete, y vibraciones suaves, que puedes apagar.
+• Nivel en el visor, también con el móvil de lado.
+• Guardar el original sin película junto a la foto, si quieres.
+• Ubicación opcional: se escribe solo en tu foto y viene apagada.
+
+PRIVACIDAD
+• Sin cuentas, sin anuncios y sin marca de agua.
+• La app no se conecta a internet: tus fotos no salen del móvil.
+• Código abierto (GPL-3.0): cualquiera puede comprobar en el código que es así.
+• Las fotos de un carrete sin revelar se guardan cifradas y no llegan a la app Fotos hasta revelarlas.
+• Sin analíticas ni rastreadores.
+• Si desinstalas la app antes de revelar un carrete, esas fotos se pierden.
+
+Disponible en español, catalán e inglés.

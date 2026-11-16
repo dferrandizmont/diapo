@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:carrete/capture/film_still_renderer.dart';
-import 'package:carrete/import/import_providers.dart';
+import 'package:diapo/capture/film_still_renderer.dart';
+import 'package:diapo/import/import_providers.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

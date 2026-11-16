@@ -1,7 +1,7 @@
 import 'dart:ui';
 
-import 'package:carrete/ui/widgets/carrete_icon.dart';
-import 'package:carrete/ui/widgets/svg_path_data.dart';
+import 'package:diapo/ui/widgets/carrete_icon.dart';
+import 'package:diapo/ui/widgets/svg_path_data.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

@@ -15,6 +15,7 @@ import '../../core/settings/app_settings.dart';
 import '../../core/settings/settings_provider.dart';
 import '../../l10n/app_localizations.dart';
 import '../../legal/legal_document.dart';
+import '../../platform/external_links.dart';
 import '../../render/film_resources.dart';
 import '../../review/review_service.dart';
 import '../../ui/theme/carrete_licence_theme.dart';
@@ -27,6 +28,7 @@ import '../viewfinder/viewfinder_state.dart';
 import 'settings_backup_section.dart';
 import 'settings_location_row.dart';
 import 'settings_parts.dart';
+import 'settings_snack.dart';
 
 /// The settings of the app, in the style of proposal A on a screen that
 /// follows the theme of the system. It lists only the settings that work:
@@ -205,6 +207,13 @@ class SettingsScreen extends ConsumerWidget {
                             ref.read(reviewServiceProvider).openStoreListing(),
                           ),
                         ),
+                      if (ref.watch(externalLinksProvider).canOpen)
+                        SettingsActionRow(
+                          key: const ValueKey('settings-kofi'),
+                          label: l10n.settingsKofiTitle,
+                          hint: l10n.settingsKofiSubtitle,
+                          onTap: () => unawaited(_openKofi(context, ref)),
+                        ),
                     ],
                   ),
                   const SizedBox(height: CarreteSpacing.xl),
@@ -225,6 +234,16 @@ class SettingsScreen extends ConsumerWidget {
     TargetPlatform.iOS => appStoreId != null,
     _ => false,
   };
+
+  /// Opens the Ko-fi page in the browser; a short note when it cannot.
+  Future<void> _openKofi(BuildContext context, WidgetRef ref) async {
+    final l10n = AppLocalizations.of(context);
+    final palette = CarretePalette.of(context);
+    final messenger = ScaffoldMessenger.of(context);
+    final opened = await ref.read(externalLinksProvider).openKofi();
+    if (opened) return;
+    showSettingsSnack(messenger, palette, l10n.settingsKofiFailed);
+  }
 
   /// Opens the page of licences of Flutter with the look of the settings. The
   /// theme wraps the page itself, so its list and the detail of a package

@@ -19,7 +19,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get settingsTitle => 'Configuració';
 
   @override
-  String get rollTitle => 'Carret';
+  String get rollTitle => 'Rodet';
 
   @override
   String get settingCameraSounds => 'Sons de la càmera';
@@ -172,15 +172,15 @@ class AppLocalizationsCa extends AppLocalizations {
   String get swipeHintClose => 'Tanca el consell';
 
   @override
-  String get rollOfferTitle => 'Prova un carret de 12';
+  String get rollOfferTitle => 'Prova un rodet de 12';
 
   @override
   String rollOfferBody(String film) {
-    return 'Amb $film. Les fotos queden amagades fins que tanquis el carret. Aleshores les reveles al moment, sense espera.';
+    return 'Amb $film. Les fotos queden amagades fins que tanquis el rodet. Aleshores les reveles al moment, sense espera.';
   }
 
   @override
-  String get rollOfferAction => 'Carregar carret de 12';
+  String get rollOfferAction => 'Carregar rodet de 12';
 
   @override
   String get rollOfferDismiss => 'Ara no';
@@ -261,7 +261,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get filmsLoading => 'S\'estan carregant les pel·lícules';
 
   @override
-  String get rollReadyTitle => 'Ja pots revelar el teu carret';
+  String get rollReadyTitle => 'Ja pots revelar el teu rodet';
 
   @override
   String rollReadyBody(int count) {
@@ -276,7 +276,7 @@ class AppLocalizationsCa extends AppLocalizations {
   }
 
   @override
-  String get rollKeyLoad => 'Carregar carret';
+  String get rollKeyLoad => 'Carregar rodet';
 
   @override
   String rollKeyOpen(int count) {
@@ -286,7 +286,7 @@ class AppLocalizationsCa extends AppLocalizations {
       other: 'queden $count fotos',
       one: 'queda una foto',
     );
-    return 'Carret carregat, $_temp0';
+    return 'Rodet carregat, $_temp0';
   }
 
   @override
@@ -325,20 +325,20 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get rollFilmLocked =>
-      'La pel·lícula queda fixada mentre hi hagi un carret carregat';
+      'La pel·lícula queda fixada mentre hi hagi un rodet carregat';
 
   @override
-  String get rollClosedNotice => 'Carret acabat';
+  String get rollClosedNotice => 'Rodet acabat';
 
   @override
   String get rollActionFailed => 'No s\'ha pogut completar. Torna-ho a provar.';
 
   @override
-  String get rollLoadTitle => 'Carregar un carret';
+  String get rollLoadTitle => 'Carregar un rodet';
 
   @override
   String get rollSheetIntro =>
-      'Una pel·lícula per a tot el carret. Les fotos queden amagades fins que el reveles.';
+      'Una pel·lícula per a tot el rodet. Les fotos queden amagades fins que el reveles.';
 
   @override
   String get rollFilmRow => 'Pel·lícula';
@@ -350,7 +350,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get rollDelayLabel => 'Espera per revelar';
 
   @override
-  String get rollDelayNote => 'L\'espera comença quan tanques el carret.';
+  String get rollDelayNote => 'L\'espera comença quan tanques el rodet.';
 
   @override
   String get delayInstant => 'Al moment';
@@ -365,15 +365,15 @@ class AppLocalizationsCa extends AppLocalizations {
   String get delayThreeDays => '3 dies';
 
   @override
-  String get rollLoadAction => 'Carregar carret';
+  String get rollLoadAction => 'Carregar rodet';
 
   @override
   String get rollLoadNote =>
-      'Mentre hi hagi un carret carregat no veuràs les teves fotos, només quantes en queden.';
+      'Mentre hi hagi un rodet carregat no veuràs les teves fotos, només quantes en queden.';
 
   @override
   String get rollLossWarning =>
-      'Les fotos d\'un carret sense revelar només existeixen en aquest mòbil. Si desinstal·les l\'app, n\'esborres les dades o canvies de mòbil, es perden.';
+      'Les fotos d\'un rodet sense revelar només existeixen en aquest mòbil. Si desinstal·les l\'app, n\'esborres les dades o canvies de mòbil, es perden.';
 
   @override
   String get rollLossNote =>
@@ -395,7 +395,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get disposableStartBody =>
-      'Té 27 fotos i una pel·lícula fixa. Ningú no veu les fotos ni toca els ajustos: per sortir cal mantenir premut el segell de sortida uns segons. En acabar, la reveles com un carret.';
+      'Té 27 fotos i una pel·lícula fixa. Ningú no veu les fotos ni toca els ajustos: per sortir cal mantenir premut el segell de sortida uns segons. En acabar, la reveles com un rodet.';
 
   @override
   String get disposableStartAction => 'Començar';
@@ -428,7 +428,7 @@ class AppLocalizationsCa extends AppLocalizations {
       one: 'Queda 1 foto, que es guarda per més tard.',
       zero: 'No queden fotos.',
     );
-    return '$_temp0 Podràs continuar des de la clau del carret.';
+    return '$_temp0 Podràs continuar des de la clau del rodet.';
   }
 
   @override
@@ -452,7 +452,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get disposableAdvanceLabel => 'Avança';
 
   @override
-  String get disposableFinishAction => 'Acabar el carret';
+  String get disposableFinishAction => 'Acabar el rodet';
 
   @override
   String get disposableFinishInstantNote =>
@@ -467,7 +467,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get disposablePausedNote =>
-      'La càmera d\'un sol ús és a mitges: la càmera no la fa servir. Per carregar un altre carret, continua-hi, acaba-la o llença-la.';
+      'La càmera d\'un sol ús és a mitges: la càmera no la fa servir. Per carregar un altre rodet, continua-hi, acaba-la o llença-la.';
 
   @override
   String rollRowSubtitle(String date, String count) {
@@ -475,7 +475,7 @@ class AppLocalizationsCa extends AppLocalizations {
   }
 
   @override
-  String get rollRecentTitle => 'Últims carrets';
+  String get rollRecentTitle => 'Últims rodets';
 
   @override
   String get rollStateWaiting => 'Esperant';
@@ -511,7 +511,7 @@ class AppLocalizationsCa extends AppLocalizations {
   }
 
   @override
-  String get rollOpenTitle => 'Carret a la càmera';
+  String get rollOpenTitle => 'Rodet a la càmera';
 
   @override
   String rollOpenSummary(String film, int length) {
@@ -524,13 +524,13 @@ class AppLocalizationsCa extends AppLocalizations {
   }
 
   @override
-  String get rollCloseAction => 'Tancar carret';
+  String get rollCloseAction => 'Tancar rodet';
 
   @override
   String get rollDevelopNowAction => 'Revelar ara';
 
   @override
-  String get rollDiscardAction => 'Llençar el carret';
+  String get rollDiscardAction => 'Llençar el rodet';
 
   @override
   String get rollDevelopNowTitle => 'Revelar ara?';
@@ -540,9 +540,9 @@ class AppLocalizationsCa extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: 'Es revelaran ara les $count fotos d\'aquest carret.',
-      one: 'Es revelarà ara la foto d\'aquest carret.',
-      zero: 'Aquest carret no té fotos.',
+      other: 'Es revelaran ara les $count fotos d\'aquest rodet.',
+      one: 'Es revelarà ara la foto d\'aquest rodet.',
+      zero: 'Aquest rodet no té fotos.',
     );
     return '$_temp0 L\'espera acaba ara i no es pot desfer.';
   }
@@ -551,11 +551,11 @@ class AppLocalizationsCa extends AppLocalizations {
   String get rollDevelopKeepWaiting => 'Continuar esperant';
 
   @override
-  String get rollDiscardTitle => 'Llençar el carret?';
+  String get rollDiscardTitle => 'Llençar el rodet?';
 
   @override
   String get rollDiscardBody =>
-      'Les fotos d\'aquest carret es perdran per sempre. No es pot desfer.';
+      'Les fotos d\'aquest rodet es perdran per sempre. No es pot desfer.';
 
   @override
   String get rollDiscardConfirm => 'Llençar';
@@ -564,17 +564,17 @@ class AppLocalizationsCa extends AppLocalizations {
   String get dialogCancel => 'Cancel·lar';
 
   @override
-  String get rollNameEdit => 'Edita el nom del carret';
+  String get rollNameEdit => 'Edita el nom del rodet';
 
   @override
-  String get rollNameTitle => 'Nom del carret';
+  String get rollNameTitle => 'Nom del rodet';
 
   @override
   String get rollNameLabel => 'Nom';
 
   @override
   String rollNameNote(String fallback) {
-    return 'És opcional. Sense nom, el carret es diu \"$fallback\".';
+    return 'És opcional. Sense nom, el rodet es diu \"$fallback\".';
   }
 
   @override
@@ -586,7 +586,7 @@ class AppLocalizationsCa extends AppLocalizations {
   }
 
   @override
-  String get rollWaitingTitle => 'Carret en espera';
+  String get rollWaitingTitle => 'Rodet en espera';
 
   @override
   String rollReadyOn(String date, String time) {
@@ -609,20 +609,20 @@ class AppLocalizationsCa extends AppLocalizations {
   String get rollKeepOpen => 'Mantén l\'app oberta fins que acabi.';
 
   @override
-  String get rollStillOpenTitle => 'Aquest carret encara és a la càmera';
+  String get rollStillOpenTitle => 'Aquest rodet encara és a la càmera';
 
   @override
-  String get rollLostTitle => 'Aquest carret no es pot revelar';
+  String get rollLostTitle => 'Aquest rodet no es pot revelar';
 
   @override
   String get rollLostBody =>
       'Es va perdre la clau que protegia les seves fotos, així que no es poden recuperar.';
 
   @override
-  String get rollDiscardedTitle => 'Aquest carret es va llençar';
+  String get rollDiscardedTitle => 'Aquest rodet es va llençar';
 
   @override
-  String get rollMissingTitle => 'No trobo aquest carret';
+  String get rollMissingTitle => 'No trobo aquest rodet';
 
   @override
   String get rollShareSheetAction => 'Comparteix el full';
@@ -640,7 +640,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String rollShareSheetPreview(String number) {
-    return 'Vista prèvia del full de contactes del carret $number';
+    return 'Vista prèvia del full de contactes del rodet $number';
   }
 
   @override
@@ -695,7 +695,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String rollNumberTitle(String number) {
-    return 'Carret $number';
+    return 'Rodet $number';
   }
 
   @override
@@ -703,7 +703,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get galleryEmptyBody =>
-      'Les fotos que facis apareixeran aquí. Les d\'un carret, quan les revelis.';
+      'Les fotos que facis apareixeran aquí. Les d\'un rodet, quan les revelis.';
 
   @override
   String get galleryDevelopingLabel => 'En revelat';
@@ -886,11 +886,11 @@ class AppLocalizationsCa extends AppLocalizations {
       'Fes lliscar els cartutxos per canviar de pel·lícula i mira el resultat en directe al visor.';
 
   @override
-  String get onboardingTitle3 => 'Un carret: fotos sense mirar.';
+  String get onboardingTitle3 => 'Un rodet: fotos sense mirar.';
 
   @override
   String get onboardingBody3 =>
-      'Amb un carret les fotos queden amagades fins que el reveles. Quan passi l\'espera que triïs, t\'avisem i obres l\'app per revelar-les.';
+      'Amb un rodet les fotos queden amagades fins que el reveles. Quan passi l\'espera que triïs, t\'avisem i obres l\'app per revelar-les.';
 
   @override
   String get onboardingSkip => 'Saltar';
@@ -926,7 +926,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get onboardingArtRoll =>
-      'El comptador d\'un carret amb 9 de 24 fotos fetes i amagades, l\'espera per revelar a triar i un avís opcional.';
+      'El comptador d\'un rodet amb 9 de 24 fotos fetes i amagades, l\'espera per revelar a triar i un avís opcional.';
 
   @override
   String get settingsHowItWorks => 'Com funciona';
@@ -936,6 +936,15 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get settingsRateSubtitle => 'Una ressenya ajuda que altres la trobin';
+
+  @override
+  String get settingsKofiTitle => 'Convida\'m a un cafè';
+
+  @override
+  String get settingsKofiSubtitle => 'Ko-fi, s\'obre al navegador';
+
+  @override
+  String get settingsKofiFailed => 'No s\'ha pogut obrir el navegador';
 
   @override
   String onboardingStepSemantics(int step, int total) {

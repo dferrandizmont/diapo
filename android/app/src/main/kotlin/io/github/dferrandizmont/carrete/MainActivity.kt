@@ -1,6 +1,7 @@
 package io.github.dferrandizmont.carrete
 
 import android.Manifest
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -41,6 +42,7 @@ class MainActivity : FlutterActivity() {
                 when (call.method) {
                     "exportSettings", "importSettings" -> documents.handle(call, result)
                     "openAppSettings" -> result.success(openAppSettings())
+                    "openKofi" -> result.success(openKofi())
                     "cameraPermission" -> result.success(
                         ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) ==
                             PackageManager.PERMISSION_GRANTED,
@@ -94,6 +96,24 @@ class MainActivity : FlutterActivity() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
+    /**
+     * Opens the Ko-fi page of the developer in the system browser (the app has
+     * no internet permission; the browser does the loading). The address is a
+     * constant here, so the channel cannot be asked to open anything else.
+     */
+    private fun openKofi(): Boolean {
+        return try {
+            startActivity(
+                Intent(Intent.ACTION_VIEW, Uri.parse(KOFI_URL))
+                    .addCategory(Intent.CATEGORY_BROWSABLE)
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK),
+            )
+            true
+        } catch (e: ActivityNotFoundException) {
+            false
+        }
+    }
+
     /** Opens the system page of this app (permissions, storage...). */
     private fun openAppSettings(): Boolean {
         return try {
@@ -107,5 +127,9 @@ class MainActivity : FlutterActivity() {
         } catch (e: Exception) {
             false
         }
+    }
+
+    private companion object {
+        const val KOFI_URL = "https://ko-fi.com/danielmfdev"
     }
 }

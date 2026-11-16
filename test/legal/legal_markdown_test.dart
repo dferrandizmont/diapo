@@ -1,7 +1,7 @@
 import 'dart:ui';
 
-import 'package:carrete/legal/legal_document.dart';
-import 'package:carrete/legal/legal_markdown.dart';
+import 'package:diapo/legal/legal_document.dart';
+import 'package:diapo/legal/legal_markdown.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
