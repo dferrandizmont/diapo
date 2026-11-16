@@ -1,0 +1,61 @@
+{
+  "_doc": "Release manifest (skill `release`). Paths are relative to this repo. {version} and {build} are substituted; the rest of each pattern is a regular expression.",
+  "app": "Diapo",
+  "id": "diapo",
+  "stack": "flutter",
+  "private": {
+    "github": "dferrandizmont/carrete"
+  },
+  "public": {
+    "github": "dferrandizmont/diapo",
+    "_note": "Public repository, exported from the private working repository with a fresh history as dev@mainshai.com."
+  },
+  "languages": [
+    "es",
+    "ca",
+    "en"
+  ],
+  "stores": {
+    "play": true,
+    "appstore": false
+  },
+  "play": {
+    "package": "es.diapo.app",
+    "track": "internal"
+  },
+  "signing": {
+    "android_keystore": "~/claves/diapo-upload.jks",
+    "backup": "Copy of the keystore in Daniel's personal Bitwarden (2026-11-16); passwords there too"
+  },
+  "version_files": [
+    {
+      "file": "pubspec.yaml",
+      "pattern": "^version:\\s*{version}\\+{build}\\s*$"
+    },
+    {
+      "file": "lib/core/app_info.dart",
+      "pattern": "'{version}'"
+    }
+  ],
+  "changelog": "CHANGELOG.md",
+  "readme": {
+    "closed_source": false
+  },
+  "ui_paths": [
+    "lib/",
+    "assets/",
+    "shaders/",
+    "packages/film_recipes/assets/",
+    "pubspec.yaml"
+  ],
+  "ui_ignore": [
+    "lib/l10n/",
+    "test/"
+  ],
+  "fastlane": "fastlane/metadata",
+  "web": {
+    "mainshai_web": "../../web/mainshai-web",
+    "id": "diapo",
+    "domain": "diapo.mainshai.com"
+  }
+}

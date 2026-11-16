@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Replaces the file paths of the FileProvider of the image_picker plugin
+  (same resource name, so the app's copy wins when the resources are merged).
+  The plugin shares the whole cache with the camera app it opens for
+  "take a photo"; Carrete never takes photos through it and picks only from
+  the Photo Picker, so the provider may serve nothing but an empty folder
+  that is never written to.
+-->
+<paths>
+    <cache-path name="cached_files" path="image_picker_unused/" />
+</paths>

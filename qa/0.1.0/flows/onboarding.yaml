@@ -1,0 +1,20 @@
+appId: es.diapo.app
+---
+# 0.1.0: the tutorial is reached from Settings > "Cómo funciona".
+- runFlow: common/start_camera.yaml
+- tapOn: "Ajustes"
+- scrollUntilVisible:
+    element: "Cómo funciona"
+    direction: DOWN
+- tapOn: "Cómo funciona"
+- assertVisible: "Paso 1 de 3"
+- assertVisible: 'Una cámara, no un filtro\.'
+- tapOn: "Siguiente"
+- assertVisible: "Paso 2 de 3"
+- assertVisible: 'Elige la película\.'
+- tapOn: "Siguiente"
+- assertVisible: "Paso 3 de 3"
+- assertVisible: 'Un carrete: fotos sin mirar\.'
+- tapOn: "Empezar a disparar"
+# From Settings the tutorial returns to Settings.
+- assertVisible: "Cómo funciona"

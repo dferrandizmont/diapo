@@ -1,0 +1,53 @@
+name: Bug report
+description: Something in the app does not work as expected. / Algo en la app no funciona como debería.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. Please do not attach photos of real people: reproduce the problem with test shots.
+        Gracias por avisar. No adjuntes fotos de personas reales: reprodúcelo con fotos de prueba.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you expected and what the app did instead. / Qué esperabas y qué hizo la app.
+      placeholder: "Example: with the film Cine at 16:9, the saved photo has no bands."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: One step per line. / Un paso por línea.
+      placeholder: |
+        1. Pick the film Cine.
+        2. Take a photo.
+        3. Open it in the gallery.
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      description: In Settings, at the bottom. / En Ajustes, al final.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and system
+      description: Phone model and Android version. / Modelo de móvil y versión de Android.
+      placeholder: "Pixel 8, Android 16"
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      description: Please confirm before sending. / Confírmalo antes de enviar.
+      options:
+        - label: I have not attached photos of real people or their locations. / No he adjuntado fotos de personas reales ni su ubicación.
+          required: true

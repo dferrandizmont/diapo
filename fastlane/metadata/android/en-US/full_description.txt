@@ -1,0 +1,45 @@
+Your film camera, with a live viewfinder. Free and ad-free.
+
+Diapo is a film camera for your phone: you pick the film before you shoot, see the result in the viewfinder while you frame, and take the photo. It is not a filter app for editing afterwards. It is a camera.
+
+LIVE VIEWFINDER
+• Swipe the cartridges to change film and watch the effect in real time: colour, grain, vignette, light leaks and halation.
+• The saved photo looks like the viewfinder, at the resolution of your camera.
+• Fine-tune each film (amount of grain, vignette and more) and use the flash in auto, on, off or party mode.
+
+TEN FILMS, ALL FREE
+• Summer 98: warm colours from a nineties summer.
+• Instant: square frame with a white border and washed-out colours.
+• Cinema: widescreen, warm skin tones and greenish shadows, with optional bars.
+• Cold slide, Expired, Flash night, Classic B&W, Press B&W, Disposable and Toy camera.
+No film, format or feature is behind a payment.
+
+ROLLS THAT DEVELOP
+Load a roll with a single film and shoot without looking. While the roll lasts you cannot see the photos: they are stored encrypted on your phone. When you close it, choose to develop right away, after a wait or the next morning. Once developed you open it as a contact sheet and can share the whole sheet as one image. You can give each roll a name.
+
+DISPOSABLE CAMERA
+A 27-frame camera with one film, no photo screen and no settings, to pass from hand to hand at a dinner or on a trip. The photos develop when the roll is finished. To leave it you have to hold the exit stamp.
+
+DEVELOP THE PHOTOS YOU ALREADY HAVE
+Pick photos from your gallery, see how they look with each film and develop them at full resolution. Hold a finger on the photo to see the original. Diapo does not ask for permission to read your gallery.
+
+YOUR OWN GALLERY
+Developed rolls and days of loose photos, shown as strips of film. Each photo shows its film and date, and you can share or delete it from there.
+
+CAMERA DETAILS
+• Optional date imprint in the style of the old cameras.
+• 3:2, 4:3, 1:1 and 16:9 formats.
+• Shutter and film-advance sounds, and light vibrations, which you can turn off.
+• A level in the viewfinder, also with the phone held sideways.
+• Save the untouched original next to the photo, if you want.
+• Optional location: it is written only into your photo, and it is off by default.
+
+PRIVACY
+• No accounts, no ads and no watermark.
+• The app has no internet permission: your photos never leave your phone.
+• Open source (GPL-3.0): anyone can check this in the code.
+• Photos of an undeveloped roll are stored encrypted and do not reach the system gallery until you develop them.
+• No analytics and no trackers.
+• If you uninstall the app or clear its data before developing a roll, those photos are lost.
+
+Available in Spanish, Catalan and English.

@@ -1,0 +1,4 @@
+{#- Plain links, no JS, in a tray of keys like the flash keys of the camera. The short code is shown, the full name is read out. -#}
+{% if site.languages | length > 1 %}<nav class="lang" aria-label="{{ t.languages_label }}" data-lang-switcher>
+{% for code in site.languages %}<a href="{{ route(code, page_kind == 'privacy') }}" lang="{{ code }}" hreflang="{{ code }}"{% if code == lang %} aria-current="page"{% endif %}><span aria-hidden="true">{{ code | upper }}</span><span class="vh">{{ t.languages[code] }}</span></a>{% endfor %}
+</nav>{% endif %}

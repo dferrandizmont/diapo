@@ -1,0 +1,22 @@
+appId: es.diapo.app
+---
+- runFlow: common/start_camera.yaml
+- runFlow: common/shoot_once.yaml
+- tapOn: "Galería"
+- extendedWaitUntil:
+    visible: ".*Fotos sueltas, Hoy, .*1 foto.*"
+    timeout: 60000
+- tapOn: ".*Fotos sueltas, Hoy, .*1 foto.*"
+- tapOn: ".*Fotograma 1.*"
+- assertVisible: "Foto 1 de 1"
+- tapOn: "Borrar"
+- assertVisible: '¿Borrar esta foto\?'
+- tapOn: "Borrar"
+# Deleting the only photo closes the viewer; the day route stays open.
+- extendedWaitUntil:
+    visible: "No encuentro este día"
+    timeout: 30000
+- assertNotVisible: ".*Fotograma 1.*"
+- back
+- assertVisible: "(?s)Aún no hay fotos.*"
+- assertNotVisible: ".*Fotos sueltas,.*"

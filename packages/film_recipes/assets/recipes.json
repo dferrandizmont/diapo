@@ -1,0 +1,1386 @@
+{
+  "schemaVersion": 1,
+  "recipesVersion": "2026.11.4",
+  "recipes": [
+    {
+      "id": "verano-98",
+      "name": {
+        "es": "Verano 98",
+        "ca": "Estiu 98",
+        "en": "Summer 98"
+      },
+      "description": {
+        "es": "Negativo de color cálido, grano fino y una fuga de luz suave en las esquinas.",
+        "ca": "Negatiu de color càlid, gra fi i una fuita de llum suau a les cantonades.",
+        "en": "Warm colour negative with fine grain and a soft light leak in the corners."
+      },
+      "kind": "color",
+      "defaults": {
+        "format": "3:2",
+        "dateStamp": false,
+        "whiteFrame": false
+      },
+      "exposure": 0.15,
+      "saturation": 0.97,
+      "matrix": [
+        1.07,
+        -0.03,
+        -0.04,
+        -0.02,
+        1.03,
+        -0.01,
+        -0.02,
+        -0.07,
+        0.91
+      ],
+      "shadowTint": [
+        0.016,
+        0.01,
+        -0.004
+      ],
+      "highlightTint": [
+        0.035,
+        0.016,
+        -0.03
+      ],
+      "curve": {
+        "master": [
+          [
+            0,
+            0
+          ],
+          [
+            0.25,
+            0.24
+          ],
+          [
+            0.5,
+            0.52
+          ],
+          [
+            0.75,
+            0.79
+          ],
+          [
+            1,
+            0.97
+          ]
+        ],
+        "r": [
+          [
+            0,
+            0.075
+          ],
+          [
+            0.5,
+            0.54
+          ],
+          [
+            1,
+            0.985
+          ]
+        ],
+        "g": [
+          [
+            0,
+            0.07
+          ],
+          [
+            0.5,
+            0.525
+          ],
+          [
+            1,
+            0.965
+          ]
+        ],
+        "b": [
+          [
+            0,
+            0.055
+          ],
+          [
+            0.5,
+            0.495
+          ],
+          [
+            1,
+            0.93
+          ]
+        ]
+      },
+      "grain": {
+        "amount": 0.4,
+        "size": 1.1
+      },
+      "halation": {
+        "amount": 0.36,
+        "threshold": 0.78,
+        "radius": 0.012,
+        "color": [
+          1,
+          0.35,
+          0.15
+        ]
+      },
+      "leak": {
+        "amount": 0.22,
+        "position": [
+          0.95,
+          0.12
+        ],
+        "radius": 0.45,
+        "color": [
+          1,
+          0.42,
+          0.12
+        ]
+      },
+      "vignette": {
+        "amount": 0.3,
+        "softness": 0.62
+      },
+      "wbDrift": 0.012,
+      "notes": "The first recipe of the book is the film the app opens with.",
+      "bandColor": "#E8772E"
+    },
+    {
+      "id": "diapositiva-fria",
+      "name": {
+        "es": "Diapositiva fría",
+        "ca": "Diapositiva freda",
+        "en": "Cold slide"
+      },
+      "description": {
+        "es": "Diapositiva de alto contraste con un sesgo frío, limpia y sin fugas de luz.",
+        "ca": "Diapositiva d'alt contrast amb un to fred, neta i sense fuites de llum.",
+        "en": "High contrast slide with a cold bias, clean and without light leaks."
+      },
+      "kind": "color",
+      "defaults": {
+        "format": "4:3",
+        "dateStamp": false,
+        "whiteFrame": false
+      },
+      "exposure": 0.05,
+      "saturation": 1.06,
+      "matrix": [
+        0.9,
+        0.04,
+        0,
+        -0.01,
+        1,
+        0.03,
+        -0.01,
+        0.05,
+        1.1
+      ],
+      "shadowTint": [
+        -0.025,
+        0.006,
+        0.035
+      ],
+      "highlightTint": [
+        -0.024,
+        0.008,
+        0.036
+      ],
+      "curve": {
+        "master": [
+          [
+            0,
+            0.012
+          ],
+          [
+            0.25,
+            0.2
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.75,
+            0.815
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "r": [
+          [
+            0,
+            0
+          ],
+          [
+            0.25,
+            0.17
+          ],
+          [
+            0.5,
+            0.47
+          ],
+          [
+            0.75,
+            0.79
+          ],
+          [
+            1,
+            0.99
+          ]
+        ],
+        "g": [
+          [
+            0,
+            0
+          ],
+          [
+            0.25,
+            0.19
+          ],
+          [
+            0.5,
+            0.505
+          ],
+          [
+            0.75,
+            0.825
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "b": [
+          [
+            0,
+            0.03
+          ],
+          [
+            0.25,
+            0.22
+          ],
+          [
+            0.5,
+            0.535
+          ],
+          [
+            0.75,
+            0.845
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "grain": {
+        "amount": 0.12,
+        "size": 1.4
+      },
+      "halation": {
+        "amount": 0.18,
+        "threshold": 0.85,
+        "radius": 0.008,
+        "color": [
+          1,
+          0.4,
+          0.25
+        ]
+      },
+      "leak": {
+        "amount": 0,
+        "position": [
+          0.9,
+          0.1
+        ],
+        "radius": 0.4,
+        "color": [
+          1,
+          0.45,
+          0.1
+        ]
+      },
+      "vignette": {
+        "amount": 0.2,
+        "softness": 0.4
+      },
+      "wbDrift": 0.006,
+      "bandColor": "#3A6FE0"
+    },
+    {
+      "id": "caducada",
+      "name": {
+        "es": "Caducada",
+        "ca": "Caducada",
+        "en": "Expired"
+      },
+      "description": {
+        "es": "Película pasada de fecha: verdes y magentas desviados, grano grueso y viñeta fuerte.",
+        "ca": "Pel·lícula passada de data: verds i magentes desviats, gra gruixut i vinyeta forta.",
+        "en": "Out-of-date film: shifted greens and magentas, coarse grain and a strong vignette."
+      },
+      "kind": "color",
+      "defaults": {
+        "format": "3:2",
+        "dateStamp": false,
+        "whiteFrame": false
+      },
+      "exposure": 0.3,
+      "saturation": 0.9,
+      "matrix": [
+        1.06,
+        -0.04,
+        -0.02,
+        0,
+        0.93,
+        0.07,
+        0.04,
+        -0.06,
+        1.02
+      ],
+      "shadowTint": [
+        -0.04,
+        0.06,
+        -0.02
+      ],
+      "highlightTint": [
+        0.06,
+        -0.05,
+        0.03
+      ],
+      "curve": {
+        "master": [
+          [
+            0,
+            0.06
+          ],
+          [
+            0.25,
+            0.24
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.75,
+            0.77
+          ],
+          [
+            1,
+            0.93
+          ]
+        ],
+        "r": [
+          [
+            0,
+            0.03
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "g": [
+          [
+            0,
+            0.05
+          ],
+          [
+            0.5,
+            0.53
+          ],
+          [
+            1,
+            0.98
+          ]
+        ],
+        "b": [
+          [
+            0,
+            0.01
+          ],
+          [
+            0.5,
+            0.43
+          ],
+          [
+            1,
+            0.88
+          ]
+        ]
+      },
+      "grain": {
+        "amount": 0.68,
+        "size": 2.2
+      },
+      "halation": {
+        "amount": 0.3,
+        "threshold": 0.75,
+        "radius": 0.015,
+        "color": [
+          1,
+          0.3,
+          0.4
+        ]
+      },
+      "leak": {
+        "amount": 0.12,
+        "position": [
+          0.05,
+          0.9
+        ],
+        "radius": 0.5,
+        "color": [
+          0.9,
+          0.3,
+          0.6
+        ]
+      },
+      "vignette": {
+        "amount": 0.6,
+        "softness": 0.6
+      },
+      "wbDrift": 0.04,
+      "bandColor": "#7FB03A"
+    },
+    {
+      "id": "noche-de-flash",
+      "name": {
+        "es": "Noche de flash",
+        "ca": "Nit de flaix",
+        "en": "Flash night"
+      },
+      "description": {
+        "es": "Contraste duro, caras quemadas, fondo negro y grano visible.",
+        "ca": "Contrast dur, cares cremades, fons negre i gra visible.",
+        "en": "Hard contrast, burnt faces, black background and visible grain."
+      },
+      "kind": "color",
+      "defaults": {
+        "format": "3:2",
+        "dateStamp": false,
+        "whiteFrame": false
+      },
+      "exposure": 0.22,
+      "saturation": 0.96,
+      "matrix": [
+        1.02,
+        -0.02,
+        0,
+        -0.01,
+        1,
+        0,
+        -0.01,
+        0,
+        1.01
+      ],
+      "shadowTint": [
+        -0.01,
+        0,
+        0.01
+      ],
+      "highlightTint": [
+        0.005,
+        0.005,
+        0
+      ],
+      "curve": {
+        "master": [
+          [
+            0,
+            0
+          ],
+          [
+            0.15,
+            0.03
+          ],
+          [
+            0.4,
+            0.34
+          ],
+          [
+            0.62,
+            0.9
+          ],
+          [
+            0.78,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "r": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "g": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "b": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "grain": {
+        "amount": 0.55,
+        "size": 1.5
+      },
+      "halation": {
+        "amount": 0.55,
+        "threshold": 0.72,
+        "radius": 0.02,
+        "color": [
+          1,
+          0.5,
+          0.4
+        ]
+      },
+      "leak": {
+        "amount": 0,
+        "position": [
+          0.9,
+          0.1
+        ],
+        "radius": 0.4,
+        "color": [
+          1,
+          0.45,
+          0.1
+        ]
+      },
+      "vignette": {
+        "amount": 0.55,
+        "softness": 0.45
+      },
+      "wbDrift": 0.02,
+      "bandColor": "#F4D93A"
+    },
+    {
+      "id": "bn-clasico",
+      "name": {
+        "es": "B/N clásico",
+        "ca": "B/N clàssic",
+        "en": "Classic B&W"
+      },
+      "description": {
+        "es": "Blanco y negro de grises profundos y grano medio, pensado para fotos de calle.",
+        "ca": "Blanc i negre de tons grisos profunds i gra mitjà, pensat per a fotos de carrer.",
+        "en": "Black and white with deep greys and medium grain, meant for street photos."
+      },
+      "kind": "bw",
+      "defaults": {
+        "format": "3:2",
+        "dateStamp": false,
+        "whiteFrame": false
+      },
+      "exposure": 0.06,
+      "saturation": 1,
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "shadowTint": [
+        0,
+        0,
+        0
+      ],
+      "highlightTint": [
+        0,
+        0,
+        0
+      ],
+      "curve": {
+        "master": [
+          [
+            0,
+            0.03
+          ],
+          [
+            0.25,
+            0.19
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.75,
+            0.8
+          ],
+          [
+            1,
+            0.955
+          ]
+        ],
+        "r": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "g": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "b": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "grain": {
+        "amount": 0.42,
+        "size": 1.6
+      },
+      "halation": {
+        "amount": 0.15,
+        "threshold": 0.82,
+        "radius": 0.01,
+        "color": [
+          1,
+          0.35,
+          0.15
+        ]
+      },
+      "leak": {
+        "amount": 0,
+        "position": [
+          0.9,
+          0.1
+        ],
+        "radius": 0.4,
+        "color": [
+          1,
+          0.45,
+          0.1
+        ]
+      },
+      "vignette": {
+        "amount": 0.32,
+        "softness": 0.5
+      },
+      "wbDrift": 0.004,
+      "bandColor": "#9A9A9A"
+    },
+    {
+      "id": "bn-prensa",
+      "name": {
+        "es": "B/N de prensa",
+        "ca": "B/N de premsa",
+        "en": "Press B&W"
+      },
+      "description": {
+        "es": "Blanco y negro de contraste alto y grano grueso, pensado para el periódico.",
+        "ca": "Blanc i negre d'alt contrast i gra gruixut, pensat per al diari.",
+        "en": "High contrast black and white with coarse grain, meant for the newspaper."
+      },
+      "kind": "bw",
+      "defaults": {
+        "format": "3:2",
+        "dateStamp": false,
+        "whiteFrame": false
+      },
+      "exposure": 0.1,
+      "saturation": 1,
+      "matrix": [
+        1.12,
+        0.08,
+        -0.2,
+        0.05,
+        1.05,
+        -0.1,
+        0,
+        0.05,
+        0.95
+      ],
+      "shadowTint": [
+        0,
+        0,
+        0
+      ],
+      "highlightTint": [
+        0,
+        0,
+        0
+      ],
+      "curve": {
+        "master": [
+          [
+            0,
+            0
+          ],
+          [
+            0.2,
+            0.1
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.8,
+            0.93
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "r": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "g": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "b": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "grain": {
+        "amount": 0.8,
+        "size": 2.4
+      },
+      "halation": {
+        "amount": 0.2,
+        "threshold": 0.8,
+        "radius": 0.01,
+        "color": [
+          1,
+          0.35,
+          0.15
+        ]
+      },
+      "leak": {
+        "amount": 0,
+        "position": [
+          0.9,
+          0.1
+        ],
+        "radius": 0.4,
+        "color": [
+          1,
+          0.45,
+          0.1
+        ]
+      },
+      "vignette": {
+        "amount": 0.45,
+        "softness": 0.5
+      },
+      "wbDrift": 0,
+      "bandColor": "#C42B44"
+    },
+    {
+      "id": "instantanea",
+      "name": {
+        "es": "Instantánea",
+        "ca": "Instantània",
+        "en": "Instant"
+      },
+      "description": {
+        "es": "Colores lavados, azul en las sombras, marco blanco opcional y formato cuadrado.",
+        "ca": "Colors rentats, blau a les ombres, marc blanc opcional i format quadrat.",
+        "en": "Washed colours, blue in the shadows, optional white frame and square format."
+      },
+      "kind": "color",
+      "defaults": {
+        "format": "1:1",
+        "dateStamp": false,
+        "whiteFrame": true
+      },
+      "exposure": 0.28,
+      "saturation": 0.64,
+      "matrix": [
+        0.97,
+        0.01,
+        0.02,
+        0,
+        0.99,
+        0.01,
+        0.02,
+        0.03,
+        0.95
+      ],
+      "shadowTint": [
+        -0.035,
+        0.005,
+        0.09
+      ],
+      "highlightTint": [
+        0.03,
+        0.02,
+        -0.01
+      ],
+      "curve": {
+        "master": [
+          [
+            0,
+            0.19
+          ],
+          [
+            0.25,
+            0.35
+          ],
+          [
+            0.5,
+            0.54
+          ],
+          [
+            0.75,
+            0.75
+          ],
+          [
+            1,
+            0.93
+          ]
+        ],
+        "r": [
+          [
+            0,
+            0.02
+          ],
+          [
+            1,
+            0.96
+          ]
+        ],
+        "g": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "b": [
+          [
+            0,
+            0.08
+          ],
+          [
+            0.5,
+            0.53
+          ],
+          [
+            1,
+            0.98
+          ]
+        ]
+      },
+      "grain": {
+        "amount": 0.28,
+        "size": 1.2
+      },
+      "halation": {
+        "amount": 0.3,
+        "threshold": 0.78,
+        "radius": 0.014,
+        "color": [
+          1,
+          0.5,
+          0.35
+        ]
+      },
+      "leak": {
+        "amount": 0.08,
+        "position": [
+          0.1,
+          0.9
+        ],
+        "radius": 0.5,
+        "color": [
+          1,
+          0.5,
+          0.3
+        ]
+      },
+      "vignette": {
+        "amount": 0.28,
+        "softness": 0.6
+      },
+      "wbDrift": 0.02,
+      "bandColor": "#F1E6CE"
+    },
+    {
+      "id": "desechable",
+      "name": {
+        "es": "Desechable",
+        "ca": "D'un sol ús",
+        "en": "Disposable"
+      },
+      "description": {
+        "es": "Color muy saturado, viñeta suave y el sello de fecha activado de salida.",
+        "ca": "Color molt saturat, vinyeta suau i el segell de data activat de sortida.",
+        "en": "Very saturated colour, soft vignette and the date stamp on from the start."
+      },
+      "kind": "color",
+      "defaults": {
+        "format": "3:2",
+        "dateStamp": true,
+        "whiteFrame": false
+      },
+      "exposure": 0.14,
+      "saturation": 1.3,
+      "matrix": [
+        1.07,
+        -0.03,
+        -0.04,
+        -0.03,
+        1.08,
+        -0.05,
+        -0.03,
+        -0.05,
+        1.03
+      ],
+      "shadowTint": [
+        -0.012,
+        0.016,
+        0.01
+      ],
+      "highlightTint": [
+        0.018,
+        0.014,
+        -0.012
+      ],
+      "curve": {
+        "master": [
+          [
+            0,
+            0.03
+          ],
+          [
+            0.25,
+            0.22
+          ],
+          [
+            0.5,
+            0.53
+          ],
+          [
+            0.75,
+            0.83
+          ],
+          [
+            1,
+            0.97
+          ]
+        ],
+        "r": [
+          [
+            0,
+            0
+          ],
+          [
+            0.5,
+            0.51
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "g": [
+          [
+            0,
+            0.01
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            1,
+            0.99
+          ]
+        ],
+        "b": [
+          [
+            0,
+            0.02
+          ],
+          [
+            0.5,
+            0.48
+          ],
+          [
+            1,
+            0.95
+          ]
+        ]
+      },
+      "grain": {
+        "amount": 0.45,
+        "size": 1.3
+      },
+      "halation": {
+        "amount": 0.45,
+        "threshold": 0.7,
+        "radius": 0.02,
+        "color": [
+          1,
+          0.3,
+          0.12
+        ]
+      },
+      "leak": {
+        "amount": 0.1,
+        "position": [
+          0.88,
+          0.14
+        ],
+        "radius": 0.5,
+        "color": [
+          1,
+          0.5,
+          0.15
+        ]
+      },
+      "vignette": {
+        "amount": 0.5,
+        "softness": 0.7
+      },
+      "wbDrift": 0.02,
+      "bandColor": "#9A5FE0"
+    },
+    {
+      "id": "cine",
+      "name": {
+        "es": "Cine",
+        "ca": "Cinema",
+        "en": "Cinema"
+      },
+      "description": {
+        "es": "Tonos de piel cálidos, sombras verdosas y formato panorámico 16:9.",
+        "ca": "Tons de pell càlids, ombres verdoses i format panoràmic 16:9.",
+        "en": "Warm skin tones, greenish shadows and the wide 16:9 format."
+      },
+      "kind": "color",
+      "defaults": {
+        "format": "16:9",
+        "cinemaBands": true,
+        "dateStamp": false,
+        "whiteFrame": false
+      },
+      "exposure": -0.03,
+      "saturation": 0.82,
+      "matrix": [
+        1.12,
+        -0.06,
+        -0.06,
+        0.07,
+        0.86,
+        0.07,
+        -0.05,
+        0.08,
+        0.97
+      ],
+      "shadowTint": [
+        -0.07,
+        0.05,
+        0.06
+      ],
+      "highlightTint": [
+        0.08,
+        0.032,
+        -0.065
+      ],
+      "curve": {
+        "master": [
+          [
+            0,
+            0.04
+          ],
+          [
+            0.2,
+            0.13
+          ],
+          [
+            0.5,
+            0.49
+          ],
+          [
+            0.8,
+            0.87
+          ],
+          [
+            1,
+            0.97
+          ]
+        ],
+        "r": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "g": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "b": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "grain": {
+        "amount": 0.32,
+        "size": 1.5
+      },
+      "halation": {
+        "amount": 0.35,
+        "threshold": 0.8,
+        "radius": 0.014,
+        "color": [
+          1,
+          0.45,
+          0.2
+        ]
+      },
+      "leak": {
+        "amount": 0,
+        "position": [
+          0.9,
+          0.1
+        ],
+        "radius": 0.4,
+        "color": [
+          1,
+          0.45,
+          0.1
+        ]
+      },
+      "vignette": {
+        "amount": 0.3,
+        "softness": 0.55
+      },
+      "wbDrift": 0.008,
+      "bandColor": "#1FA88C"
+    },
+    {
+      "id": "camara-de-juguete",
+      "name": {
+        "es": "Cámara de juguete",
+        "ca": "Càmera de joguina",
+        "en": "Toy camera"
+      },
+      "description": {
+        "es": "Viñeta muy fuerte, colores raros y una fuga de luz enorme.",
+        "ca": "Vinyeta molt forta, colors estranys i una fuita de llum enorme.",
+        "en": "A very strong vignette, odd colours and a huge light leak."
+      },
+      "kind": "color",
+      "defaults": {
+        "format": "3:2",
+        "dateStamp": false,
+        "whiteFrame": false
+      },
+      "exposure": 0.2,
+      "saturation": 1.35,
+      "matrix": [
+        1,
+        0.15,
+        -0.15,
+        -0.12,
+        0.9,
+        0.22,
+        0.12,
+        -0.12,
+        1
+      ],
+      "shadowTint": [
+        0.02,
+        -0.01,
+        0.035
+      ],
+      "highlightTint": [
+        -0.01,
+        0.035,
+        -0.03
+      ],
+      "curve": {
+        "master": [
+          [
+            0,
+            0.02
+          ],
+          [
+            0.25,
+            0.18
+          ],
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.75,
+            0.86
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "r": [
+          [
+            0,
+            0
+          ],
+          [
+            0.5,
+            0.52
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "g": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "b": [
+          [
+            0,
+            0.04
+          ],
+          [
+            0.5,
+            0.46
+          ],
+          [
+            1,
+            0.96
+          ]
+        ]
+      },
+      "grain": {
+        "amount": 0.5,
+        "size": 1.9
+      },
+      "halation": {
+        "amount": 0.3,
+        "threshold": 0.75,
+        "radius": 0.02,
+        "color": [
+          1,
+          0.4,
+          0.6
+        ]
+      },
+      "leak": {
+        "amount": 0.85,
+        "position": [
+          0,
+          0.75
+        ],
+        "radius": 1,
+        "color": [
+          1,
+          0.55,
+          0.1
+        ]
+      },
+      "vignette": {
+        "amount": 0.92,
+        "softness": 0.8
+      },
+      "wbDrift": 0.05,
+      "bandColor": "#E02FC8"
+    }
+  ]
+}

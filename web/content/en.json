@@ -1,0 +1,92 @@
+{
+  "name": "Diapo",
+  "title": "Diapo · Film camera with a live viewfinder",
+  "description": "Diapo is a free film camera with no ads: pick a film, see it live in the viewfinder, load rolls that develop later or use the 27-shot disposable camera. No accounts and no internet.",
+  "intro": "Diapo is a camera for Android. You pick a film before you shoot and see it live in the viewfinder: what you see is what gets saved. For anyone who wants photos that look like film without editing them afterwards.",
+  "key_facts": "No accounts · No internet permission · Photos never leave the phone · Open source",
+  "features": [
+    "The film shows in the viewfinder before you shoot. What you see is what gets saved, at full resolution.",
+    "Summer 98, Cold slide, Expired, Flash night, Classic B&W, Press B&W, Instant, Disposable, Cinema and Toy camera.",
+    "Load 12, 24 or 36 shots with a single film. You see none of them until the roll develops, right away or when you choose.",
+    "27 shots with a fixed film. Pass the phone around and find the photos together when the roll develops. Inside, the camera changes its look: cardboard, paper and a wheel to wind on.",
+    "Share a whole roll as one image, with its perforations and frame numbers. No watermark.",
+    "Apply a film to a photo you already have. The original is left untouched."
+  ],
+  "feature_titles": [
+    "Live viewfinder",
+    "Ten films",
+    "Rolls that develop later",
+    "Disposable camera",
+    "Contact sheet",
+    "Develop photos from your phone"
+  ],
+  "privacy_summary": [
+    "Diapo has no accounts, ads or analytics, and it does not ask for the internet permission: it cannot send anything.",
+    "The photos of an undeveloped roll are stored encrypted on the phone and only reach your gallery when the roll develops."
+  ],
+  "faq": [
+    {
+      "question": "Is it really free?",
+      "answer": "Yes. Every film and feature is free, with no ads, no purchases and no watermark."
+    },
+    {
+      "question": "Where can I download it?",
+      "answer": "It cannot be installed yet: Diapo is being tested on Android, and the iPhone version will come later. This page will say so as soon as it can be downloaded."
+    },
+    {
+      "question": "What happens to an undeveloped roll if I change phones?",
+      "answer": "Undeveloped photos only exist on that phone. If you uninstall the app, clear its data or move to another phone, they are lost. Develop the roll first."
+    },
+    {
+      "question": "Can I apply a film to photos I already have?",
+      "answer": "Yes. From the gallery of the app, \"Develop photos from your phone\" opens the system picker. The original photo is left untouched: a new one is saved."
+    }
+  ],
+  "licence_text": "Code GPL-3.0 · Name, icon and screenshots reserved",
+  "screenshot_alts": {
+    "01-viewfinder": "The Diapo viewfinder with a film applied live and the film carousel underneath",
+    "02-films": "The ten films of Diapo, each with its name",
+    "03-roll": "A loaded roll: the photos stay hidden until it develops",
+    "04-disposable": "The cardboard disposable camera, with the counter of shots left",
+    "05-gallery": "The Diapo gallery with developed photos"
+  },
+  "screenshot_captions": {
+    "01-viewfinder": "Pick your film. See the result live.",
+    "02-films": "Ten films. All free.",
+    "03-roll": "Shoot without looking. Find your roll when it develops.",
+    "04-disposable": "27 shots. Pass the camera around.",
+    "05-gallery": "No accounts. No ads. No watermark."
+  },
+  "privacy_date": "2026-11-16",
+  "kicker": "Film camera · Android",
+  "tagline": "Your film camera, with a live viewfinder.",
+  "pitch": "Free and with no ads.",
+  "cta_download": "How to get it",
+  "cta_features": "See the features",
+  "nav_label": "Sections",
+  "nav_about": "What it is",
+  "theme_toggle": "Dark theme",
+  "lcd_label": "Films",
+  "lcd_facts": [
+    { "value": "10", "label": "Original films" },
+    { "value": "12 · 24 · 36", "label": "Shots per roll" },
+    { "value": "27", "label": "Shots in the disposable" },
+    { "value": "0", "label": "Ads" }
+  ],
+  "download_note": "Android 8 or later. Free, with no in-app purchases.",
+  "disposable": {
+    "kicker": "Disposable mode",
+    "stamps": ["27 shots", "One film", "Hidden until developed"],
+    "counter_label": "left",
+    "note": "pass it on"
+  },
+  "privacy_kicker": "Privacy",
+  "privacy_lcd": "No network",
+  "privacy_title": "Your photos never leave the phone",
+  "privacy_code": "Open source (GPL-3.0): you can check that it has no internet permission.",
+  "privacy_code_link": "See the code on GitHub",
+  "support_more": "Another question? Write to",
+  "legal_notice": "Legal notice",
+  "legal_url": "https://github.com/dferrandizmont/diapo/blob/main/docs/legal/aviso-legal.en.md",
+  "copyright": "© 2026 Daniel Mont Ferrandiz"
+}

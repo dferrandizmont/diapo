@@ -1,0 +1,23 @@
+id = "diapo"
+domain = "diapo.mainshai.com"
+languages = ["es", "ca", "en"]
+default_language = "es"
+brand = "#C93A20"
+open_source = true
+free = true
+repo_url = "https://github.com/dferrandizmont/diapo"
+contact_email = "diapo@mainshai.com"
+# The README and store screenshots (skill readme-app), same names in every language.
+screenshots = [
+  "01-viewfinder",
+  "02-films",
+  "03-roll",
+  "04-disposable",
+  "05-gallery",
+]
+privacy = { es = "docs/legal/politica-privacidad.md", ca = "docs/legal/politica-privacidad.ca.md", en = "docs/legal/politica-privacidad.en.md" }
+# Not installable yet: Google Play internal testing is not public. Both platforms stay "soon" without a link.
+downloads = [
+  { kind = "play", state = "soon" },
+  { kind = "app_store", state = "soon" },
+]

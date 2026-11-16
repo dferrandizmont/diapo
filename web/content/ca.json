@@ -1,0 +1,92 @@
+{
+  "name": "Diapo",
+  "title": "Diapo · Càmera de pel·lícula amb visor en directe",
+  "description": "Diapo és una càmera de pel·lícula gratis i sense anuncis: tries una pel·lícula, la veus en directe al visor, carregues carrets que es revelen després o fas servir la càmera d'un sol ús de 27 fotos. Sense comptes i sense internet.",
+  "intro": "Diapo és una càmera per a Android. Tries una pel·lícula abans de disparar i la veus al visor, en directe: el que veus és el que es desa. Per a qui vol fotos amb aire de carret sense editar-les després.",
+  "key_facts": "Sense comptes · Sense permís d'internet · Les fotos no surten del mòbil · Codi obert",
+  "features": [
+    "La pel·lícula es veu al visor abans de disparar. El que veus és el que es desa, a resolució completa.",
+    "Estiu 98, Diapositiva freda, Caducada, Nit de flaix, B/N clàssic, B/N de premsa, Instantània, D'un sol ús, Cinema i Càmera de joguina.",
+    "Carrega 12, 24 o 36 fotos amb una sola pel·lícula. No en veus cap fins que reveles el carret, al moment o quan triïs.",
+    "27 fotos amb la pel·lícula fixa. Passa el mòbil de mà en mà i descobriu les fotos en revelar. En entrar, la càmera canvia d'aspecte: cartró, paper i una roda per avançar.",
+    "Comparteix un carret sencer en una sola imatge, amb les perforacions i els números. Sense marca d'aigua.",
+    "Aplica una pel·lícula a una foto que ja tens. L'original no es toca."
+  ],
+  "feature_titles": [
+    "Visor en directe",
+    "Deu pel·lícules",
+    "Carrets que es revelen després",
+    "Càmera d'un sol ús",
+    "Full de contactes",
+    "Revela fotos del mòbil"
+  ],
+  "privacy_summary": [
+    "Diapo no té comptes, anuncis ni analítica, i no demana permís d'internet: no pot enviar res.",
+    "Les fotos d'un carret sense revelar es desen xifrades al mòbil i només arriben a la teva galeria quan el reveles."
+  ],
+  "faq": [
+    {
+      "question": "És gratis de debò?",
+      "answer": "Sí. Totes les pel·lícules i funcions són gratis, sense anuncis, sense compres i sense marca d'aigua."
+    },
+    {
+      "question": "On la descarrego?",
+      "answer": "Encara no es pot instal·lar: Diapo és en proves a Android, i la versió per a iPhone arribarà després. Aquesta pàgina ho dirà tan aviat com es pugui descarregar."
+    },
+    {
+      "question": "Què passa amb un carret sense revelar si canvio de mòbil?",
+      "answer": "Les fotos sense revelar només existeixen en aquell mòbil. Si desinstal·les l'app, n'esborres les dades o canvies de mòbil, es perden. Revela'l abans."
+    },
+    {
+      "question": "Puc aplicar una pel·lícula a fotos que ja tinc?",
+      "answer": "Sí. Des de la galeria de l'app, «Revela fotos del mòbil» obre el selector del sistema. La foto original no es toca: se'n desa una de nova."
+    }
+  ],
+  "licence_text": "Codi GPL-3.0 · Nom, icona i captures reservats",
+  "screenshot_alts": {
+    "01-viewfinder": "El visor de Diapo amb una pel·lícula aplicada en directe i el carrusel de pel·lícules a sota",
+    "02-films": "Les deu pel·lícules de Diapo, cadascuna amb el seu nom",
+    "03-roll": "Un carret carregat: les fotos queden amagades fins que es revela",
+    "04-disposable": "La càmera d'un sol ús de cartró, amb el comptador de fotos que queden",
+    "05-gallery": "La galeria de Diapo amb les fotos revelades"
+  },
+  "screenshot_captions": {
+    "01-viewfinder": "Tria la pel·lícula. Mira el resultat en directe.",
+    "02-films": "Deu pel·lícules. Totes gratis.",
+    "03-roll": "Dispara sense mirar. Descobreix el teu carret en revelar.",
+    "04-disposable": "27 fotos. Passa la càmera de mà en mà.",
+    "05-gallery": "Sense comptes. Sense anuncis. Sense marca d'aigua."
+  },
+  "privacy_date": "2026-11-16",
+  "kicker": "Càmera de pel·lícula · Android",
+  "tagline": "La teva càmera de pel·lícula, amb visor en directe.",
+  "pitch": "Gratis i sense anuncis.",
+  "cta_download": "Com aconseguir-la",
+  "cta_features": "Veure funcions",
+  "nav_label": "Seccions",
+  "nav_about": "Què és",
+  "theme_toggle": "Tema fosc",
+  "lcd_label": "Pel·lícules",
+  "lcd_facts": [
+    { "value": "10", "label": "Pel·lícules pròpies" },
+    { "value": "12 · 24 · 36", "label": "Fotos per carret" },
+    { "value": "27", "label": "Fotos a la d'un sol ús" },
+    { "value": "0", "label": "Anuncis" }
+  ],
+  "download_note": "Android 8 o superior. Gratis, sense compres dins de l'app.",
+  "disposable": {
+    "kicker": "Mode d'un sol ús",
+    "stamps": ["27 fotos", "Una sola pel·lícula", "Amagades fins a revelar"],
+    "counter_label": "en queden",
+    "note": "passa-la"
+  },
+  "privacy_kicker": "Privacitat",
+  "privacy_lcd": "Sense xarxa",
+  "privacy_title": "Les teves fotos no surten del mòbil",
+  "privacy_code": "Codi obert (GPL-3.0): pots comprovar que no té permís d'internet.",
+  "privacy_code_link": "Veure el codi a GitHub",
+  "support_more": "Una altra pregunta? Escriu a",
+  "legal_notice": "Avís legal",
+  "legal_url": "https://github.com/dferrandizmont/diapo/blob/main/docs/legal/aviso-legal.ca.md",
+  "copyright": "© 2026 Daniel Mont Ferrandiz"
+}

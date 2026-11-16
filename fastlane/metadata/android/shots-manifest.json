@@ -1,0 +1,141 @@
+{
+  "generated": "2026-11-16T12:24:41+01:00",
+  "shots_json": "../../../docs/store/shots.json",
+  "images": [
+    {
+      "locale": "ca",
+      "type": "phoneScreenshots",
+      "position": 1,
+      "name": "01-viewfinder.png",
+      "source": "01-viewfinder",
+      "sha256": "4c6dd0beb716e28676f0a08a764632303714dad8f253298adc7bb635bc855929",
+      "title": "Tria la pel·lícula. Mira el resultat en directe."
+    },
+    {
+      "locale": "ca",
+      "type": "phoneScreenshots",
+      "position": 2,
+      "name": "02-films.png",
+      "source": "02-films",
+      "sha256": "a4fbe6a8f42f783c3a05510a29e4e20def517ea4e5b34644ad87423ad2344c7a",
+      "title": "Deu pel·lícules. Totes gratis."
+    },
+    {
+      "locale": "ca",
+      "type": "phoneScreenshots",
+      "position": 3,
+      "name": "03-roll.png",
+      "source": "03-roll",
+      "sha256": "f5e4b0894bf489151084932e7b02c5a20562c2fa18eb0940a2c5f60fd8db3e35",
+      "title": "Dispara sense mirar. Descobreix el teu carret en revelar."
+    },
+    {
+      "locale": "ca",
+      "type": "phoneScreenshots",
+      "position": 4,
+      "name": "04-disposable.png",
+      "source": "04-disposable",
+      "sha256": "3a34d89d749999d0adc10dc62a190fa99366c7bdc44bda2f3dc7652a85a36566",
+      "title": "27 fotos. Passa la càmera de mà en mà."
+    },
+    {
+      "locale": "ca",
+      "type": "phoneScreenshots",
+      "position": 5,
+      "name": "05-gallery.png",
+      "source": "05-gallery",
+      "sha256": "c4a8bb38c6937ce5e295539657a7ee4a8baa94482bb8657f1b49c39536068b16",
+      "title": "Sense comptes. Sense anuncis. Sense marca d'aigua."
+    },
+    {
+      "locale": "en-US",
+      "type": "phoneScreenshots",
+      "position": 1,
+      "name": "01-viewfinder.png",
+      "source": "01-viewfinder",
+      "sha256": "37ecc4da46eb7ddab888d46a3393de74bc59545f91262610d97ac441171ffb28",
+      "title": "Pick your film. See the result live."
+    },
+    {
+      "locale": "en-US",
+      "type": "phoneScreenshots",
+      "position": 2,
+      "name": "02-films.png",
+      "source": "02-films",
+      "sha256": "5415bdeb07cba4529fb4f141ba53fe2764e99752096d2a47394dd3dfe3f80294",
+      "title": "Ten films. All free."
+    },
+    {
+      "locale": "en-US",
+      "type": "phoneScreenshots",
+      "position": 3,
+      "name": "03-roll.png",
+      "source": "03-roll",
+      "sha256": "4cd96c52b1e238d2a0b9aae373b8a11934d6b66c4ffe3ad22e37fdacafa7f571",
+      "title": "Shoot without looking. Find your roll when it develops."
+    },
+    {
+      "locale": "en-US",
+      "type": "phoneScreenshots",
+      "position": 4,
+      "name": "04-disposable.png",
+      "source": "04-disposable",
+      "sha256": "926639a7b6566ccc0ad856892866635004d4511fbecdaedb4e1f6662e7954554",
+      "title": "27 shots. Pass the camera around."
+    },
+    {
+      "locale": "en-US",
+      "type": "phoneScreenshots",
+      "position": 5,
+      "name": "05-gallery.png",
+      "source": "05-gallery",
+      "sha256": "92df96336c71d919dfed8877462b85a5740f3444b510f72f557cea3fd7e2ee5d",
+      "title": "No accounts. No ads. No watermark."
+    },
+    {
+      "locale": "es-ES",
+      "type": "phoneScreenshots",
+      "position": 1,
+      "name": "01-viewfinder.png",
+      "source": "01-viewfinder",
+      "sha256": "0f3a8126982fbb1473c90208195b4f60ceaffd2a186a05efa4a073d31002a467",
+      "title": "Elige la película. Mira el resultado en directo."
+    },
+    {
+      "locale": "es-ES",
+      "type": "phoneScreenshots",
+      "position": 2,
+      "name": "02-films.png",
+      "source": "02-films",
+      "sha256": "613b36e3ee8d72827f2e919f9cdee671a60f817b90e0b6809c61420888053ed6",
+      "title": "Diez películas. Todas gratis."
+    },
+    {
+      "locale": "es-ES",
+      "type": "phoneScreenshots",
+      "position": 3,
+      "name": "03-roll.png",
+      "source": "03-roll",
+      "sha256": "6131ce68a18c18b73c1867713bd7a1abe174f245a9523240a3c4b4c060e653b5",
+      "title": "Dispara sin mirar. Descubre tu carrete al revelar."
+    },
+    {
+      "locale": "es-ES",
+      "type": "phoneScreenshots",
+      "position": 4,
+      "name": "04-disposable.png",
+      "source": "04-disposable",
+      "sha256": "b681b9966a76a899f938244e1e2e93517c95f3a4a0e13bda06e97ac3f0bf55ac",
+      "title": "27 fotos. Pasa la cámara de mano en mano."
+    },
+    {
+      "locale": "es-ES",
+      "type": "phoneScreenshots",
+      "position": 5,
+      "name": "05-gallery.png",
+      "source": "05-gallery",
+      "sha256": "094b43d364082170e6bb313911a8775cee5421e31a942fe04f54c2df0ea702c1",
+      "title": "Sin cuentas. Sin anuncios. Sin marca de agua."
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carrete.app/schema/recipes.schema.json",
+  "title": "Carrete film recipes",
+  "description": "The format of assets/recipes.json. It mirrors the rules of the Dart validator in lib/src/validation.dart. Two rules cannot be written in JSON Schema and are only checked by the validator: the x of the curve points must increase strictly, and the last point of a curve must end at x = 1.",
+  "type": "object",
+  "required": ["schemaVersion", "recipesVersion", "recipes"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "const": 1
+    },
+    "recipesVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "recipes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/recipe" }
+    }
+  },
+  "$defs": {
+    "localizedText": {
+      "type": "object",
+      "required": ["es", "ca", "en"],
+      "additionalProperties": false,
+      "properties": {
+        "es": { "type": "string", "minLength": 1 },
+        "ca": { "type": "string", "minLength": 1 },
+        "en": { "type": "string", "minLength": 1 }
+      }
+    },
+    "curvePoint": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": { "type": "number", "minimum": 0, "maximum": 1 }
+    },
+    "curveFirstPoint": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "prefixItems": [
+        { "const": 0 },
+        { "type": "number", "minimum": 0, "maximum": 1 }
+      ],
+      "items": { "type": "number", "minimum": 0, "maximum": 1 }
+    },
+    "curve": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 16,
+      "prefixItems": [
+        { "$ref": "#/$defs/curveFirstPoint" },
+        { "$ref": "#/$defs/curvePoint" }
+      ],
+      "items": { "$ref": "#/$defs/curvePoint" }
+    },
+    "color": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": { "type": "number", "minimum": 0, "maximum": 1 }
+    },
+    "recipe": {
+      "type": "object",
+      "required": ["id", "name", "description"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]{2,40}$"
+        },
+        "name": { "$ref": "#/$defs/localizedText" },
+        "description": { "$ref": "#/$defs/localizedText" },
+        "kind": {
+          "type": "string",
+          "enum": ["color", "bw"]
+        },
+        "defaults": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "format": {
+              "type": "string",
+              "enum": ["3:2", "4:3", "1:1", "16:9"]
+            },
+            "dateStamp": { "type": "boolean" },
+            "whiteFrame": { "type": "boolean" },
+            "cinemaBands": { "type": "boolean" }
+          }
+        },
+        "exposure": { "type": "number", "minimum": -2, "maximum": 2 },
+        "saturation": { "type": "number", "minimum": 0, "maximum": 2 },
+        "matrix": {
+          "type": "array",
+          "minItems": 9,
+          "maxItems": 9,
+          "items": { "type": "number", "minimum": -2, "maximum": 2 }
+        },
+        "shadowTint": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": { "type": "number", "minimum": -0.2, "maximum": 0.2 }
+        },
+        "highlightTint": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": { "type": "number", "minimum": -0.2, "maximum": 0.2 }
+        },
+        "curve": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "master": { "$ref": "#/$defs/curve" },
+            "r": { "$ref": "#/$defs/curve" },
+            "g": { "$ref": "#/$defs/curve" },
+            "b": { "$ref": "#/$defs/curve" }
+          }
+        },
+        "grain": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "amount": { "type": "number", "minimum": 0, "maximum": 1 },
+            "size": { "type": "number", "minimum": 0.25, "maximum": 4 }
+          }
+        },
+        "halation": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "amount": { "type": "number", "minimum": 0, "maximum": 1 },
+            "threshold": { "type": "number", "minimum": 0, "maximum": 1 },
+            "radius": { "type": "number", "minimum": 0, "maximum": 0.05 },
+            "color": { "$ref": "#/$defs/color" }
+          }
+        },
+        "leak": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "amount": { "type": "number", "minimum": 0, "maximum": 1 },
+            "position": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": { "type": "number", "minimum": 0, "maximum": 1 }
+            },
+            "radius": { "type": "number", "minimum": 0.05, "maximum": 1.5 },
+            "color": { "$ref": "#/$defs/color" }
+          }
+        },
+        "vignette": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "amount": { "type": "number", "minimum": 0, "maximum": 1 },
+            "softness": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        },
+        "wbDrift": { "type": "number", "minimum": 0, "maximum": 0.1 },
+        "bandColor": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

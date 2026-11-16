@@ -1,0 +1,105 @@
+{% extends 'base/layout.html.j2' %}
+{% from 'base/screenshots.html.j2' import picture %}
+{% from 'base/faq.html.j2' import faq %}
+{#- Design "A + desechable": the whole page is the plastic compact of design A; only the disposable camera block, inside
+    the features, switches to the kraft cardboard and paper of design C, as the app does in the disposable mode. -#}
+{% block content %}{% set disposable_index = 3 %}
+<div class="wrap stack">
+
+<section id="about" class="body">
+  <div class="hero">
+    <div class="hero-text">
+      <div class="hero-top">
+        <div class="lcd-unit">
+          <p class="lcd"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"></rect><path d="M7 5v14M17 5v14M3 9h4M3 15h4M17 9h4M17 15h4"></path></svg><span>10</span></p>
+          <p class="silk">{{ c.lcd_label }}</p>
+        </div>
+        <p class="silk kicker">{{ c.kicker }}</p>
+      </div>
+      <h1>{{ c.tagline }}</h1>
+      <p class="pitch">{{ c.pitch }}</p>
+      <p class="intro">{{ c.intro }}</p>
+      <p class="ctas"><a class="shutter-key" href="#download">{{ c.cta_download }}</a><a class="key" href="#features">{{ c.cta_features }}</a></p>
+    </div>
+    <div class="hero-phone">
+      <div class="phone">{{ picture(shots[0], true, "(max-width: 600px) 60vw, 270px") }}</div>
+      <span class="shutter" aria-hidden="true"><span></span></span>
+    </div>
+  </div>
+  <ul class="facts">
+    {% for fact in c.lcd_facts %}<li><span class="lcd">{{ fact.value }}</span><span class="silk">{{ fact.label }}</span></li>{% endfor %}
+  </ul>
+  <p class="key-facts">{{ c.key_facts }}</p>
+</section>
+
+<section id="download" aria-labelledby="h-download">
+  <h2 id="h-download">{{ t.download }}</h2>
+  <div class="plate download">
+    {% for item in site.downloads %}<div class="dl">
+      <p class="silk">{{ t.android if item.kind in ['play', 'apk', 'fdroid'] else t.ios }}</p>
+      {% if item.state == 'soon' %}<span class="key key-sunk">{{ t[item.kind] }} · {{ t[item.state] }}</span>
+      {% else %}<a class="key" href="{{ item.url }}">{{ t[item.kind] }} · {{ t[item.state] }}</a>{% endif %}
+    </div>{% endfor %}
+    <p class="dl-note">{{ c.download_note }}</p>
+  </div>
+</section>
+
+<section id="screenshots" aria-labelledby="h-shots">
+  <h2 id="h-shots">{{ t.screenshots }}</h2>
+  <ul class="shots">
+    {% for shot in shots %}<li><figure>
+      <div class="phone">{{ picture(shot, loop.first, "(max-width: 600px) 52vw, 204px") }}</div>
+      <figcaption>{{ c.screenshot_captions[site.screenshots[loop.index0]] }}</figcaption>
+    </figure></li>{% endfor %}
+  </ul>
+</section>
+
+<section id="features" aria-labelledby="h-features">
+  <h2 id="h-features">{{ t.features }}</h2>
+  <ul class="features">
+    {% for feature in c.features %}{% if loop.index0 == disposable_index %}
+      <li class="kraft" data-feature>
+        <div class="kraft-body">
+          <div class="kraft-label">
+            <p class="kraft-kicker"><span class="kraft-n">{{ '%02d' | format(disposable_index + 1) }}</span>{{ c.disposable.kicker }}</p>
+            <h3>{{ c.feature_titles[disposable_index] }}</h3>
+            <p>{{ c.features[disposable_index] }}</p>
+            <p class="stamps">{% for stamp in c.disposable.stamps %}<span>{{ stamp }}</span>{% endfor %}</p>
+          </div>
+          <div class="kraft-art" aria-hidden="true">
+            <p class="counter"><span class="counter-n">27</span><span class="counter-l">{{ c.disposable.counter_label }}</span></p>
+            <span class="paper-shutter"><span><span></span></span></span>
+            <span class="pencil">{{ c.disposable.note }}</span>
+          </div>
+        </div>
+      </li>
+    {% else %}<li class="cartridge band-{{ loop.index }}">
+      <p class="silk">{{ '%02d' | format(loop.index) }}</p>
+      <h3>{{ c.feature_titles[loop.index0] }}</h3>
+      <p>{{ feature }}</p>
+    </li>{% endif %}{% endfor %}
+  </ul>
+</section>
+
+<section id="privacy" class="plate privacy" aria-labelledby="h-privacy">
+  <div class="lcd-unit">
+    <p class="lcd"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1.5"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg><span>{{ c.privacy_lcd }}</span></p>
+    <p class="silk">{{ c.privacy_kicker }}</p>
+  </div>
+  <div class="privacy-text">
+    <h2 id="h-privacy">{{ c.privacy_title }}</h2>
+    {% for sentence in c.privacy_summary %}<p>{{ sentence }}</p>{% endfor %}
+    <p>{{ c.privacy_code }} <a href="{{ site.repo_url }}">{{ c.privacy_code_link }}</a></p>
+    <p><a class="strong-link" href="{{ route(lang, true) }}">{{ t.privacy_full }}</a></p>
+  </div>
+</section>
+
+<section id="support" aria-labelledby="h-support">
+  <h2 id="h-support">{{ t.support }}</h2>
+  <h3 class="silk">{{ t.faq }}</h3>
+  <div class="plate faq">{{ faq(c.faq) }}</div>
+  <p class="more">{{ c.support_more }} <a href="mailto:{{ contact_email }}">{{ contact_email }}</a>.</p>
+</section>
+
+</div>
+{% endblock %}

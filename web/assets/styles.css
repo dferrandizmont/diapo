@@ -1,0 +1,257 @@
+/* Diapo · design "A + desechable".
+   The page is the plastic compact of design A (lib/ui/theme/carrete_tokens.dart): LCD window, raised keys, film
+   cartridges with their band colours, the red shutter. Only the disposable camera block switches to the kraft and
+   paper of design C (lib/ui/theme/disposable_tokens.dart), as the app does in the disposable mode.
+   Light and dark follow the system; assets/theme.js can pin one with data-theme on <html>. */
+
+@font-face { font-family: "Chakra Petch"; src: url("fonts/ChakraPetch-SemiBold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Chakra Petch"; src: url("fonts/ChakraPetch-Bold.ttf") format("truetype"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Barlow Semi Condensed"; src: url("fonts/BarlowSemiCondensed-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Barlow Semi Condensed"; src: url("fonts/BarlowSemiCondensed-SemiBold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Bowlby One"; src: url("fonts/BowlbyOne-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Space Mono"; src: url("fonts/SpaceMono-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Space Mono"; src: url("fonts/SpaceMono-Bold.ttf") format("truetype"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Caveat"; src: url("fonts/Caveat-Variable.ttf") format("truetype"); font-weight: 400 700; font-display: swap; }
+
+:root {
+  color-scheme: light dark;
+  --display: "Chakra Petch", "Barlow Semi Condensed", system-ui, sans-serif;
+  --text: "Barlow Semi Condensed", system-ui, sans-serif;
+  /* Light: the light gallery and the light camera of design A. */
+  --bg: #F1F0EB; --plate: #FBFAF6; --hair: #D9D6CC; --ink: #1B1C1E; --soft: #55595F; --accent: #B93420;
+  --body: #E2DFD6; --body-top: #ECE9E1; --key-top: #F6F4EE; --key-bot: #E9E6DE; --key-shadow: rgba(0, 0, 0, 0.35);
+  --key-hi: rgba(255, 255, 255, 0.7); --sunk-top: #D3D0C7; --sunk-bot: #DCD9D0; --tray: #CFCBC1; --foot: #E2DFD6;
+  --plate-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); --body-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+  /* Fixed: the LCD, the viewfinder and the shutter look the same in both themes. */
+  --lcd-top: #C3CDAF; --lcd-bot: #AEBA98; --lcd-ink: #18200F; --viewfinder: #0B0C0D; --silk2: #A9ADB2;
+  --red: #C93A20;
+  /* Design C, only inside the disposable block. */
+  --kraft-top: #CBA36C; --kraft-bot: #B68B54; --c-ink: #1A1713; --c-ink2: #3A332A; --c-paper: #F2E8D3;
+  --c-paper-light: #FFF8E6; --c-red: #BA2E1C; --c-yellow: #F2C230;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111214; --plate: #17181A; --hair: #2C2E32; --ink: #ECEAE3; --soft: #A4A8AE; --accent: #FF7A59;
+    --body: #232528; --body-top: #2B2D31; --key-top: #3D4045; --key-bot: #2A2C30; --key-shadow: #050506;
+    --key-hi: rgba(255, 255, 255, 0.08); --sunk-top: #17181A; --sunk-bot: #222427; --tray: #0B0C0D; --foot: #0B0C0D;
+    --plate-shadow: none; --body-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+  }
+}
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #111214; --plate: #17181A; --hair: #2C2E32; --ink: #ECEAE3; --soft: #A4A8AE; --accent: #FF7A59;
+  --body: #232528; --body-top: #2B2D31; --key-top: #3D4045; --key-bot: #2A2C30; --key-shadow: #050506;
+  --key-hi: rgba(255, 255, 255, 0.08); --sunk-top: #17181A; --sunk-bot: #222427; --tray: #0B0C0D; --foot: #0B0C0D;
+  --plate-shadow: none; --body-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 1rem; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--text); font-size: 1.125rem; line-height: 1.5; }
+img, svg { display: block; max-width: 100%; }
+a { color: var(--accent); text-underline-offset: 0.2em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; margin: 0; overflow-wrap: break-word; }
+h2 { font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem); }
+p { margin: 0; }
+.vh { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 10; padding: 0.75rem 1rem; border-radius: 8px; background: var(--ink); color: var(--bg); font-weight: 600; }
+.skip-link:focus { top: 1rem; }
+.wrap { width: 100%; max-width: 75rem; margin: 0 auto; padding-inline: clamp(1rem, 4vw, 2.5rem); }
+.ico { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+/* Silkscreen print: small spaced capitals. */
+.silk { font-family: var(--display); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--soft); }
+
+/* Raised keys of the camera. */
+.key { display: inline-flex; max-width: 100%; align-items: center; justify-content: center; gap: 0.5rem; min-height: 3rem; padding: 0.5rem 1.375rem;
+  border: 0; border-radius: 8px; background: linear-gradient(180deg, var(--key-top), var(--key-bot));
+  box-shadow: inset 0 1px 0 var(--key-hi), 0 3px 0 var(--key-shadow); color: var(--ink);
+  font-family: var(--display); font-weight: 600; font-size: 1rem; text-decoration: none; text-align: center; cursor: pointer; }
+.key:hover { text-decoration: none; filter: brightness(1.03); }
+a.key:active, button.key:active { transform: translateY(2px); box-shadow: inset 0 1px 0 var(--key-hi), 0 1px 0 var(--key-shadow); }
+.key-sunk { background: linear-gradient(180deg, var(--sunk-top), var(--sunk-bot)); box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3); color: var(--soft); cursor: default; }
+.shutter-key { display: inline-flex; max-width: 100%; align-items: center; min-height: 3rem; padding: 0.5rem 1.625rem; border-radius: 999px;
+  background: radial-gradient(circle at 35% 25%, #F06A4E, var(--red) 60%, #AE2D18); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 3px 0 #741C0E;
+  color: #FFFFFF; font-family: var(--display); font-weight: 700; font-size: 0.9375rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; }
+.shutter-key:focus-visible { outline-color: var(--ink); }
+
+/* LCD window. */
+.lcd { display: inline-flex; align-items: center; gap: 0.5rem; max-width: 100%; padding: 0.375rem 0.75rem; border-radius: 6px;
+  background: linear-gradient(180deg, var(--lcd-top), var(--lcd-bot)); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35);
+  color: var(--lcd-ink); font-family: var(--display); font-weight: 700; font-size: 1.375rem; line-height: 1.15; letter-spacing: 0.04em; overflow-wrap: anywhere; }
+.lcd-unit { display: flex; flex-direction: column; align-items: center; gap: 0.375rem; flex: none; }
+.lcd-unit .lcd { font-size: 2rem; line-height: 1; }
+
+/* Header. */
+.hd-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.25rem; }
+.brand { display: inline-flex; align-items: center; gap: 0.75rem; color: var(--ink); text-decoration: none; font-family: var(--display); font-weight: 600; font-size: 1.625rem; }
+.brand img { border-radius: 10px; }
+.hd-nav { display: none; gap: 1.5rem; }
+.hd-nav a { color: var(--soft); text-decoration: none; font-weight: 600; font-size: 0.9375rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.hd-nav a:hover { color: var(--ink); }
+.hd-tools { display: flex; flex-wrap: wrap; margin-left: auto; align-items: center; gap: 0.625rem; }
+.lang { display: flex; gap: 3px; padding: 3px; border-radius: 11px; background: var(--tray); box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.35); }
+.lang a { display: flex; align-items: center; justify-content: center; min-width: 2.75rem; min-height: 2.75rem; border-radius: 8px;
+  background: linear-gradient(180deg, var(--key-top), var(--key-bot)); box-shadow: inset 0 1px 0 var(--key-hi), 0 2px 0 var(--key-shadow);
+  color: var(--ink); font-family: var(--display); font-weight: 600; font-size: 0.875rem; text-decoration: none; }
+.lang a[aria-current="page"] { background: linear-gradient(180deg, var(--sunk-top), var(--sunk-bot)); box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.35); color: var(--accent); font-weight: 700; }
+.theme-toggle { width: 2.75rem; min-height: 2.75rem; padding: 0; }
+.theme-toggle[hidden] { display: none; }
+.theme-toggle .i-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .i-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .i-sun { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .i-moon { display: none; }
+  :root:not([data-theme="light"]) .theme-toggle .i-sun { display: block; }
+}
+@media (min-width: 60rem) { .hd-nav { display: flex; } }
+
+/* Page rhythm. */
+main { display: block; }
+.stack { display: flex; flex-direction: column; gap: clamp(3.5rem, 7vw, 6rem); padding-top: 0.5rem; padding-bottom: 4.5rem; }
+section > h2 { margin-bottom: 1.25rem; }
+.plate { border-radius: 12px; background: var(--plate); border: 1px solid var(--hair); box-shadow: var(--plate-shadow); }
+
+/* About: the body of the camera. */
+.body { border-radius: 28px; background: linear-gradient(180deg, var(--body-top), var(--body));
+  box-shadow: inset 0 1px 0 var(--key-hi), 0 3px 0 var(--key-shadow), var(--body-shadow);
+  padding: clamp(1.25rem, 4vw, 3.5rem); display: flex; flex-direction: column; gap: 2rem; }
+.hero { display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: center; }
+.hero-text { flex: 1 1 28rem; min-width: 0; display: flex; flex-direction: column; gap: 1.25rem; }
+.hero-top { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+.hero-top .kicker { padding-bottom: 1.25rem; }
+.hero h1 { font-size: clamp(2.25rem, 1.5rem + 3.2vw, 4.125rem); line-height: 1.04; letter-spacing: -0.01em; text-wrap: balance; }
+.pitch { font-family: var(--display); font-weight: 600; font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.7rem); color: var(--accent); }
+.intro { max-width: 34em; font-size: 1.1875rem; color: var(--soft); }
+.ctas { display: flex; flex-wrap: wrap; gap: 0.875rem; padding-top: 0.375rem; }
+.hero-phone { flex: 1 1 17rem; display: flex; justify-content: center; position: relative; padding-bottom: 0.75rem; }
+.hero-phone .phone { width: min(15rem, 70%); }
+.shutter { position: absolute; right: max(0px, calc(50% - 12rem)); bottom: 0; width: 5.75rem; height: 5.75rem; padding: 0.5rem; border-radius: 50%;
+  background: repeating-conic-gradient(#17181A 0 5deg, #3F4247 5deg 10deg); box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4); }
+.shutter span { display: block; width: 100%; height: 100%; border-radius: 50%; background: radial-gradient(circle at 35% 28%, #FF9A80, #E5442A 45%, #AE2D18); box-shadow: 0 4px 0 #741C0E; }
+
+/* Phone frame around a screenshot. */
+.phone { padding: 0.5rem; border-radius: 2rem; background: var(--viewfinder); box-shadow: 0 2px 0 #050506, 0 16px 32px rgba(0, 0, 0, 0.25); }
+.phone img { width: 100%; height: auto; border-radius: 1.5rem; background: #1B1C1E; }
+
+/* Key facts: LCD chips. The value wraps at its spaces, so "12 · 24 · 36" never leaves its box, at any width or text size. */
+.facts { list-style: none; margin: 0; padding: 1.75rem 0 0; border-top: 1px solid var(--hair);
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10.5rem), 1fr)); gap: 1.375rem 1.125rem; }
+.facts li { min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+.facts .silk { line-height: 1.35; }
+.key-facts { font-size: 1rem; color: var(--soft); margin-top: -0.5rem; }
+
+/* Download. */
+.download { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 1.25rem 1.75rem; padding: 1.25rem; }
+.dl { max-width: 100%; min-width: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.dl .key { font-size: 1.0625rem; min-height: 3.25rem; }
+.dl-note { flex: 1 1 14rem; font-size: 1rem; color: var(--soft); }
+
+/* Screenshots: a row that scrolls sideways like the film carousel. */
+.shots { list-style: none; margin: 0; padding: 0.25rem 0.25rem 1rem; display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory; }
+.shots li { flex: 0 0 min(12.75rem, 60vw); scroll-snap-align: start; }
+.shots figure { margin: 0; display: flex; flex-direction: column; gap: 0.875rem; }
+.shots figcaption { font-family: var(--display); font-weight: 600; font-size: 1rem; line-height: 1.3; }
+
+/* Features: film cartridges with the band colour of a film. */
+.features { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr)); gap: 1.25rem; }
+.cartridge { display: flex; flex-direction: column; gap: 0.5rem; padding: 1.375rem 1.375rem 1.5rem; border-radius: 9px;
+  background: linear-gradient(180deg, var(--key-top), var(--key-bot)) padding-box;
+  box-shadow: inset 0 1px 0 var(--key-hi), inset 0 -6px 0 var(--band, #9A9A9A), 0 3px 0 var(--key-shadow); }
+.cartridge h3 { font-size: 1.3125rem; }
+.cartridge p:last-child { font-size: 1.0625rem; color: var(--soft); }
+.band-1 { --band: #E8772E; }
+.band-2 { --band: #3A6FE0; }
+.band-3 { --band: #7FB03A; }
+.band-5 { --band: #1FA88C; }
+.band-6 { --band: #C42B44; }
+
+/* The disposable camera: design C inside one block. */
+.kraft { grid-column: 1 / -1; margin-top: 1.125rem; color: var(--c-ink); }
+.kraft::before { content: ""; display: block; height: 16px;
+  background: linear-gradient(135deg, transparent 50%, var(--kraft-top) 50%) 0 0 / 16px 16px repeat-x,
+              linear-gradient(225deg, transparent 50%, var(--kraft-top) 50%) 0 0 / 16px 16px repeat-x; }
+.kraft-body { display: flex; flex-wrap: wrap; align-items: center; gap: 2.5rem; padding: clamp(1rem, 4vw, 3rem); border-radius: 0 0 12px 12px;
+  background: repeating-linear-gradient(90deg, rgba(90, 56, 20, 0.14) 0 2px, transparent 2px 9px), linear-gradient(180deg, var(--kraft-top), var(--kraft-bot)); }
+.kraft-label { flex: 1 1 20rem; min-width: 0; display: flex; flex-direction: column; gap: 0.875rem; padding: clamp(1rem, 3vw, 2rem);
+  background: var(--c-paper-light); border: 2px solid var(--c-ink); box-shadow: 7px 7px 0 var(--c-ink); transform: rotate(-0.8deg);
+  font-family: "Space Mono", ui-monospace, monospace; font-size: 0.97rem; line-height: 1.55; }
+.kraft-kicker { display: flex; flex-wrap: wrap; align-items: center; gap: 0.625rem; font-weight: 700; font-size: 0.8125rem; letter-spacing: 0.12em; text-transform: uppercase; }
+/* The number of the feature, as a red sticker of design C, so the list reads 01 to 06 across the two designs. */
+.kraft-n { display: inline-flex; align-items: center; justify-content: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--c-red); border: 2px solid var(--c-ink); color: var(--c-paper-light); font-family: "Bowlby One", sans-serif; font-weight: 400; font-size: 0.9375rem; letter-spacing: 0; transform: rotate(-6deg); flex: none; }
+.kraft h3 { font-family: "Bowlby One", var(--display); font-weight: 400; font-size: clamp(1.5rem, 1.1rem + 1.8vw, 2.75rem); line-height: 1.05; hyphens: auto; }
+.kraft-label > p:not(.kraft-kicker) { color: var(--c-ink2); }
+.stamps { margin: 0; padding: 0.25rem 0 0; display: flex; flex-wrap: wrap; gap: 0.75rem 0.875rem; }
+.stamps span { max-width: 100%; overflow-wrap: anywhere; padding: 0.375rem 0.75rem; border: 2px solid var(--c-ink); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; transform: rotate(-1.5deg); }
+.stamps span:nth-child(2) { transform: rotate(1deg); }
+.stamps span:nth-child(3) { border-color: var(--c-red); color: var(--c-red); transform: rotate(-0.6deg); }
+.kraft-art { flex: 1 1 16rem; flex-wrap: wrap; position: relative; min-height: 11rem; display: flex; align-items: center; justify-content: center; gap: 1.75rem; }
+.counter { width: 8.125rem; height: 8.125rem; border-radius: 50%; background: var(--c-paper); border: 2px solid var(--c-ink); box-shadow: 5px 5px 0 var(--c-yellow);
+  transform: rotate(-8deg); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.counter-n { font-family: "Bowlby One", sans-serif; font-size: 3.375rem; line-height: 1; }
+.counter-l { font-family: "Caveat", cursive; font-weight: 700; font-size: 1.5rem; line-height: 1; }
+.paper-shutter { width: 6.5rem; height: 6.5rem; border-radius: 50%; background: var(--c-paper); border: 2px solid var(--c-ink); box-shadow: 4px 4px 0 var(--c-ink);
+  display: flex; align-items: center; justify-content: center; }
+.paper-shutter > span { width: 4.75rem; height: 4.75rem; border-radius: 50%; border: 2px dashed var(--c-ink); display: flex; align-items: center; justify-content: center; }
+.paper-shutter > span > span { width: 3.375rem; height: 3.375rem; border-radius: 50%; background: var(--c-red); border: 2px solid var(--c-ink); }
+.pencil { position: absolute; right: 0.25rem; bottom: -0.375rem; font-family: "Caveat", cursive; font-weight: 700; font-size: 1.625rem; transform: rotate(-4deg); }
+
+/* Privacy. */
+.privacy { display: flex; flex-wrap: wrap; align-items: center; gap: 1.75rem; padding: clamp(1.375rem, 3.5vw, 2.5rem); }
+.privacy .lcd { font-size: 1.625rem; }
+.privacy-text { flex: 1 1 26rem; min-width: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+.privacy-text p { color: var(--soft); }
+.privacy-text a { font-weight: 600; }
+.strong-link { font-family: var(--display); font-size: 1.0625rem; }
+
+/* Support. */
+#support > h3 { margin-bottom: 0.75rem; }
+.faq details { padding: 1.125rem 1.375rem; border-bottom: 1px solid var(--hair); }
+.faq details:last-child { border-bottom: 0; }
+.faq summary { cursor: pointer; font-family: var(--display); font-weight: 600; font-size: 1.1875rem; }
+.faq details p { margin-top: 0.625rem; color: var(--soft); }
+.more { margin-top: 1.25rem; color: var(--soft); }
+.more a { font-weight: 600; }
+
+/* Footer. */
+.ft { background: var(--foot); border-top: 1px solid var(--hair); }
+.ft-in { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 1.5rem 2.5rem; padding-block: 2rem 2.5rem; }
+.ft-author { display: flex; align-items: center; gap: 0.625rem; font-weight: 600; }
+.ft-author img { border-radius: 7px; }
+.ft-author a { color: var(--ink); }
+.ft-small { font-size: 0.875rem; color: var(--soft); }
+.ft-brand { display: flex; flex-direction: column; gap: 0.375rem; }
+.ft-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 1rem; }
+.ft-links a { color: var(--ink); }
+.ft-note { align-self: flex-end; font-family: var(--display); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--soft); }
+
+/* Privacy page. */
+.doc { max-width: 52rem; padding-top: clamp(1.5rem, 5vw, 3.5rem); padding-bottom: 5rem; }
+.crumbs { font-size: 0.9375rem; color: var(--soft); margin-bottom: 1rem; }
+.crumbs a { font-weight: 600; }
+.doc h1 { font-size: clamp(2.125rem, 1.6rem + 2.5vw, 3.375rem); line-height: 1.05; }
+.docmeta { margin-top: 0.875rem; color: var(--soft); }
+.privacy-fallback { margin-top: 1rem; padding: 0.75rem 1rem; border-radius: 8px; background: var(--plate); border: 1px solid var(--hair); }
+.prose { margin-top: 2.25rem; }
+.prose > * + * { margin-top: 1rem; }
+.prose h2 { font-size: 1.375rem; margin-top: 2.25rem; color: var(--soft); }
+.prose h3 { font-size: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem); margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--hair); }
+.prose h4 { font-size: 1.1875rem; margin-top: 1.75rem; }
+.prose ul, .prose ol { padding-left: 1.3em; }
+.prose li + li { margin-top: 0.375rem; }
+.prose code { font-size: 0.92em; padding: 0.05em 0.3em; border-radius: 4px; background: var(--plate); border: 1px solid var(--hair); overflow-wrap: anywhere; }
+.prose table { display: block; overflow-x: auto; max-width: 100%; border-collapse: collapse; font-size: 0.95rem; line-height: 1.45;
+  border: 1px solid var(--hair); border-radius: 12px; background: var(--plate); }
+.prose th, .prose td { padding: 0.75rem 0.875rem; text-align: left; vertical-align: top; min-width: 11rem; border-top: 1px solid var(--hair); }
+.prose th { font-family: var(--display); font-weight: 700; background: var(--key-bot); border-top: 0; }
+
+/* 404. */
+.nf { padding-block: clamp(2.5rem, 8vw, 6rem); display: flex; flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+.nf h1 { font-size: clamp(2rem, 1.5rem + 2vw, 3rem); }
+.lcd-big { font-size: 3rem; }
+.nf-links { list-style: none; margin: 0.5rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 1rem; }
+
+@media (forced-colors: active) { .key, .lang a, .lcd, .plate, .cartridge { border: 1px solid ButtonText; } }

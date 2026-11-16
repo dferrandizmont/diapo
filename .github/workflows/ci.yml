@@ -1,0 +1,115 @@
+name: CI
+
+# The private repository has no spare Actions minutes: CI runs only for a
+# release tag (v*) or when started by hand (Actions > CI > Run workflow, or
+# `gh workflow run ci.yml`). Day-to-day checks run locally through heavy.sh.
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  FLUTTER_SUPPRESS_ANALYTICS: 'true'
+  DART_SUPPRESS_ANALYTICS: 'true'
+
+jobs:
+  flutter:
+    name: Flutter and film recipes
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+
+      # Cache the SDK and public hosted packages, excluding Pub credentials
+      # and Git dependencies. Never cache the checkout or Gradle user home.
+      - name: Cache Flutter and Pub packages
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ${{ runner.tool_cache }}/flutter
+            ~/.pub-cache/hosted
+            ~/.pub-cache/hosted-hashes
+          key: ${{ runner.os }}-flutter-3.47.7-${{ hashFiles('**/pubspec.lock') }}
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          flutter-version: '3.47.7'
+          channel: stable
+          # Use the SHA-pinned cache action above instead of the action's
+          # built-in cache steps, which reference a mutable action tag.
+          cache: false
+          pub-cache: false
+
+      - name: Install Flutter dependencies
+        run: flutter pub get
+
+      - name: Install film recipe dependencies
+        working-directory: packages/film_recipes
+        run: dart pub get
+
+      - name: Check formatting
+        run: dart format --output=none --set-exit-if-changed .
+
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Test Flutter
+        run: flutter test
+
+      - name: Test film recipes
+        working-directory: packages/film_recipes
+        run: dart test
+
+  android:
+    name: Android JVM unit tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Java
+        uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00 # v4.7.1
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Cache Flutter and Pub packages
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ${{ runner.tool_cache }}/flutter
+            ~/.pub-cache/hosted
+            ~/.pub-cache/hosted-hashes
+          key: ${{ runner.os }}-flutter-3.47.7-${{ hashFiles('**/pubspec.lock') }}
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          flutter-version: '3.47.7'
+          channel: stable
+          cache: false
+          pub-cache: false
+
+      - name: Install Flutter dependencies
+        run: flutter pub get
+
+      - name: Build debug APK and generate Gradle wrapper
+        run: flutter build apk --debug
+
+      - name: Test Android JVM code
+        working-directory: android
+        run: ./gradlew :app:testDebugUnitTest

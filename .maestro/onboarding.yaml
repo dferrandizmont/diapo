@@ -1,0 +1,23 @@
+appId: io.github.dferrandizmont.carrete
+---
+- launchApp:
+    clearState: true
+    permissions:
+      camera: allow
+      notifications: allow
+- assertVisible: "Paso 1 de 3"
+- assertVisible: 'Una cámara, no un filtro\.'
+- tapOn: "Siguiente"
+- assertVisible: "Paso 2 de 3"
+- assertVisible: 'Elige la película y afínala\.'
+- tapOn: "Siguiente"
+- assertVisible: "Paso 3 de 3"
+- assertVisible: 'Un carrete: fotos sin mirar\.'
+- tapOn: "Empezar a disparar"
+- extendedWaitUntil:
+    visible:
+      text: "Disparar"
+      enabled: true
+    timeout: 30000
+- assertVisible: "Ninguna foto en esta sesión"
+- assertVisible: "Cargar un carrete"

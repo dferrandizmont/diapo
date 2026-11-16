@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>{% include 'base/head.html.j2' %}
+<script src="{{ 'theme.js' | asset }}"></script></head>
+<body class="page-{{ page_kind }}">
+{% include 'base/skip_link.html.j2' %}
+{% block header %}{% set home = '' if page_kind == 'home' else route(lang) %}
+<header class="hd">
+  <div class="wrap hd-in">
+    <a class="brand" href="{{ route(lang) }}"><img src="/icon.png" alt="" width="40" height="40">{{ c.name }}</a>
+    <nav class="hd-nav" aria-label="{{ c.nav_label }}">
+      <a href="{{ home }}#about">{{ c.nav_about }}</a><a href="{{ home }}#download">{{ t.download }}</a><a href="{{ home }}#features">{{ t.features }}</a><a href="{{ home }}#privacy">{{ t.privacy }}</a><a href="{{ home }}#support">{{ t.support }}</a>
+    </nav>
+    <div class="hd-tools">
+      {% include 'base/lang_switcher.html.j2' %}
+      {% include 'base/theme_toggle.html.j2' %}
+    </div>
+  </div>
+</header>
+{% endblock %}
+<main id="content">{% block content %}{% endblock %}</main>
+{% block footer %}{% include 'base/required_footer.html.j2' %}{% endblock %}
+</body>
+</html>

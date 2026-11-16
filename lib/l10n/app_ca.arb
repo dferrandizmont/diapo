@@ -1,0 +1,746 @@
+{
+  "@@locale": "ca",
+  "appTitle": "Diapo",
+  "galleryTitle": "Galeria",
+  "settingsTitle": "Configuració",
+  "rollTitle": "Carret",
+  "settingCameraSounds": "Sons de la càmera",
+  "settingSaveOriginal": "Desa també l'original",
+  "settingSaveOriginalHint": "Si es pot, també desa la foto sense pel·lícula.",
+  "settingSaveLocation": "Desa la ubicació",
+  "settingGrid": "Reixeta",
+  "settingLevel": "Nivell",
+  "settingDateStamp": "Data a la foto",
+  "settingDefaultFilm": "Pel·lícula per defecte",
+  "settingTheme": "Tema",
+  "settingLanguage": "Idioma",
+  "settingDateStyle": "Estil de la data",
+  "dateStyleYearFirst": "Any primer",
+  "dateStyleDayFirst": "Dia primer",
+  "dateStyleSemantics": "{style}: {date}",
+  "settingsSectionCamera": "Càmera",
+  "settingsSectionLook": "Aspecte",
+  "settingsSectionAdvanced": "Avançat",
+  "settingsSectionAbout": "Quant a",
+  "themeSystem": "Sistema",
+  "themeLight": "Clar",
+  "themeDark": "Fosc",
+  "languageSystem": "Sistema",
+  "languageSpanish": "Español",
+  "languageCatalan": "Català",
+  "languageEnglish": "English",
+  "settingsVersion": "Versió",
+  "settingsOfflineNote": "Funciona sense connexió, sense comptes ni anuncis. Les teves fotos mai no surten del mòbil.",
+  "settingsFreeSoftwareNote": "Diapo és programari lliure sota la llicència GPL-3.0-only. Codi font: https://github.com/dferrandizmont/diapo",
+  "settingsLicences": "Llicències",
+  "settingsPrivacyPolicy": "Política de privacitat",
+  "settingsLegalNotice": "Avís legal",
+  "cameraCounterLabel": "Fotos soltes",
+  "cameraCounterSemantics": "{film}, fotos soltes",
+  "flashOff": "Apagat",
+  "flashAuto": "Automàtic",
+  "flashOn": "Encès",
+  "flashParty": "Festa",
+  "flashKeyLabel": "Flaix: {mode}",
+  "switchCameraLabel": "Canviar de càmera",
+  "shutterLabel": "Disparar",
+  "formatKeyLabel": "Format {format}",
+  "formatKeyHint": "Canvia el format del quadre",
+  "viewfinderLabel": "Visor de la càmera",
+  "filmCarouselLabel": "Pel·lícules",
+  "filmCartridgeHint": "Mantén premut per als ajustos fins",
+  "tunePanelLabel": "Ajustos fins de {film}",
+  "tuneSubtitle": "Ajustos fins",
+  "tuneClose": "Tancar",
+  "tuneGrain": "Gra",
+  "tuneHalation": "Halos",
+  "tuneLeak": "Fuita de llum",
+  "tuneVignette": "Vinyeta",
+  "tuneDateStamp": "Data impresa",
+  "tuneCinemaBands": "Bandes de cinema",
+  "tuneFormat": "Format",
+  "whiteFrameHint": "Marc blanc en desar",
+  "focusLockedLabel": "Enfocament i exposició bloquejats. Toca per deixar anar",
+  "zoomLabel": "{zoom}x",
+  "cameraPermissionDenied": "Cal el permís de la càmera per fer fotos. Pots concedir-lo als ajustos del sistema.",
+  "cameraOpenSettings": "Obre els ajustos",
+  "cameraUnavailable": "No es pot obrir la càmera.",
+  "cameraRetry": "Tornar-ho a provar",
+  "shotSaved": "Foto desada",
+  "shotSaveFailed": "No s'ha pogut desar la foto.",
+  "filmsLoadFailed": "No s'han pogut carregar les pel·lícules.",
+  "filmsLoading": "S'estan carregant les pel·lícules",
+  "rollReadyTitle": "Ja pots revelar el teu carret",
+  "rollReadyBody": "{count, plural, =1{Obre l'app per revelar la teva foto. Mantén-la oberta fins que acabi.} other{Obre l'app per revelar les teves {count} fotos. Mantén-la oberta fins que acabi.}}",
+  "@rollReadyBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "Readiness notification; count is the photos taken, fewer than the roll length when it was closed early. Photos develop when the app is open."
+  },
+  "rollKeyLoad": "Carregar carret",
+  "rollKeyOpen": "Carret carregat, {count, plural, =1{queda una foto} other{queden {count} fotos}}",
+  "@rollKeyOpen": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rollKeyLeft": "Queden {count}",
+  "@rollKeyLeft": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "rollKeyPaused": "Càmera d'un sol ús en pausa, {count, plural, =1{queda una foto} other{queden {count} fotos}}",
+  "@rollKeyPaused": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rollKeyPausedTitle": "Un sol ús en pausa",
+  "rollCounterLabel": "Queden",
+  "rollCounterSemantics": "{count, plural, =0{No queden fotos} =1{Queda una foto} other{Queden {count} fotos}}",
+  "@rollCounterSemantics": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rollFilmLocked": "La pel·lícula queda fixada mentre hi hagi un carret carregat",
+  "rollClosedNotice": "Carret acabat",
+  "rollActionFailed": "No s'ha pogut completar. Torna-ho a provar.",
+  "rollLoadTitle": "Carregar un carret",
+  "rollFilmRow": "Pel·lícula",
+  "rollLengthLabel": "Fotos",
+  "rollDelayLabel": "Espera per revelar",
+  "delayInstant": "Al moment",
+  "delayOneHour": "1 hora",
+  "delayNextMorning": "Demà al matí",
+  "delayThreeDays": "3 dies",
+  "rollLoadAction": "Carregar carret",
+  "rollLoadNote": "Mentre hi hagi un carret carregat no veuràs les teves fotos, només quantes en queden.",
+  "rollLossWarning": "Les fotos d'un carret sense revelar només existeixen en aquest mòbil. Si desinstal·les l'app, n'esborres les dades o canvies de mòbil, es perden.",
+  "disposableOption": "Càmera d'un sol ús",
+  "disposableOptionNote": "27 fotos per compartir la càmera",
+  "disposableStartTitle": "Càmera d'un sol ús",
+  "disposableStartBody": "Té 27 fotos i una pel·lícula fixa. Ningú no veu les fotos ni toca els ajustos: per sortir cal mantenir premut el segell de sortida uns segons. En acabar, la reveles com un carret.",
+  "disposableStartAction": "Començar",
+  "disposableCounterCaption": "Fotos que queden",
+  "disposableFlashLabel": "Flaix",
+  "disposableExitWord": "Sortir",
+  "disposableExitHint": "Mantén premut",
+  "disposableExitSemantics": "Sortir de la càmera d'un sol ús. Mantén premut durant dos segons.",
+  "disposableExitTitle": "Sortir de la càmera d'un sol ús?",
+  "disposableExitBody": "{count, plural, =0{No queden fotos.} =1{Queda 1 foto, que es guarda per més tard.} other{Queden {count} fotos, que es guarden per més tard.}} Podràs continuar des de la clau del carret.",
+  "@disposableExitBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "disposableExitConfirm": "Sortir",
+  "disposableExitStay": "Continuar",
+  "disposableStrip": "{count} fotos · usar i llençar",
+  "@disposableStrip": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "disposableDone": "S'ha acabat la càmera d'un sol ús",
+  "disposableResume": "Tornar a la càmera d'un sol ús",
+  "disposableAdvanceLabel": "Avança",
+  "disposableFinishAction": "Acabar el carret",
+  "disposableFinishInstantNote": "Aquesta càmera d'un sol ús es revela a l'instant, tan bon punt l'acabis.",
+  "disposableFinishWarning": "Un cop acabada, ja no s'hi poden fer més fotos.",
+  "disposableFinishKeepWait": "Mantenir l'espera",
+  "disposablePausedNote": "La càmera d'un sol ús és a mitges: la càmera no la fa servir. Per carregar un altre carret, continua-hi, acaba-la o llença-la.",
+  "rollRowSubtitle": "{date} · {count}",
+  "rollRecentTitle": "Últims carrets",
+  "rollStateWaiting": "Esperant",
+  "rollStateDeveloping": "Revelant",
+  "rollStateDeveloped": "Revelat",
+  "rollStateLost": "Perdut",
+  "rollFramesCount": "{count, plural, =1{1 foto} other{{count} fotos}}",
+  "@rollFramesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rollRowSemantics": "{film}, {frames}, {state}, {date}",
+  "@rollRowSemantics": {
+    "placeholders": {
+      "film": {
+        "type": "String"
+      },
+      "frames": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "rollOpenTitle": "Carret a la càmera",
+  "rollOpenSummary": "{film} · {length} fotos",
+  "@rollOpenSummary": {
+    "placeholders": {
+      "film": {
+        "type": "String"
+      },
+      "length": {
+        "type": "int"
+      }
+    }
+  },
+  "rollDevelopsLine": "Espera per revelar: {delay}",
+  "@rollDevelopsLine": {
+    "placeholders": {
+      "delay": {
+        "type": "String"
+      }
+    }
+  },
+  "rollCloseAction": "Tancar carret",
+  "rollDevelopNowAction": "Revelar ara",
+  "rollDiscardAction": "Llençar el carret",
+  "rollDevelopNowTitle": "Revelar ara?",
+  "rollDevelopNowBody": "{count, plural, =0{Aquest carret no té fotos.} =1{Es revelarà ara la foto d'aquest carret.} other{Es revelaran ara les {count} fotos d'aquest carret.}} L'espera acaba ara i no es pot desfer.",
+  "rollDevelopKeepWaiting": "Continuar esperant",
+  "rollDiscardTitle": "Llençar el carret?",
+  "rollDiscardBody": "Les fotos d'aquest carret es perdran per sempre. No es pot desfer.",
+  "rollDiscardConfirm": "Llençar",
+  "dialogCancel": "Cancel·lar",
+  "rollNameEdit": "Edita el nom del carret",
+  "rollNameTitle": "Nom del carret",
+  "rollNameLabel": "Nom",
+  "rollNameNote": "És opcional. Sense nom, el carret es diu \"{fallback}\".",
+  "@rollNameNote": {
+    "placeholders": {
+      "fallback": {
+        "type": "String"
+      }
+    }
+  },
+  "rollNameSave": "Desa",
+  "rollNameCounter": "{count} de {max} caràcters",
+  "@rollNameCounter": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "rollWaitingTitle": "Carret en espera",
+  "rollReadyOn": "Pots revelar a partir del {date} a les {time}",
+  "@rollReadyOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "rollWaitingNote": "Fins aleshores les teves fotos queden desades i xifrades al mòbil.",
+  "rollDevelopingTitle": "Revelant",
+  "rollDevelopProgressSemantics": "{done} de {total} fotos revelades",
+  "@rollDevelopProgressSemantics": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "rollKeepOpen": "Mantén l'app oberta fins que acabi.",
+  "rollStillOpenTitle": "Aquest carret encara és a la càmera",
+  "rollLostTitle": "Aquest carret no es pot revelar",
+  "rollLostBody": "Es va perdre la clau que protegia les seves fotos, així que no es poden recuperar.",
+  "rollDiscardedTitle": "Aquest carret es va llençar",
+  "rollMissingTitle": "No trobo aquest carret",
+  "rollShareSheetAction": "Comparteix el full",
+  "rollShareSheetRendering": "Preparant el full",
+  "rollShareSheetError": "No s'ha pogut preparar el full. Torna-ho a provar.",
+  "rollShareSheetFailed": "No s'ha pogut obrir el menú de compartir.",
+  "rollShareSheetPreview": "Vista prèvia del full de contactes del carret {number}",
+  "@rollShareSheetPreview": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "contactSheetTitle": "Full de contactes",
+  "rollDevelopedOn": "Revelat el {date}",
+  "@rollDevelopedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "rollFrameFailed": "Error",
+  "rollFrameMissing": "Esborrada",
+  "frameSemantics": "Fotograma {number}",
+  "@frameSemantics": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "frameFailedSemantics": "Fotograma {number}, no s'ha pogut revelar",
+  "@frameFailedSemantics": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "frameDevelopingSemantics": "Fotograma {number}, revelant",
+  "@frameDevelopingSemantics": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "frameMissingSemantics": "Fotograma {number}, ja no és a la galeria",
+  "@frameMissingSemantics": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "frameOpenHint": "Obre la foto",
+  "viewerPosition": "{index} de {total}",
+  "@viewerPosition": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "viewerSemantics": "Foto {index} de {total}",
+  "@viewerSemantics": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "viewerUnavailable": "No es pot mostrar la foto.",
+  "rollNumberTitle": "Carret {number}",
+  "@rollNumberTitle": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "galleryEmptyTitle": "Encara no hi ha fotos",
+  "galleryEmptyBody": "Les fotos que facis apareixeran aquí. Les d'un carret, quan les revelis.",
+  "galleryDevelopingLabel": "En revelat",
+  "galleryLooseLabel": "Fotos soltes",
+  "galleryToday": "Avui",
+  "galleryYesterday": "Ahir",
+  "galleryCardHint": "Obre les fotos",
+  "galleryLoadFailed": "No s'ha pogut carregar la galeria.",
+  "galleryImportRow": "Revela fotos del mòbil",
+  "@galleryImportRow": {
+    "description": "Row of the gallery that opens the photo picker to develop photos already taken."
+  },
+  "galleryImportHint": "Tria fotos de la teva galeria i dona'ls una pel·lícula",
+  "@galleryImportHint": {
+    "description": "Second line of the row of the gallery that develops photos of the phone."
+  },
+  "importTitle": "Revela fotos",
+  "@importTitle": {
+    "description": "Title of the screen that develops photos of the gallery."
+  },
+  "importPickFailed": "No s'han pogut obrir les teves fotos.",
+  "@importPickFailed": {
+    "description": "Shown when the photo picker of the system could not open."
+  },
+  "importPickLimit": "Només es poden revelar {count} fotos alhora. S'han agafat les primeres.",
+  "@importPickLimit": {
+    "description": "Shown when more photos were chosen than can be developed at once. count: the limit.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importCloseLabel": "Sortir sense revelar",
+  "@importCloseLabel": {
+    "description": "Screen reader text of the key that leaves the import screen without developing anything."
+  },
+  "importCounter": "{current} de {total}",
+  "@importCounter": {
+    "description": "Position of the photo shown, for example 2 of 5. Printed on the top bar.",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importPhotoSemantics": "Foto {current} de {total}, amb la pel·lícula {film}",
+  "@importPhotoSemantics": {
+    "description": "Screen reader text of the photo being developed.",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "film": {
+        "type": "String"
+      }
+    }
+  },
+  "importCompareHint": "Mantén premuda la foto per veure l'original",
+  "@importCompareHint": {
+    "description": "Hint of the photo: holding it shows the photo without the film."
+  },
+  "importOriginalPill": "Original",
+  "@importOriginalPill": {
+    "description": "Label shown over the photo while it is held, to say it is the original without the film."
+  },
+  "importTuneLabel": "Ajust fi",
+  "@importTuneLabel": {
+    "description": "Screen reader text of the key that opens the fine tuning of the film."
+  },
+  "importStripLabel": "Fotos per revelar",
+  "@importStripLabel": {
+    "description": "Screen reader text of the strip of chosen photos."
+  },
+  "importStripItem": "Foto {current} de {total}",
+  "@importStripItem": {
+    "description": "Screen reader text of a photo of the strip.",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importDevelopAction": "{count, plural, =1{Revela la foto} other{Revela les {count} fotos}}",
+  "@importDevelopAction": {
+    "description": "Key that develops the chosen photos. count: how many.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importProgress": "Revelant {current} de {total}",
+  "@importProgress": {
+    "description": "Title of the panel shown while the photos are developed.",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importCancelling": "Cancel·lant",
+  "@importCancelling": {
+    "description": "Shown while a cancelled export finishes the photo in progress and undoes the rest."
+  },
+  "importPartialTitle": "Revelat a mitges",
+  "@importPartialTitle": {
+    "description": "Title when some photos were developed and others not."
+  },
+  "importPartialBody": "S'han revelat {done} de {total} fotos. Les altres no s'han pogut llegir o desar.",
+  "@importPartialBody": {
+    "description": "Explains how many photos were developed. done: developed; total: chosen.",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importFailedTitle": "No s'ha pogut revelar",
+  "@importFailedTitle": {
+    "description": "Title when no photo could be developed."
+  },
+  "importFailedBody": "No s'ha desat cap foto. Prova-ho amb unes altres o torna-ho a intentar.",
+  "@importFailedBody": {
+    "description": "Explains that nothing was saved."
+  },
+  "importOpenGallery": "Anar a la galeria",
+  "@importOpenGallery": {
+    "description": "Key that leaves the import screen to the gallery once the export has ended with problems."
+  },
+  "importUnreadable": "No es pot llegir aquesta foto",
+  "@importUnreadable": {
+    "description": "Shown in place of a photo that cannot be read."
+  },
+  "importRejected": "{count, plural, =1{Una foto és massa gran i s'ha deixat fora.} other{{count} fotos són massa grans i s'han deixat fora.}}",
+  "@importRejected": {
+    "description": "Shown when photos were left out of the import for being too big to open. count: how many.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importNoDate": "Sense data: no s'imprimirà",
+  "@importNoDate": {
+    "description": "Shown over a photo that has no date when the film asks for the date imprint."
+  },
+  "importLeftoverTitle": "Algunes fotos s'han quedat",
+  "@importLeftoverTitle": {
+    "description": "Title when photos that had to be removed after a cancel or a failure are still in the gallery of the phone."
+  },
+  "importLeftoverBody": "{count, plural, =1{Una foto no s'ha pogut treure de la galeria del mòbil. És a la carpeta Diapo i la pots esborrar des d'allà.} other{{count} fotos no s'han pogut treure de la galeria del mòbil. Són a la carpeta Diapo i les pots esborrar des d'allà.}}",
+  "@importLeftoverBody": {
+    "description": "Explains how many photos could not be removed. count: how many.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "galleryDayMissingTitle": "No trobo aquest dia",
+  "viewerShare": "Comparteix",
+  "viewerDelete": "Esborra",
+  "viewerDeleteTitle": "Vols esborrar aquesta foto?",
+  "viewerDeleteBody": "S'esborrarà de Diapo i de la galeria del mòbil. No es pot desfer.",
+  "viewerDeleteConfirm": "Esborra",
+  "viewerActionFailed": "No s'ha pogut completar. Torna-ho a provar.",
+  "viewerOriginalKept": "Foto eliminada, però el seu original continua a Pictures/Diapo/Originales.",
+  "galleryPlaceholder": "La galeria encara no és aquí.",
+  "onboardingTitle1": "Una càmera, no un filtre.",
+  "onboardingBody1": "Tries la pel·lícula abans de disparar i la veus en directe al visor. Les teves fotos no surten del mòbil.",
+  "onboardingTitle2": "Tria la pel·lícula.",
+  "onboardingBody2": "Fes lliscar els cartutxos per canviar de pel·lícula i mira el resultat en directe al visor.",
+  "onboardingTitle3": "Un carret: fotos sense mirar.",
+  "onboardingBody3": "Amb un carret les fotos queden amagades fins que el reveles. Quan passi l'espera que triïs, t'avisem i obres l'app per revelar-les.",
+  "onboardingSkip": "Saltar",
+  "onboardingNext": "Següent",
+  "onboardingStart": "Començar a disparar",
+  "onboardingChipNoAccount": "Sense compte",
+  "onboardingChipNoWatermark": "Sense marca d'aigua",
+  "onboardingChipOnDevice": "Al teu mòbil",
+  "onboardingArtCamera": "Un visor amb una escena en pel·lícula. Sense compte, sense marca d'aigua, tot al teu mòbil.",
+  "onboardingArtFilm": "Un visor amb una escena en pel·lícula i, a sota, cinc cartutxos de pel·lícula.",
+  "onboardingRollHidden": "Fetes · amagades fins a revelar",
+  "onboardingReminder": "Avís quan puguis revelar",
+  "onboardingArtRoll": "El comptador d'un carret amb 9 de 24 fotos fetes i amagades, l'espera per revelar a triar i un avís opcional.",
+  "settingsHowItWorks": "Com funciona",
+  "settingsRateTitle": "Valorar Diapo",
+  "settingsRateSubtitle": "Una ressenya ajuda que altres la trobin",
+  "onboardingStepSemantics": "Pas {step} de {total}",
+  "settingSaveLocationHint": "El lloc es desa a les dades de la foto (EXIF), només amb la càmera oberta, i no s'envia enlloc. Desactivat per defecte.",
+  "@settingSaveLocationHint": {
+    "description": "Description of the save location setting: where it goes, when, and that it stays on the phone."
+  },
+  "settingSaveLocationApproximate": "Només tens permís per a la ubicació aproximada, així que el lloc serà aproximat.",
+  "@settingSaveLocationApproximate": {
+    "description": "Extra line under the save location setting when only approximate location is granted."
+  },
+  "settingSaveLocationRevoked": "No s'està desant la ubicació perquè s'ha retirat el permís.",
+  "@settingSaveLocationRevoked": {
+    "description": "Warning under the save location setting when it is on but the permission was removed."
+  },
+  "settingSaveLocationOpenSettings": "Obre els ajustos del sistema",
+  "@settingSaveLocationOpenSettings": {
+    "description": "Action under the save location setting that opens the system settings of the app."
+  },
+  "locationPermissionNeeded": "Cal el permís d'ubicació per desar el lloc de les fotos.",
+  "@locationPermissionNeeded": {
+    "description": "Shown when the user refuses the location permission after turning the setting on."
+  },
+  "locationPermissionBlocked": "El permís d'ubicació està bloquejat. Activa'l als ajustos del sistema.",
+  "@locationPermissionBlocked": {
+    "description": "Shown when the location permission is blocked and only the system settings can grant it."
+  },
+  "locationPermissionBlockedAction": "Ajustos",
+  "@locationPermissionBlockedAction": {
+    "description": "Button of the message that opens the system settings."
+  },
+  "settingsSectionBackup": "Els teus ajustos, sense fotos",
+  "@settingsSectionBackup": {
+    "description": "Title of the section of the settings with export and import."
+  },
+  "settingsExport": "Exporta els ajustos",
+  "@settingsExport": {
+    "description": "Row that saves the settings and the film tuning to a file."
+  },
+  "settingsExportHint": "Desa un fitxer amb els teus ajustos i l'afinament de cada pel·lícula. No desa les teves fotos: no és una còpia de seguretat.",
+  "@settingsExportHint": {
+    "description": "Explains the export row."
+  },
+  "settingsImport": "Importa els ajustos",
+  "@settingsImport": {
+    "description": "Row that restores the settings and the film tuning from a file."
+  },
+  "settingsImportHint": "Llegeix un fitxer exportat abans i l'aplica. No recupera fotos.",
+  "@settingsImportHint": {
+    "description": "Explains the import row."
+  },
+  "settingsImportConfirmTitle": "Vols importar els ajustos?",
+  "@settingsImportConfirmTitle": {
+    "description": "Title of the confirmation before importing settings."
+  },
+  "settingsImportConfirmBody": "Es reemplaçaran els teus ajustos actuals i l'afinament de les pel·lícules pels del fitxer.",
+  "@settingsImportConfirmBody": {
+    "description": "Body of the confirmation before importing settings."
+  },
+  "settingsImportConfirmAction": "Importa",
+  "@settingsImportConfirmAction": {
+    "description": "Button that confirms importing settings."
+  },
+  "settingsExportDone": "Ajustos exportats.",
+  "@settingsExportDone": {
+    "description": "Shown after the settings file was saved."
+  },
+  "settingsImportDone": "Ajustos importats.",
+  "@settingsImportDone": {
+    "description": "Shown after the settings were imported."
+  },
+  "settingsImportSkippedFilms": "{count, plural, =1{S'ha deixat fora una pel·lícula que aquesta versió no coneix.} other{S'han deixat fora {count} pel·lícules que aquesta versió no coneix.}}",
+  "@settingsImportSkippedFilms": {
+    "description": "Added to the import message when the file had films this version does not know. count: how many.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsImportLocationStaysOff": "La ubicació continua desactivada; activa-la aquí si la vols.",
+  "@settingsImportLocationStaysOff": {
+    "description": "Added to the import message: an import never turns location on."
+  },
+  "settingsImportOriginalStaysOff": "Desa també l'original continua desactivat; activa'l aquí si el vols.",
+  "@settingsImportOriginalStaysOff": {
+    "description": "Added to the import message: an import never turns saving originals on."
+  },
+  "settingsBackupTooLarge": "El fitxer és massa gran per ser una còpia d'ajustos de Diapo.",
+  "@settingsBackupTooLarge": {
+    "description": "Import error: the file is too big."
+  },
+  "settingsBackupInvalidJson": "No es pot llegir el fitxer: no té un format vàlid.",
+  "@settingsBackupInvalidJson": {
+    "description": "Import error: the file is not readable JSON."
+  },
+  "settingsBackupWrongFormat": "Aquest fitxer no és una còpia d'ajustos de Diapo.",
+  "@settingsBackupWrongFormat": {
+    "description": "Import error: the file is not a Carrete settings backup."
+  },
+  "settingsBackupUnsupportedVersion": "Aquest fitxer ve d'una versió més nova de Diapo. Actualitza l'app per importar-lo.",
+  "@settingsBackupUnsupportedVersion": {
+    "description": "Import error: the file comes from a newer version."
+  },
+  "settingsBackupInvalidValue": "El fitxer té valors no vàlids i no s'ha importat res.",
+  "@settingsBackupInvalidValue": {
+    "description": "Import error: the file has values that are not valid."
+  },
+  "settingsBackupBusy": "Ja hi ha una exportació o una importació en curs.",
+  "@settingsBackupBusy": {
+    "description": "Error: another export or import is still running."
+  },
+  "settingsBackupStorage": "No s'ha pogut llegir o desar. Torna-ho a provar.",
+  "@settingsBackupStorage": {
+    "description": "Error: the file or the storage could not be used."
+  },
+  "settingsBackupInterrupted": "S'ha interromput l'operació. Torna-ho a provar.",
+  "@settingsBackupInterrupted": {
+    "description": "Error: the operation was interrupted."
+  },
+  "flashKeyHint": "Toca per passar al mode següent",
+  "rollSheetIntro": "Una pel·lícula per a tot el carret. Les fotos queden amagades fins que el reveles.",
+  "rollDelayNote": "L'espera comença quan tanques el carret.",
+  "@cameraCounterSemantics": {
+    "placeholders": {
+      "film": {
+        "type": "String"
+      }
+    }
+  },
+  "viewfinderSwipeHint": "Fes lliscar els cartutxos per canviar de pel·lícula",
+  "rollOfferTitle": "Prova un carret de 12",
+  "rollOfferBody": "Amb {film}. Les fotos queden amagades fins que tanquis el carret. Aleshores les reveles al moment, sense espera.",
+  "@rollOfferBody": {
+    "placeholders": {
+      "film": {
+        "type": "String"
+      }
+    }
+  },
+  "rollOfferAction": "Carregar carret de 12",
+  "rollOfferDismiss": "Ara no",
+  "rollLossNote": "Només existeixen en aquest mòbil: es perden si desinstal·les, esborres les dades o canvies de mòbil.",
+  "@rollDevelopNowBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingHaptics": "Vibració",
+  "disposableOptionSemantics": "{title} · {detail}",
+  "@disposableOptionSemantics": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "detail": {
+        "type": "String"
+      }
+    }
+  },
+  "swipeHintClose": "Tanca el consell",
+  "saveStatusSaving": "{count, plural, =1{Desant 1 foto} other{Desant {count} fotos}}",
+  "saveStatusPending": "Hi ha fotos pendents de desar",
+  "saveSheetTitle": "Fotos pendents",
+  "saveSheetCount": "{count, plural, =1{1 foto està esperant per desar-se.} other{{count} fotos estan esperant per desar-se.}}",
+  "saveSheetStorageFull": "El telèfon s'ha quedat sense espai. Allibera espai i torna-ho a provar.",
+  "saveSheetPermission": "Diapo no té permís per desar a la galeria. Revisa els permisos del sistema i torna-ho a provar.",
+  "saveSheetUnknown": "Ara no s'han pogut desar. Pots tornar-ho a provar.",
+  "saveSheetKept": "Mentrestant es conserven de manera provisional dins de l'app. No esborris les dades de l'app.",
+  "saveSheetRetry": "Tornar-ho a provar",
+  "saveSheetLater": "Més tard"
+}

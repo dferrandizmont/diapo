@@ -1,0 +1,60 @@
+appId: io.github.dferrandizmont.carrete
+---
+- runFlow: common/start_camera.yaml
+# The first three recipe names; hints may be merged into Flutter labels.
+- tapOn: ".*Verano 98.*"
+- assertVisible:
+    text: ".*Verano 98.*"
+    selected: true
+- scrollUntilVisible:
+    element: ".*Diapositiva fría.*"
+    direction: RIGHT
+    timeout: 15000
+- tapOn: ".*Diapositiva fría.*"
+- assertVisible:
+    text: ".*Diapositiva fría.*"
+    selected: true
+- scrollUntilVisible:
+    element: ".*Caducada.*"
+    direction: RIGHT
+    timeout: 15000
+- tapOn: ".*Caducada.*"
+- assertVisible:
+    text: ".*Caducada.*"
+    selected: true
+# Actual enum order: 3:2 -> 4:3 -> 1:1 -> 16:9 -> 3:2.
+- tapOn: "Formato 3:2.*"
+- assertVisible: "Formato 4:3.*"
+- tapOn: "Formato 4:3.*"
+- assertVisible: "Formato 1:1.*"
+- tapOn: "Formato 1:1.*"
+- assertVisible: "Formato 16:9.*"
+- tapOn: "Formato 16:9.*"
+- assertVisible: "Formato 3:2.*"
+- tapOn: "Flash: Automático"
+- assertVisible:
+    text: "Flash: Automático"
+    selected: true
+- tapOn: "Flash: Encendido"
+- assertVisible:
+    text: "Flash: Encendido"
+    selected: true
+- tapOn: "Flash: Fiesta"
+- assertVisible:
+    text: "Flash: Fiesta"
+    selected: true
+- tapOn: "Flash: Apagado"
+- assertVisible:
+    text: "Flash: Apagado"
+    selected: true
+- tapOn: "Ajustes"
+- tapOn: "Cuadrícula"
+- assertVisible:
+    text: "Cuadrícula"
+    checked: true
+- tapOn: "Cuadrícula"
+- assertVisible:
+    text: "Cuadrícula"
+    checked: false
+- back
+- assertVisible: "Disparar"

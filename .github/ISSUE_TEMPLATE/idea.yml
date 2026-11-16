@@ -1,0 +1,24 @@
+name: Idea or film suggestion
+description: Something you would like Diapo to do, or a film look you miss. / Algo que te gustaría que hiciera Diapo, o una película que echas de menos.
+title: "[Idea] "
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Films in Diapo have their own names: please describe the look (colours, grain, contrast, era) rather than a brand.
+        Las películas de Diapo tienen nombres propios: describe el aspecto (colores, grano, contraste, época) en vez de una marca.
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: What you would like and why. / Qué te gustaría y por qué.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: When would you use it?
+      description: The moment or kind of photo it is for. / El momento o el tipo de foto para el que sirve.
+    validations:
+      required: false

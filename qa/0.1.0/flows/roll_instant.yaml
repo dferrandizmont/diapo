@@ -1,0 +1,33 @@
+appId: es.diapo.app
+---
+- runFlow: common/start_camera.yaml
+- tapOn: "Cargar carrete"
+- tapOn: "12 fotos"
+- tapOn: "Al momento"
+- scrollUntilVisible:
+    element: "Cargar carrete"
+    direction: DOWN
+- tapOn: "Cargar carrete"
+- assertVisible: "Quedan 12 fotos"
+- runFlow: common/shoot_once.yaml
+- assertVisible: "Quedan 11 fotos"
+- runFlow: common/shoot_once.yaml
+- assertVisible: "Quedan 10 fotos"
+- tapOn: "Carrete cargado, quedan 10 fotos"
+# 0.1.0: the roll sheet offers "Revelar ahora" and asks for confirmation.
+- tapOn: "Revelar ahora"
+- assertVisible: '¿Revelar ahora\?'
+- tapOn: "Revelar ahora"
+# Closing by hand opens the roll screen; foreground developing runs there.
+- extendedWaitUntil:
+    visible: ".*Fotograma 2.*"
+    timeout: 120000
+- assertVisible: "(?i).*Hoja de contactos.*"
+- assertVisible: "(?i)2 fotos"
+- assertVisible: ".*Fotograma 1.*"
+- assertNotVisible: ".*Fotograma 3.*"
+- tapOn: ".*Fotograma 1.*"
+- assertVisible: "Foto 1 de 2"
+- assertVisible: "Compartir"
+- back
+- assertVisible: ".*Fotograma 2.*"

@@ -1,0 +1,24 @@
+appId: es.diapo.app
+---
+- runFlow: common/start_camera.yaml
+- runFlow: common/shoot_once.yaml
+- runFlow: common/shoot_once.yaml
+- tapOn: "Galería"
+- extendedWaitUntil:
+    visible: ".*Fotos sueltas, Hoy, .*2 fotos.*"
+    timeout: 60000
+- tapOn: ".*Fotos sueltas, Hoy, .*2 fotos.*"
+- assertVisible: ".*Fotograma 1.*"
+- assertVisible: ".*Fotograma 2.*"
+- tapOn: ".*Fotograma 1.*"
+- assertVisible: "Foto 1 de 2"
+# Film names are recipe data; the date/time is Material-localized, not ARB.
+- assertVisible: 'Verano 98 · .*\d{1,2}.*\d{1,2}:\d{2}.*'
+- assertVisible: "Compartir"
+- assertVisible: "Borrar"
+- back
+- assertVisible: ".*Fotograma 1.*"
+- back
+- assertVisible: ".*Fotos sueltas, Hoy, .*2 fotos.*"
+- back
+- assertVisible: "Disparar"

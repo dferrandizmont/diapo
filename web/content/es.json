@@ -1,0 +1,92 @@
+{
+  "name": "Diapo",
+  "title": "Diapo · Cámara de película con visor en directo",
+  "description": "Diapo es una cámara de película gratis y sin anuncios: eliges una película, la ves en directo en el visor, cargas carretes que se revelan después o usas la cámara desechable de 27 fotos. Sin cuentas y sin internet.",
+  "intro": "Diapo es una cámara para Android. Eliges una película antes de disparar y la ves en el visor, en directo: lo que ves es lo que se guarda. Para quien quiere fotos con aire de carrete sin editarlas después.",
+  "key_facts": "Sin cuentas · Sin permiso de internet · Las fotos no salen del móvil · Código abierto",
+  "features": [
+    "La película se ve en el visor antes de disparar. Lo que ves es lo que se guarda, a resolución completa.",
+    "Verano 98, Diapositiva fría, Caducada, Noche de flash, B/N clásico, B/N de prensa, Instantánea, Desechable, Cine y Cámara de juguete.",
+    "Carga 12, 24 o 36 fotos con una sola película. No ves ninguna hasta revelar el carrete, al momento o cuando tú elijas.",
+    "27 fotos con la película fija. Pasa el móvil de mano en mano y descubrid las fotos al revelar. Al entrar, la cámara cambia de aspecto: cartón, papel y una rueda para avanzar.",
+    "Comparte un carrete entero en una sola imagen, con sus perforaciones y números. Sin marca de agua.",
+    "Aplica una película a una foto que ya tienes. La original no se toca."
+  ],
+  "feature_titles": [
+    "Visor en directo",
+    "Diez películas",
+    "Carretes que se revelan después",
+    "Cámara desechable",
+    "Hoja de contactos",
+    "Revela fotos del móvil"
+  ],
+  "privacy_summary": [
+    "Diapo no tiene cuentas, anuncios ni analítica, y no pide permiso de internet: no puede enviar nada.",
+    "Las fotos de un carrete sin revelar se guardan cifradas en el móvil y solo llegan a tu galería cuando lo revelas."
+  ],
+  "faq": [
+    {
+      "question": "¿Es gratis de verdad?",
+      "answer": "Sí. Todas las películas y funciones son gratis, sin anuncios, sin compras y sin marca de agua."
+    },
+    {
+      "question": "¿Dónde la descargo?",
+      "answer": "Todavía no se puede instalar: Diapo está en pruebas en Android, y la versión para iPhone llegará después. Esta página lo dirá en cuanto se pueda descargar."
+    },
+    {
+      "question": "¿Qué pasa con un carrete sin revelar si cambio de móvil?",
+      "answer": "Las fotos sin revelar solo existen en ese móvil. Si desinstalas la app, borras sus datos o cambias de móvil, se pierden. Revélalo antes."
+    },
+    {
+      "question": "¿Puedo aplicar una película a fotos que ya tengo?",
+      "answer": "Sí. Desde la galería de la app, «Revelar fotos del móvil» abre el selector del sistema. La foto original no se toca: se guarda una nueva."
+    }
+  ],
+  "licence_text": "Código GPL-3.0 · Nombre, icono y capturas reservados",
+  "screenshot_alts": {
+    "01-viewfinder": "El visor de Diapo con una película aplicada en directo y el carrusel de películas debajo",
+    "02-films": "Las diez películas de Diapo, cada una con su nombre",
+    "03-roll": "Un carrete cargado: las fotos quedan ocultas hasta revelarlo",
+    "04-disposable": "La cámara desechable de cartón, con el contador de fotos que quedan",
+    "05-gallery": "La galería de Diapo con las fotos reveladas"
+  },
+  "screenshot_captions": {
+    "01-viewfinder": "Elige la película. Mira el resultado en directo.",
+    "02-films": "Diez películas. Todas gratis.",
+    "03-roll": "Dispara sin mirar. Descubre tu carrete al revelar.",
+    "04-disposable": "27 fotos. Pasa la cámara de mano en mano.",
+    "05-gallery": "Sin cuentas. Sin anuncios. Sin marca de agua."
+  },
+  "privacy_date": "2026-11-16",
+  "kicker": "Cámara de película · Android",
+  "tagline": "Tu cámara de película, con visor en directo.",
+  "pitch": "Gratis y sin anuncios.",
+  "cta_download": "Cómo conseguirla",
+  "cta_features": "Ver funciones",
+  "nav_label": "Secciones",
+  "nav_about": "Qué es",
+  "theme_toggle": "Tema oscuro",
+  "lcd_label": "Películas",
+  "lcd_facts": [
+    { "value": "10", "label": "Películas propias" },
+    { "value": "12 · 24 · 36", "label": "Fotos por carrete" },
+    { "value": "27", "label": "Fotos en la desechable" },
+    { "value": "0", "label": "Anuncios" }
+  ],
+  "download_note": "Android 8 o superior. Gratis, sin compras dentro de la app.",
+  "disposable": {
+    "kicker": "Modo desechable",
+    "stamps": ["27 fotos", "Una sola película", "Ocultas hasta revelar"],
+    "counter_label": "quedan",
+    "note": "pásala"
+  },
+  "privacy_kicker": "Privacidad",
+  "privacy_lcd": "Sin red",
+  "privacy_title": "Tus fotos no salen del móvil",
+  "privacy_code": "Código abierto (GPL-3.0): puedes comprobar que no tiene permiso de internet.",
+  "privacy_code_link": "Ver el código en GitHub",
+  "support_more": "¿Otra pregunta? Escribe a",
+  "legal_notice": "Aviso legal",
+  "legal_url": "https://github.com/dferrandizmont/diapo/blob/main/docs/legal/aviso-legal.md",
+  "copyright": "© 2026 Daniel Mont Ferrandiz"
+}

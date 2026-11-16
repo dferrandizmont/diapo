@@ -1,0 +1,11 @@
+# Only these entry flows run as tests; common/ contains reusable subflows.
+flows:
+  - onboarding.yaml
+  - shoot.yaml
+  - film_and_format.yaml
+  - roll_instant.yaml
+  - roll_discard.yaml
+  - disposable.yaml
+  - gallery_delete.yaml
+  - settings.yaml
+  - import.yaml

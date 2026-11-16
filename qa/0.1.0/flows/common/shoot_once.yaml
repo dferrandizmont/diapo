@@ -1,0 +1,24 @@
+appId: es.diapo.app
+---
+# Wait for capture readiness before and after pressing the shutter.
+# Saving/developing may continue later; callers also wait for gallery results.
+- extendedWaitUntil:
+    visible:
+      text: "Disparar"
+      enabled: true
+    timeout: 30000
+- tapOn:
+    text: "Disparar"
+    enabled: true
+    waitToSettleTimeoutMs: 1000
+- extendedWaitUntil:
+    visible:
+      text: "Disparar"
+      enabled: true
+    timeout: 30000
+# 0.1.0: after a few loose photos the camera offers a roll of 12 once.
+- runFlow:
+    when:
+      visible: "Ahora no"
+    commands:
+      - tapOn: "Ahora no"

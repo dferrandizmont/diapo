@@ -1,0 +1,6 @@
+# The real android/key.properties and the upload keystore stay outside version control.
+# Use an absolute path outside this repository, with forward slashes on Windows.
+storeFile=/absolute/path/outside/repository/carrete-upload.jks
+storePassword=<STORE_PASSWORD>
+keyAlias=<UPLOAD_KEY_ALIAS>
+keyPassword=<KEY_PASSWORD>

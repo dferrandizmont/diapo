@@ -1,0 +1,11 @@
+{% extends 'base/layout.html.j2' %}
+{% block content %}
+<div class="wrap nf">
+  <p class="lcd lcd-big" aria-hidden="true">404</p>
+  <h1>{{ t.not_found }}</h1>
+  <p>{{ t.not_found_text }}</p>
+  <ul class="nf-links">
+  {% for code in site.languages %}<li><a class="key" href="{{ route(code) }}" lang="{{ code }}" hreflang="{{ code }}">{{ t.home }} · {{ t.languages[code] }}</a></li>{% endfor %}
+  </ul>
+</div>
+{% endblock %}

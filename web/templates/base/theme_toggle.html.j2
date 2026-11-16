@@ -1,0 +1,7 @@
+{#- Light/dark toggle (the pattern of Ink Lab). Hidden until assets/theme.js shows it, so without JS the header has no
+    dead button and the page follows the system. The icon swaps in CSS from the effective theme; aria-pressed (set by
+    the script) says whether dark is on. -#}
+<button type="button" class="theme-toggle key" data-theme-toggle hidden aria-pressed="false" aria-label="{{ c.theme_toggle }}" title="{{ c.theme_toggle }}">
+  <svg class="ico i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg>
+  <svg class="ico i-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"></path></svg>
+</button>

@@ -1,0 +1,1391 @@
+{
+  "@@locale": "es",
+  "appTitle": "Diapo",
+  "galleryTitle": "Galería",
+  "settingsTitle": "Ajustes",
+  "rollTitle": "Carrete",
+  "settingCameraSounds": "Sonidos de la cámara",
+  "settingSaveOriginal": "Guardar también el original",
+  "settingSaveOriginalHint": "Si se puede, también guarda la foto sin película.",
+  "settingSaveLocation": "Guardar la ubicación",
+  "settingGrid": "Cuadrícula",
+  "settingLevel": "Nivel",
+  "settingDateStamp": "Fecha en la foto",
+  "settingDefaultFilm": "Película por defecto",
+  "settingTheme": "Tema",
+  "settingLanguage": "Idioma",
+  "settingDateStyle": "Estilo de la fecha",
+  "@settingDateStyle": {
+    "description": "Setting: how the date is stamped on the photo (year first or day first)."
+  },
+  "dateStyleYearFirst": "Año primero",
+  "@dateStyleYearFirst": {
+    "description": "Date style 'yy m d, shown under its sample."
+  },
+  "dateStyleDayFirst": "Día primero",
+  "@dateStyleDayFirst": {
+    "description": "Date style d m 'yy, shown under its sample."
+  },
+  "dateStyleSemantics": "{style}: {date}",
+  "@dateStyleSemantics": {
+    "description": "Screen reader text of a date style option. style: its name; date: today's date in that style.",
+    "placeholders": {
+      "style": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsSectionCamera": "Cámara",
+  "@settingsSectionCamera": {
+    "description": "Title of the section of the settings about the camera."
+  },
+  "settingsSectionLook": "Aspecto",
+  "@settingsSectionLook": {
+    "description": "Title of the section of the settings about the theme and the language."
+  },
+  "settingsSectionAdvanced": "Avanzado",
+  "@settingsSectionAdvanced": {
+    "description": "Title of the last section of the settings, collapsed: the export and import of the settings."
+  },
+  "settingsSectionAbout": "Acerca de",
+  "@settingsSectionAbout": {
+    "description": "Title of the section of the settings about the app."
+  },
+  "themeSystem": "Sistema",
+  "@themeSystem": {
+    "description": "Theme option: follow the system."
+  },
+  "themeLight": "Claro",
+  "@themeLight": {
+    "description": "Theme option: light."
+  },
+  "themeDark": "Oscuro",
+  "@themeDark": {
+    "description": "Theme option: dark."
+  },
+  "languageSystem": "Sistema",
+  "@languageSystem": {
+    "description": "Language option: the language of the device."
+  },
+  "languageSpanish": "Español",
+  "@languageSpanish": {
+    "description": "Language option. Every language writes its own name the same in all translations, so a user can always find theirs."
+  },
+  "languageCatalan": "Català",
+  "@languageCatalan": {
+    "description": "Language option. Same in all translations."
+  },
+  "languageEnglish": "English",
+  "@languageEnglish": {
+    "description": "Language option. Same in all translations."
+  },
+  "settingsVersion": "Versión",
+  "@settingsVersion": {
+    "description": "Label of the version of the app."
+  },
+  "settingsOfflineNote": "Funciona sin conexión, sin cuentas y sin anuncios. Tus fotos nunca salen del móvil.",
+  "@settingsOfflineNote": {
+    "description": "Sentence in the about section: privacy promise of the app."
+  },
+  "settingsFreeSoftwareNote": "Diapo es software libre bajo la licencia GPL-3.0-only. Código fuente: https://github.com/dferrandizmont/diapo",
+  "@settingsFreeSoftwareNote": {
+    "description": "Sentence in the about section: the app is free software under GPL-3.0-only, with the address of its source code (shown as plain text, never opened: the app has no network)."
+  },
+  "settingsLicences": "Licencias",
+  "@settingsLicences": {
+    "description": "Entry that opens the list of open source licences."
+  },
+  "settingsPrivacyPolicy": "Política de privacidad",
+  "@settingsPrivacyPolicy": {
+    "description": "Entry that opens the privacy policy, bundled with the app and readable offline."
+  },
+  "settingsLegalNotice": "Aviso legal",
+  "@settingsLegalNotice": {
+    "description": "Entry that opens the legal notice (aviso legal), bundled with the app and readable offline."
+  },
+  "cameraCounterLabel": "Fotos sueltas",
+  "@cameraCounterLabel": {
+    "description": "Small label under the LCD of the viewfinder while no roll is loaded: the photos are saved one by one to the gallery."
+  },
+  "cameraCounterSemantics": "{film}, fotos sueltas",
+  "@cameraCounterSemantics": {
+    "description": "Screen reader text of the LCD of the viewfinder while no roll is loaded. film: the name of the selected film.",
+    "placeholders": {
+      "film": {
+        "type": "String"
+      }
+    }
+  },
+  "flashOff": "Apagado",
+  "@flashOff": {
+    "description": "Flash mode: never fires."
+  },
+  "flashAuto": "Automático",
+  "@flashAuto": {
+    "description": "Flash mode: fires when it is dark."
+  },
+  "flashOn": "Encendido",
+  "@flashOn": {
+    "description": "Flash mode: always fires."
+  },
+  "flashParty": "Fiesta",
+  "@flashParty": {
+    "description": "Flash mode: always fires and burns the highlights a little on purpose."
+  },
+  "flashKeyLabel": "Flash: {mode}",
+  "@flashKeyLabel": {
+    "description": "Screen reader label of a flash key. mode: the name of the mode.",
+    "placeholders": {
+      "mode": {
+        "type": "String"
+      }
+    }
+  },
+  "flashKeyHint": "Toca para pasar al siguiente modo",
+  "@flashKeyHint": {
+    "description": "Screen reader hint of the flash key, which cycles off, auto, on and party."
+  },
+  "switchCameraLabel": "Cambiar de cámara",
+  "@switchCameraLabel": {
+    "description": "Key that switches between the back and the front camera."
+  },
+  "shutterLabel": "Disparar",
+  "@shutterLabel": {
+    "description": "The shutter button."
+  },
+  "formatKeyLabel": "Formato {format}",
+  "@formatKeyLabel": {
+    "description": "Label of the key that cycles the frame format. format: for example 3:2.",
+    "placeholders": {
+      "format": {
+        "type": "String"
+      }
+    }
+  },
+  "formatKeyHint": "Cambia el formato del encuadre",
+  "@formatKeyHint": {
+    "description": "Hint of the format key."
+  },
+  "viewfinderLabel": "Visor de la cámara",
+  "@viewfinderLabel": {
+    "description": "Label of the live preview."
+  },
+  "viewfinderSwipeHint": "Desliza los cartuchos para cambiar de película",
+  "@viewfinderSwipeHint": {
+    "description": "Hint shown once over the camera of a new user, above the carousel of films."
+  },
+  "swipeHintClose": "Cerrar consejo",
+  "@swipeHintClose": {
+    "description": "Screen reader label of the key that closes the hint about swiping the films."
+  },
+  "rollOfferTitle": "Prueba un carrete de 12",
+  "@rollOfferTitle": {
+    "description": "Title of the offer shown once, after the second loose photo, to load a roll of 12 frames."
+  },
+  "rollOfferBody": "Con {film}. Las fotos quedan ocultas hasta que cierres el carrete. Entonces las revelas al momento, sin espera.",
+  "@rollOfferBody": {
+    "description": "Body of the offer of a roll of 12. film: the name of the selected film.",
+    "placeholders": {
+      "film": {
+        "type": "String"
+      }
+    }
+  },
+  "rollOfferAction": "Cargar carrete de 12",
+  "@rollOfferAction": {
+    "description": "Key of the offer that loads a roll of 12 frames with no wait to develop."
+  },
+  "rollOfferDismiss": "Ahora no",
+  "@rollOfferDismiss": {
+    "description": "Key of the offer of a roll of 12 that closes it."
+  },
+  "filmCarouselLabel": "Películas",
+  "@filmCarouselLabel": {
+    "description": "Label of the carousel of films."
+  },
+  "filmCartridgeHint": "Mantén pulsado para los ajustes finos",
+  "@filmCartridgeHint": {
+    "description": "Hint of a film cartridge."
+  },
+  "tunePanelLabel": "Ajustes finos de {film}",
+  "@tunePanelLabel": {
+    "description": "Label of the fine-tuning panel. film: name of the film.",
+    "placeholders": {
+      "film": {
+        "type": "String"
+      }
+    }
+  },
+  "tuneSubtitle": "Ajustes finos",
+  "@tuneSubtitle": {
+    "description": "Subtitle of the fine-tuning panel, under the name of the film."
+  },
+  "tuneClose": "Cerrar",
+  "@tuneClose": {
+    "description": "Closes the fine-tuning panel."
+  },
+  "tuneGrain": "Grano",
+  "@tuneGrain": {
+    "description": "Slider of the fine-tuning panel."
+  },
+  "tuneHalation": "Halos",
+  "@tuneHalation": {
+    "description": "Slider of the fine-tuning panel."
+  },
+  "tuneLeak": "Fuga de luz",
+  "@tuneLeak": {
+    "description": "Slider of the fine-tuning panel."
+  },
+  "tuneVignette": "Viñeta",
+  "@tuneVignette": {
+    "description": "Slider of the fine-tuning panel."
+  },
+  "tuneDateStamp": "Fecha impresa",
+  "@tuneDateStamp": {
+    "description": "Switch of the fine-tuning panel."
+  },
+  "tuneCinemaBands": "Bandas de cine",
+  "@tuneCinemaBands": {
+    "description": "Switch of the fine-tuning panel, shown only for the 16:9 format."
+  },
+  "tuneFormat": "Formato",
+  "@tuneFormat": {
+    "description": "Row of the fine-tuning panel with the frame formats."
+  },
+  "whiteFrameHint": "Marco blanco al guardar",
+  "@whiteFrameHint": {
+    "description": "Hint over the viewfinder in the square format of an instant film."
+  },
+  "focusLockedLabel": "Enfoque y exposición bloqueados. Toca para soltar",
+  "@focusLockedLabel": {
+    "description": "Screen reader text of the lock indicator."
+  },
+  "zoomLabel": "{zoom}x",
+  "@zoomLabel": {
+    "description": "Zoom shown while pinching. zoom: for example 1.4.",
+    "placeholders": {
+      "zoom": {
+        "type": "String"
+      }
+    }
+  },
+  "cameraPermissionDenied": "Hace falta el permiso de la cámara para hacer fotos. Puedes concederlo en los ajustes del sistema.",
+  "@cameraPermissionDenied": {
+    "description": "Shown when the user refused the camera permission."
+  },
+  "cameraOpenSettings": "Abrir los ajustes",
+  "@cameraOpenSettings": {
+    "description": "Key under the camera permission message that opens the settings of the app in the system."
+  },
+  "cameraUnavailable": "No se puede abrir la cámara.",
+  "@cameraUnavailable": {
+    "description": "Shown when the camera fails to open."
+  },
+  "cameraRetry": "Reintentar",
+  "@cameraRetry": {
+    "description": "Retries opening the camera."
+  },
+  "shotSaved": "Foto guardada",
+  "@shotSaved": {
+    "description": "Announced to screen readers when a photo is saved."
+  },
+  "shotSaveFailed": "No se pudo guardar la foto.",
+  "@shotSaveFailed": {
+    "description": "Shown when processing or saving a photo fails."
+  },
+  "filmsLoadFailed": "No se pudieron cargar las películas.",
+  "@filmsLoadFailed": {
+    "description": "Shown when the book of films fails to load."
+  },
+  "filmsLoading": "Cargando las películas",
+  "@filmsLoading": {
+    "description": "Screen reader text while the book of films loads."
+  },
+  "rollReadyTitle": "Ya puedes revelar tu carrete",
+  "rollReadyBody": "{count, plural, =1{Abre la app para revelar tu foto. Mantenla abierta hasta terminar.} other{Abre la app para revelar tus {count} fotos. Mantenla abierta hasta terminar.}}",
+  "@rollReadyBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "Notification when the wait of a roll is over. count: the photos taken, fewer than the roll length when it was closed early. The photos are developed by the app, only while it is open."
+  },
+  "rollKeyLoad": "Cargar carrete",
+  "@rollKeyLoad": {
+    "description": "Label of the roll control of the camera while no roll is loaded. It opens the sheet to load a roll."
+  },
+  "rollKeyOpen": "Carrete cargado, {count, plural, =1{queda una foto} other{quedan {count} fotos}}",
+  "@rollKeyOpen": {
+    "description": "Screen reader label of the roll key while a roll is loaded. count: frames left.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rollKeyLeft": "Quedan {count}",
+  "@rollKeyLeft": {
+    "description": "Second line of the roll control while a roll or a disposable is loaded. count: the frames left, with two digits (08).",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "rollKeyPaused": "Cámara desechable en pausa, {count, plural, =1{queda una foto} other{quedan {count} fotos}}",
+  "@rollKeyPaused": {
+    "description": "Screen reader label of the roll control while a disposable camera is set aside. count: frames left.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rollKeyPausedTitle": "Desechable en pausa",
+  "@rollKeyPausedTitle": {
+    "description": "First line of the roll control while a disposable camera is set aside. The camera shoots loose photos meanwhile."
+  },
+  "rollCounterLabel": "Quedan",
+  "@rollCounterLabel": {
+    "description": "Small print under the LCD while a roll is loaded."
+  },
+  "rollCounterSemantics": "{count, plural, =0{No quedan fotos} =1{Queda una foto} other{Quedan {count} fotos}}",
+  "@rollCounterSemantics": {
+    "description": "Screen reader text of the LCD counter while a roll is loaded. count: frames left.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rollFilmLocked": "La película queda fijada mientras haya un carrete cargado",
+  "@rollFilmLocked": {
+    "description": "Hint of a film cartridge that cannot be chosen now."
+  },
+  "rollClosedNotice": "Carrete terminado",
+  "@rollClosedNotice": {
+    "description": "Notice over the viewfinder when the roll closes by itself."
+  },
+  "rollActionFailed": "No se ha podido completar. Inténtalo de nuevo.",
+  "@rollActionFailed": {
+    "description": "Notice when an action on a roll fails."
+  },
+  "rollLoadTitle": "Cargar un carrete",
+  "@rollLoadTitle": {
+    "description": "Title of the sheet that loads a roll."
+  },
+  "rollSheetIntro": "Una película para todo el carrete. Las fotos quedan ocultas hasta que lo reveles.",
+  "@rollSheetIntro": {
+    "description": "One-line explanation at the top of the sheet that loads a roll."
+  },
+  "rollFilmRow": "Película",
+  "@rollFilmRow": {
+    "description": "Name of the row that shows the film of the roll."
+  },
+  "rollLengthLabel": "Fotos",
+  "@rollLengthLabel": {
+    "description": "Name of the row that picks the number of frames."
+  },
+  "rollDelayLabel": "Espera para revelar",
+  "@rollDelayLabel": {
+    "description": "Label of the choice of how long to wait before the roll can be developed, in the sheet that loads a roll."
+  },
+  "rollDelayNote": "La espera empieza cuando cierras el carrete.",
+  "@rollDelayNote": {
+    "description": "Note under the choice of the wait: it counts from the moment the roll is closed, not loaded."
+  },
+  "delayInstant": "Al momento",
+  "@delayInstant": {
+    "description": "Develop delay: as soon as the roll is closed."
+  },
+  "delayOneHour": "1 hora",
+  "@delayOneHour": {
+    "description": "Develop delay."
+  },
+  "delayNextMorning": "Mañana temprano",
+  "@delayNextMorning": {
+    "description": "Develop delay: the next morning."
+  },
+  "delayThreeDays": "3 días",
+  "@delayThreeDays": {
+    "description": "Develop delay."
+  },
+  "rollLoadAction": "Cargar carrete",
+  "@rollLoadAction": {
+    "description": "Key that loads the roll."
+  },
+  "rollLoadNote": "Mientras haya un carrete cargado no verás tus fotos, solo cuántas quedan.",
+  "@rollLoadNote": {
+    "description": "Note under the sheet that loads a roll."
+  },
+  "rollLossWarning": "Las fotos de un carrete sin revelar solo existen en este móvil. Si desinstalas la app, borras sus datos o cambias de móvil, se pierden.",
+  "@rollLossWarning": {
+    "description": "Warning in the sheet that loads a roll: where the undeveloped photos live and what loses them."
+  },
+  "rollLossNote": "Solo existen en este móvil: se pierden si desinstalas, borras los datos o cambias de móvil.",
+  "@rollLossNote": {
+    "description": "Compact reminder in the details of a roll that is not developed yet (the sheet of the camera and the waiting screen)."
+  },
+  "disposableOption": "Cámara desechable",
+  "@disposableOption": {
+    "description": "Key of the roll sheet that starts the disposable camera."
+  },
+  "disposableOptionNote": "27 fotos para compartir la cámara",
+  "@disposableOptionNote": {
+    "description": "Second line of the secondary option of the roll sheet that starts the disposable camera."
+  },
+  "disposableOptionSemantics": "{title} · {detail}",
+  "@disposableOptionSemantics": {
+    "description": "Screen reader label of the secondary option that starts the disposable camera. title and detail: its two lines.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "detail": {
+        "type": "String"
+      }
+    }
+  },
+  "disposableStartTitle": "Cámara desechable",
+  "@disposableStartTitle": {
+    "description": "Title of the dialog that starts the disposable camera."
+  },
+  "disposableStartBody": "Tiene 27 fotos y una película fija. Nadie ve las fotos ni toca ajustes: para salir hay que mantener pulsado el sello de salir unos segundos. Al acabar, la revelas como un carrete.",
+  "@disposableStartBody": {
+    "description": "Body of the dialog that starts the disposable camera."
+  },
+  "disposableStartAction": "Empezar",
+  "@disposableStartAction": {
+    "description": "Key that starts the disposable camera."
+  },
+  "disposableCounterCaption": "Fotos que quedan",
+  "@disposableCounterCaption": {
+    "description": "Small text on the sticker that counts the photos left."
+  },
+  "disposableFlashLabel": "Flash",
+  "@disposableFlashLabel": {
+    "description": "Name of the flash switch of the disposable camera (on or off)."
+  },
+  "disposableExitWord": "Salir",
+  "@disposableExitWord": {
+    "description": "Word on the exit stamp."
+  },
+  "disposableExitHint": "Mantén pulsado",
+  "@disposableExitHint": {
+    "description": "Small text on the exit stamp."
+  },
+  "disposableExitSemantics": "Salir de la cámara desechable. Mantén pulsado durante dos segundos.",
+  "@disposableExitSemantics": {
+    "description": "What a screen reader says for the exit stamp."
+  },
+  "disposableExitTitle": "¿Salir de la cámara desechable?",
+  "@disposableExitTitle": {
+    "description": "Title of the confirmation to leave the disposable camera."
+  },
+  "disposableExitBody": "{count, plural, =0{No quedan fotos.} =1{Queda 1 foto, que se guarda para más tarde.} other{Quedan {count} fotos, que se guardan para más tarde.}} Podrás seguir desde la llave del carrete.",
+  "@disposableExitBody": {
+    "description": "Body of the confirmation to leave the disposable camera.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "disposableExitConfirm": "Salir",
+  "@disposableExitConfirm": {
+    "description": "Key that leaves the disposable camera."
+  },
+  "disposableExitStay": "Seguir",
+  "@disposableExitStay": {
+    "description": "Key that stays in the disposable camera."
+  },
+  "disposableStrip": "{count} fotos · usar y tirar",
+  "@disposableStrip": {
+    "description": "Label on the cardboard of the disposable camera.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "disposableDone": "Se acabó la desechable",
+  "@disposableDone": {
+    "description": "Notice when the last photo of the disposable camera is taken."
+  },
+  "disposableResume": "Seguir con la desechable",
+  "@disposableResume": {
+    "description": "Key of the roll sheet that returns to a disposable camera that was set aside."
+  },
+  "disposableAdvanceLabel": "Avanza",
+  "@disposableAdvanceLabel": {
+    "description": "Word above the thumb wheel of the disposable camera."
+  },
+  "disposableFinishAction": "Terminar carrete",
+  "@disposableFinishAction": {
+    "description": "Key of the roll sheet that finishes a disposable camera that was set aside and shows how it develops."
+  },
+  "disposableFinishInstantNote": "Esta desechable se revela al momento, en cuanto la termines.",
+  "@disposableFinishInstantNote": {
+    "description": "Shown when finishing a paused disposable whose wait is instant."
+  },
+  "disposableFinishWarning": "Una vez terminada, ya no se pueden hacer más fotos con ella.",
+  "@disposableFinishWarning": {
+    "description": "Shown when finishing a paused disposable: it cannot be resumed."
+  },
+  "disposableFinishKeepWait": "Mantener la espera",
+  "@disposableFinishKeepWait": {
+    "description": "Key that finishes a paused disposable and keeps its scheduled wait to develop."
+  },
+  "disposablePausedNote": "La desechable está a medias: la cámara no la usa. Para cargar otro carrete, sigue con ella, termínala o tírala.",
+  "@disposablePausedNote": {
+    "description": "Note in the roll sheet while a disposable camera is set aside."
+  },
+  "rollRowSubtitle": "{date} · {count}",
+  "@rollRowSubtitle": {
+    "description": "Second line of a recent roll: its date and its frame count.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "rollRecentTitle": "Últimos carretes",
+  "@rollRecentTitle": {
+    "description": "Title of the list of the last rolls."
+  },
+  "rollStateWaiting": "Esperando",
+  "@rollStateWaiting": {
+    "description": "State of a closed roll that is waiting for its time."
+  },
+  "rollStateDeveloping": "Revelando",
+  "@rollStateDeveloping": {
+    "description": "State of a roll that is being developed."
+  },
+  "rollStateDeveloped": "Revelado",
+  "@rollStateDeveloped": {
+    "description": "State of a developed roll."
+  },
+  "rollStateLost": "Perdido",
+  "@rollStateLost": {
+    "description": "State of a roll whose key is lost."
+  },
+  "rollFramesCount": "{count, plural, =1{1 foto} other{{count} fotos}}",
+  "@rollFramesCount": {
+    "description": "Number of frames of a roll.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rollRowSemantics": "{film}, {frames}, {state}, {date}",
+  "@rollRowSemantics": {
+    "description": "Screen reader text of a roll in the list. frames: for example 24 frames.",
+    "placeholders": {
+      "film": {
+        "type": "String"
+      },
+      "frames": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "rollOpenTitle": "Carrete en la cámara",
+  "@rollOpenTitle": {
+    "description": "Title of the sheet while a roll is loaded."
+  },
+  "rollOpenSummary": "{film} · {length} fotos",
+  "@rollOpenSummary": {
+    "description": "Film and length of the loaded roll.",
+    "placeholders": {
+      "film": {
+        "type": "String"
+      },
+      "length": {
+        "type": "int"
+      }
+    }
+  },
+  "rollDevelopsLine": "Espera para revelar: {delay}",
+  "@rollDevelopsLine": {
+    "description": "How long the loaded roll waits once closed. delay: the name of the delay.",
+    "placeholders": {
+      "delay": {
+        "type": "String"
+      }
+    }
+  },
+  "rollCloseAction": "Cerrar carrete",
+  "@rollCloseAction": {
+    "description": "Key that closes the roll and develops it after its delay."
+  },
+  "rollDevelopNowAction": "Revelar ahora",
+  "@rollDevelopNowAction": {
+    "description": "Key that develops the roll right away."
+  },
+  "rollDiscardAction": "Tirar el carrete",
+  "@rollDiscardAction": {
+    "description": "Key that throws the roll away."
+  },
+  "rollDevelopNowTitle": "¿Revelar ahora?",
+  "@rollDevelopNowTitle": {
+    "description": "Title of the warning before developing early."
+  },
+  "rollDevelopNowBody": "{count, plural, =0{Este carrete no tiene fotos.} =1{Se revelará la foto de este carrete ahora.} other{Se revelarán las {count} fotos de este carrete ahora.}} La espera termina ya y no se puede deshacer.",
+  "@rollDevelopNowBody": {
+    "description": "Body of the confirmation of developing a roll before its wait is over. count: the photos taken on the roll.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rollDevelopKeepWaiting": "Seguir esperando",
+  "@rollDevelopKeepWaiting": {
+    "description": "Button that cancels the early developing."
+  },
+  "rollDiscardTitle": "¿Tirar el carrete?",
+  "@rollDiscardTitle": {
+    "description": "Title of the confirmation before throwing a roll away."
+  },
+  "rollDiscardBody": "Las fotos de este carrete se perderán para siempre. No se puede deshacer.",
+  "@rollDiscardBody": {
+    "description": "Confirmation before throwing a roll away."
+  },
+  "rollDiscardConfirm": "Tirar",
+  "@rollDiscardConfirm": {
+    "description": "Button that confirms throwing a roll away."
+  },
+  "dialogCancel": "Cancelar",
+  "@dialogCancel": {
+    "description": "Button that closes a dialog without doing anything."
+  },
+  "rollNameEdit": "Editar nombre del carrete",
+  "@rollNameEdit": {
+    "description": "Screen reader label and tooltip of the key of a roll screen that opens the dialog to name the roll."
+  },
+  "rollNameTitle": "Nombre del carrete",
+  "@rollNameTitle": {
+    "description": "Title of the dialog that names a roll."
+  },
+  "rollNameLabel": "Nombre",
+  "@rollNameLabel": {
+    "description": "Label of the text field of the dialog that names a roll."
+  },
+  "rollNameNote": "Es opcional. Sin nombre, el carrete se llama \"{fallback}\".",
+  "@rollNameNote": {
+    "description": "Note of the dialog that names a roll. fallback: the name the roll has while it has no name of its own, for example Carrete 07.",
+    "placeholders": {
+      "fallback": {
+        "type": "String"
+      }
+    }
+  },
+  "rollNameSave": "Guardar",
+  "@rollNameSave": {
+    "description": "Key of the dialog that names a roll that saves the name."
+  },
+  "rollNameCounter": "{count} de {max} caracteres",
+  "@rollNameCounter": {
+    "description": "Screen reader text of the counter of the field that names a roll. count: the characters written. max: the most allowed.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "rollWaitingTitle": "Carrete en espera",
+  "@rollWaitingTitle": {
+    "description": "Title of a closed roll that is waiting."
+  },
+  "rollReadyOn": "Puedes revelar a partir del {date} a las {time}",
+  "@rollReadyOn": {
+    "description": "When a closed roll will be ready.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "rollWaitingNote": "Hasta entonces tus fotos siguen guardadas y cifradas en el móvil.",
+  "@rollWaitingNote": {
+    "description": "Note under the date a closed roll will be ready."
+  },
+  "rollDevelopingTitle": "Revelando",
+  "@rollDevelopingTitle": {
+    "description": "Title of a roll that is being developed."
+  },
+  "rollDevelopProgressSemantics": "{done} de {total} fotos reveladas",
+  "@rollDevelopProgressSemantics": {
+    "description": "Screen reader text of the progress of the developing.",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "rollKeepOpen": "Mantén la app abierta hasta que termine.",
+  "@rollKeepOpen": {
+    "description": "Note on the developing screen."
+  },
+  "rollStillOpenTitle": "Este carrete sigue en la cámara",
+  "@rollStillOpenTitle": {
+    "description": "Shown when the screen of a roll is opened while the roll is loaded."
+  },
+  "rollLostTitle": "Este carrete no se puede revelar",
+  "@rollLostTitle": {
+    "description": "Title of a roll whose key is lost."
+  },
+  "rollLostBody": "Se perdió la clave que protegía sus fotos, así que no se pueden recuperar.",
+  "@rollLostBody": {
+    "description": "Explanation for a roll whose key is lost."
+  },
+  "rollDiscardedTitle": "Este carrete se tiró",
+  "@rollDiscardedTitle": {
+    "description": "Shown when the roll was thrown away."
+  },
+  "rollMissingTitle": "No encuentro este carrete",
+  "@rollMissingTitle": {
+    "description": "Shown when there is no such roll."
+  },
+  "rollShareSheetAction": "Compartir hoja",
+  "@rollShareSheetAction": {
+    "description": "Key of a developed roll that previews its contact sheet as one image and shares it. Also the title of the preview."
+  },
+  "rollShareSheetRendering": "Preparando la hoja",
+  "@rollShareSheetRendering": {
+    "description": "Shown in the preview while the contact sheet image is painted."
+  },
+  "rollShareSheetError": "No se pudo preparar la hoja. Inténtalo de nuevo.",
+  "@rollShareSheetError": {
+    "description": "Shown in the preview when the contact sheet image could not be made."
+  },
+  "rollShareSheetFailed": "No se pudo abrir el menú de compartir.",
+  "@rollShareSheetFailed": {
+    "description": "Shown under the preview when the share sheet of the system did not open."
+  },
+  "rollShareSheetPreview": "Vista previa de la hoja de contactos del carrete {number}",
+  "@rollShareSheetPreview": {
+    "description": "Screen reader label of the preview image. number: the number of the roll.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "contactSheetTitle": "Hoja de contactos",
+  "@contactSheetTitle": {
+    "description": "Title of the sheet of thumbnails of a developed roll."
+  },
+  "rollDevelopedOn": "Revelado el {date}",
+  "@rollDevelopedOn": {
+    "description": "When a roll was developed.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "rollFrameFailed": "Fallo",
+  "@rollFrameFailed": {
+    "description": "Short label inside a frame that could not be developed."
+  },
+  "rollFrameMissing": "Borrada",
+  "@rollFrameMissing": {
+    "description": "Short label inside a frame whose photo was deleted from the gallery."
+  },
+  "frameSemantics": "Fotograma {number}",
+  "@frameSemantics": {
+    "description": "Screen reader text of a frame of the contact sheet.",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "frameFailedSemantics": "Fotograma {number}, no se pudo revelar",
+  "@frameFailedSemantics": {
+    "description": "Screen reader text of a frame that failed.",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "frameDevelopingSemantics": "Fotograma {number}, revelando",
+  "@frameDevelopingSemantics": {
+    "description": "Screen reader text of a frame whose photo is not saved yet while the roll is being developed.",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "frameMissingSemantics": "Fotograma {number}, ya no está en la galería",
+  "@frameMissingSemantics": {
+    "description": "Screen reader text of a frame whose photo was deleted.",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "frameOpenHint": "Abre la foto",
+  "@frameOpenHint": {
+    "description": "Hint of a frame of the contact sheet."
+  },
+  "viewerPosition": "{index} de {total}",
+  "@viewerPosition": {
+    "description": "Position of the photo in the viewer.",
+    "placeholders": {
+      "index": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "viewerSemantics": "Foto {index} de {total}",
+  "@viewerSemantics": {
+    "description": "Screen reader text of the photo in the viewer.",
+    "placeholders": {
+      "index": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "viewerUnavailable": "No se puede mostrar la foto.",
+  "@viewerUnavailable": {
+    "description": "Shown when a photo cannot be read."
+  },
+  "rollNumberTitle": "Carrete {number}",
+  "@rollNumberTitle": {
+    "description": "Title of the screen of a roll. number: its number, for example 07.",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "galleryEmptyTitle": "Aún no hay fotos",
+  "@galleryEmptyTitle": {
+    "description": "Title of the gallery when it has no photos."
+  },
+  "galleryEmptyBody": "Las fotos que hagas aparecerán aquí. Las de un carrete, cuando las reveles.",
+  "@galleryEmptyBody": {
+    "description": "Explanation under the title of the empty gallery."
+  },
+  "galleryDevelopingLabel": "En revelado",
+  "@galleryDevelopingLabel": {
+    "description": "Title of the group of rolls that are not developed yet, in the gallery."
+  },
+  "galleryLooseLabel": "Fotos sueltas",
+  "@galleryLooseLabel": {
+    "description": "Name of the photos taken with no roll in the camera. It is the title of the contact sheet of a day."
+  },
+  "galleryToday": "Hoy",
+  "@galleryToday": {
+    "description": "The day of today, over a group of photos."
+  },
+  "galleryYesterday": "Ayer",
+  "@galleryYesterday": {
+    "description": "The day before today, over a group of photos."
+  },
+  "galleryCardHint": "Abre las fotos",
+  "@galleryCardHint": {
+    "description": "Hint of a card of the gallery."
+  },
+  "galleryLoadFailed": "No se ha podido cargar la galería.",
+  "@galleryLoadFailed": {
+    "description": "Shown when the gallery cannot be read."
+  },
+  "galleryImportRow": "Revelar fotos del móvil",
+  "@galleryImportRow": {
+    "description": "Row of the gallery that opens the photo picker to develop photos already taken."
+  },
+  "galleryImportHint": "Elige fotos de tu galería y dales una película",
+  "@galleryImportHint": {
+    "description": "Second line of the row of the gallery that develops photos of the phone."
+  },
+  "importTitle": "Revelar fotos",
+  "@importTitle": {
+    "description": "Title of the screen that develops photos of the gallery."
+  },
+  "importPickFailed": "No se han podido abrir tus fotos.",
+  "@importPickFailed": {
+    "description": "Shown when the photo picker of the system could not open."
+  },
+  "importPickLimit": "Solo se pueden revelar {count} fotos a la vez. Se han cogido las primeras.",
+  "@importPickLimit": {
+    "description": "Shown when more photos were chosen than can be developed at once. count: the limit.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importCloseLabel": "Salir sin revelar",
+  "@importCloseLabel": {
+    "description": "Screen reader text of the key that leaves the import screen without developing anything."
+  },
+  "importCounter": "{current} de {total}",
+  "@importCounter": {
+    "description": "Position of the photo shown, for example 2 of 5. Printed on the top bar.",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importPhotoSemantics": "Foto {current} de {total}, con la película {film}",
+  "@importPhotoSemantics": {
+    "description": "Screen reader text of the photo being developed.",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "film": {
+        "type": "String"
+      }
+    }
+  },
+  "importCompareHint": "Mantén pulsada la foto para ver el original",
+  "@importCompareHint": {
+    "description": "Hint of the photo: holding it shows the photo without the film."
+  },
+  "importOriginalPill": "Original",
+  "@importOriginalPill": {
+    "description": "Label shown over the photo while it is held, to say it is the original without the film."
+  },
+  "importTuneLabel": "Ajuste fino",
+  "@importTuneLabel": {
+    "description": "Screen reader text of the key that opens the fine tuning of the film."
+  },
+  "importStripLabel": "Fotos para revelar",
+  "@importStripLabel": {
+    "description": "Screen reader text of the strip of chosen photos."
+  },
+  "importStripItem": "Foto {current} de {total}",
+  "@importStripItem": {
+    "description": "Screen reader text of a photo of the strip.",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importDevelopAction": "{count, plural, =1{Revelar la foto} other{Revelar las {count} fotos}}",
+  "@importDevelopAction": {
+    "description": "Key that develops the chosen photos. count: how many.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importProgress": "Revelando {current} de {total}",
+  "@importProgress": {
+    "description": "Title of the panel shown while the photos are developed.",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importCancelling": "Cancelando",
+  "@importCancelling": {
+    "description": "Shown while a cancelled export finishes the photo in progress and undoes the rest."
+  },
+  "importPartialTitle": "Revelado a medias",
+  "@importPartialTitle": {
+    "description": "Title when some photos were developed and others not."
+  },
+  "importPartialBody": "Se han revelado {done} de {total} fotos. Las demás no se han podido leer o guardar.",
+  "@importPartialBody": {
+    "description": "Explains how many photos were developed. done: developed; total: chosen.",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importFailedTitle": "No se ha podido revelar",
+  "@importFailedTitle": {
+    "description": "Title when no photo could be developed."
+  },
+  "importFailedBody": "No se ha guardado ninguna foto. Prueba con otras o inténtalo de nuevo.",
+  "@importFailedBody": {
+    "description": "Explains that nothing was saved."
+  },
+  "importOpenGallery": "Ir a la galería",
+  "@importOpenGallery": {
+    "description": "Key that leaves the import screen to the gallery once the export has ended with problems."
+  },
+  "importUnreadable": "No se puede leer esta foto",
+  "@importUnreadable": {
+    "description": "Shown in place of a photo that cannot be read."
+  },
+  "importRejected": "{count, plural, =1{Una foto es demasiado grande y se ha dejado fuera.} other{{count} fotos son demasiado grandes y se han dejado fuera.}}",
+  "@importRejected": {
+    "description": "Shown when photos were left out of the import for being too big to open. count: how many.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importNoDate": "Sin fecha: no se imprimirá",
+  "@importNoDate": {
+    "description": "Shown over a photo that has no date when the film asks for the date imprint."
+  },
+  "importLeftoverTitle": "Algunas fotos se han quedado",
+  "@importLeftoverTitle": {
+    "description": "Title when photos that had to be removed after a cancel or a failure are still in the gallery of the phone."
+  },
+  "importLeftoverBody": "{count, plural, =1{Una foto no se ha podido quitar de la galería del móvil. Está en la carpeta Diapo y puedes borrarla desde ahí.} other{{count} fotos no se han podido quitar de la galería del móvil. Están en la carpeta Diapo y puedes borrarlas desde ahí.}}",
+  "@importLeftoverBody": {
+    "description": "Explains how many photos could not be removed. count: how many.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "galleryDayMissingTitle": "No encuentro este día",
+  "@galleryDayMissingTitle": {
+    "description": "Shown when there are no loose photos of the day that was asked for."
+  },
+  "viewerShare": "Compartir",
+  "@viewerShare": {
+    "description": "Key of the viewer that shares the photo."
+  },
+  "viewerDelete": "Borrar",
+  "@viewerDelete": {
+    "description": "Key of the viewer that deletes the photo."
+  },
+  "viewerDeleteTitle": "¿Borrar esta foto?",
+  "@viewerDeleteTitle": {
+    "description": "Title of the confirmation before deleting a photo."
+  },
+  "viewerDeleteBody": "Se borrará de Diapo y de la galería del móvil. No se puede deshacer.",
+  "@viewerDeleteBody": {
+    "description": "Confirmation before deleting a photo."
+  },
+  "viewerDeleteConfirm": "Borrar",
+  "@viewerDeleteConfirm": {
+    "description": "Button that confirms deleting a photo."
+  },
+  "viewerActionFailed": "No se ha podido completar. Inténtalo de nuevo.",
+  "viewerOriginalKept": "Foto eliminada, pero su original sigue en Pictures/Diapo/Originales.",
+  "@viewerOriginalKept": {
+    "description": "Notice after deleting a photo whose untouched original could not be deleted with it."
+  },
+  "@viewerActionFailed": {
+    "description": "Notice when sharing or deleting a photo fails."
+  },
+  "galleryPlaceholder": "La galería todavía no está aquí.",
+  "onboardingTitle1": "Una cámara, no un filtro.",
+  "@onboardingTitle1": {
+    "description": "Title of the first screen of the first-use flow."
+  },
+  "onboardingBody1": "Eliges la película antes de disparar y la ves en directo en el visor. Tus fotos no salen del móvil.",
+  "@onboardingBody1": {
+    "description": "Text of the first screen of the first-use flow."
+  },
+  "onboardingTitle2": "Elige la película.",
+  "@onboardingTitle2": {
+    "description": "Title of the second screen of the first-use flow."
+  },
+  "onboardingBody2": "Desliza los cartuchos para cambiar de película y mira el resultado en directo en el visor.",
+  "@onboardingBody2": {
+    "description": "Text of the second screen of the first-use flow."
+  },
+  "onboardingTitle3": "Un carrete: fotos sin mirar.",
+  "@onboardingTitle3": {
+    "description": "Title of the third screen of the first-use flow."
+  },
+  "onboardingBody3": "Con un carrete las fotos quedan ocultas hasta que lo reveles. Cuando pase la espera que elijas, te avisamos y abres la app para revelarlas.",
+  "@onboardingBody3": {
+    "description": "Text of the third screen of the first-use flow."
+  },
+  "onboardingSkip": "Saltar",
+  "@onboardingSkip": {
+    "description": "Key that leaves the first-use flow."
+  },
+  "onboardingNext": "Siguiente",
+  "@onboardingNext": {
+    "description": "Label of the shutter of the first-use flow: goes to the next screen."
+  },
+  "onboardingStart": "Empezar a disparar",
+  "@onboardingStart": {
+    "description": "Label of the shutter on the last screen of the first-use flow: opens the camera."
+  },
+  "onboardingChipNoAccount": "Sin cuenta",
+  "@onboardingChipNoAccount": {
+    "description": "Small label over the picture of the first screen of the first-use flow."
+  },
+  "onboardingChipNoWatermark": "Sin marca de agua",
+  "@onboardingChipNoWatermark": {
+    "description": "Small label over the picture of the first screen of the first-use flow."
+  },
+  "onboardingChipOnDevice": "En tu móvil",
+  "@onboardingChipOnDevice": {
+    "description": "Small label over the picture of the first screen of the first-use flow."
+  },
+  "onboardingArtCamera": "Un visor con una escena en película. Sin cuenta, sin marca de agua, todo en tu móvil.",
+  "@onboardingArtCamera": {
+    "description": "Screen reader text of the picture of the first screen."
+  },
+  "onboardingArtFilm": "Un visor con una escena en película y, debajo, cinco cartuchos de película.",
+  "@onboardingArtFilm": {
+    "description": "Screen reader text of the picture of the second screen."
+  },
+  "onboardingRollHidden": "Hechas · ocultas hasta revelar",
+  "@onboardingRollHidden": {
+    "description": "Small label under the counter in the picture of the third screen."
+  },
+  "onboardingReminder": "Aviso cuando puedas revelar",
+  "@onboardingReminder": {
+    "description": "Label of the reminder switch in the picture of the third screen."
+  },
+  "onboardingArtRoll": "El contador de un carrete con 9 de 24 fotos hechas y ocultas, la espera para revelar a elegir y un aviso opcional.",
+  "@onboardingArtRoll": {
+    "description": "Screen reader text of the picture of the third screen."
+  },
+  "settingsHowItWorks": "Cómo funciona",
+  "@settingsHowItWorks": {
+    "description": "Entry of the settings that shows the first-use flow again."
+  },
+  "settingsRateTitle": "Valorar Diapo",
+  "@settingsRateTitle": {
+    "description": "Row of the settings that opens the store page of the app to leave a review."
+  },
+  "settingsRateSubtitle": "Una reseña ayuda a que otros la encuentren",
+  "@settingsRateSubtitle": {
+    "description": "Sentence under the rate row of the settings."
+  },
+  "onboardingStepSemantics": "Paso {step} de {total}",
+  "@onboardingStepSemantics": {
+    "description": "Screen reader text of the step counter of the first-use flow.",
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "settingSaveLocationHint": "El lugar se guarda en los datos de la foto (EXIF), solo con la cámara abierta, y no se envía a ningún sitio. Desactivado por defecto.",
+  "@settingSaveLocationHint": {
+    "description": "Description of the save location setting: where it goes, when, and that it stays on the phone."
+  },
+  "settingSaveLocationApproximate": "Solo tienes permiso para la ubicación aproximada, así que el lugar será aproximado.",
+  "@settingSaveLocationApproximate": {
+    "description": "Extra line under the save location setting when only approximate location is granted."
+  },
+  "settingSaveLocationRevoked": "No se está guardando la ubicación porque se quitó el permiso.",
+  "@settingSaveLocationRevoked": {
+    "description": "Warning under the save location setting when it is on but the permission was removed."
+  },
+  "settingSaveLocationOpenSettings": "Abrir los ajustes del sistema",
+  "@settingSaveLocationOpenSettings": {
+    "description": "Action under the save location setting that opens the system settings of the app."
+  },
+  "locationPermissionNeeded": "Hace falta el permiso de ubicación para guardar el lugar de las fotos.",
+  "@locationPermissionNeeded": {
+    "description": "Shown when the user refuses the location permission after turning the setting on."
+  },
+  "locationPermissionBlocked": "El permiso de ubicación está bloqueado. Actívalo en los ajustes del sistema.",
+  "@locationPermissionBlocked": {
+    "description": "Shown when the location permission is blocked and only the system settings can grant it."
+  },
+  "locationPermissionBlockedAction": "Ajustes",
+  "@locationPermissionBlockedAction": {
+    "description": "Button of the message that opens the system settings."
+  },
+  "settingsSectionBackup": "Tus ajustes, sin fotos",
+  "@settingsSectionBackup": {
+    "description": "Row of the Advanced section that opens the export and import of the settings (settings only, not photos)."
+  },
+  "settingsExport": "Exportar ajustes",
+  "@settingsExport": {
+    "description": "Row that saves the settings and the film tuning to a file."
+  },
+  "settingsExportHint": "Guarda un archivo con tus ajustes y el afinado de cada película. No guarda tus fotos: no es una copia de seguridad.",
+  "@settingsExportHint": {
+    "description": "Explains the export row."
+  },
+  "settingsImport": "Importar ajustes",
+  "@settingsImport": {
+    "description": "Row that restores the settings and the film tuning from a file."
+  },
+  "settingsImportHint": "Lee un archivo exportado antes y lo aplica. No recupera fotos.",
+  "@settingsImportHint": {
+    "description": "Explains the import row."
+  },
+  "settingsImportConfirmTitle": "¿Importar ajustes?",
+  "@settingsImportConfirmTitle": {
+    "description": "Title of the confirmation before importing settings."
+  },
+  "settingsImportConfirmBody": "Se reemplazarán tus ajustes actuales y el afinado de las películas por los del archivo.",
+  "@settingsImportConfirmBody": {
+    "description": "Body of the confirmation before importing settings."
+  },
+  "settingsImportConfirmAction": "Importar",
+  "@settingsImportConfirmAction": {
+    "description": "Button that confirms importing settings."
+  },
+  "settingsExportDone": "Ajustes exportados.",
+  "@settingsExportDone": {
+    "description": "Shown after the settings file was saved."
+  },
+  "settingsImportDone": "Ajustes importados.",
+  "@settingsImportDone": {
+    "description": "Shown after the settings were imported."
+  },
+  "settingsImportSkippedFilms": "{count, plural, =1{Se ha dejado fuera una película que esta versión no conoce.} other{Se han dejado fuera {count} películas que esta versión no conoce.}}",
+  "@settingsImportSkippedFilms": {
+    "description": "Added to the import message when the file had films this version does not know. count: how many.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsImportLocationStaysOff": "La ubicación sigue desactivada; actívala aquí si la quieres.",
+  "@settingsImportLocationStaysOff": {
+    "description": "Added to the import message: an import never turns location on."
+  },
+  "settingsImportOriginalStaysOff": "Guardar también el original sigue desactivado; actívalo aquí si lo quieres.",
+  "@settingsImportOriginalStaysOff": {
+    "description": "Added to the import message: an import never turns saving originals on."
+  },
+  "settingsBackupTooLarge": "El archivo es demasiado grande para ser una copia de ajustes de Diapo.",
+  "@settingsBackupTooLarge": {
+    "description": "Import error: the file is too big."
+  },
+  "settingsBackupInvalidJson": "No se puede leer el archivo: no tiene un formato válido.",
+  "@settingsBackupInvalidJson": {
+    "description": "Import error: the file is not readable JSON."
+  },
+  "settingsBackupWrongFormat": "Este archivo no es una copia de ajustes de Diapo.",
+  "@settingsBackupWrongFormat": {
+    "description": "Import error: the file is not a Carrete settings backup."
+  },
+  "settingsBackupUnsupportedVersion": "Este archivo viene de una versión más nueva de Diapo. Actualiza la app para importarlo.",
+  "@settingsBackupUnsupportedVersion": {
+    "description": "Import error: the file comes from a newer version."
+  },
+  "settingsBackupInvalidValue": "El archivo tiene valores no válidos y no se ha importado nada.",
+  "@settingsBackupInvalidValue": {
+    "description": "Import error: the file has values that are not valid."
+  },
+  "settingsBackupBusy": "Ya hay una exportación o una importación en curso.",
+  "@settingsBackupBusy": {
+    "description": "Error: another export or import is still running."
+  },
+  "settingsBackupStorage": "No se ha podido leer o guardar. Inténtalo de nuevo.",
+  "@settingsBackupStorage": {
+    "description": "Error: the file or the storage could not be used."
+  },
+  "settingsBackupInterrupted": "Se interrumpió la operación. Inténtalo de nuevo.",
+  "@settingsBackupInterrupted": {
+    "description": "Error: the operation was interrupted."
+  },
+  "settingHaptics": "Vibración",
+  "@settingHaptics": {
+    "description": "Setting that turns the small vibrations of the camera on or off (shutter, cartridge, roll loaded, roll finished). Not played on silent."
+  },
+  "saveStatusSaving": "{count, plural, =1{Guardando 1 foto} other{Guardando {count} fotos}}",
+  "@saveStatusSaving": {
+    "description": "What the camera says while photos are being saved. count: how many.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "saveStatusPending": "Hay fotos pendientes de guardar",
+  "@saveStatusPending": {
+    "description": "The chip of the camera while some photos could not be saved yet. Tapping it opens the explanation."
+  },
+  "saveSheetTitle": "Fotos pendientes",
+  "@saveSheetTitle": {
+    "description": "Title of the sheet that explains the photos waiting to be saved."
+  },
+  "saveSheetCount": "{count, plural, =1{1 foto está esperando a guardarse.} other{{count} fotos están esperando a guardarse.}}",
+  "@saveSheetCount": {
+    "description": "First line of the sheet. count: the photos waiting.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "saveSheetStorageFull": "El teléfono se ha quedado sin espacio. Libera espacio y vuelve a intentarlo.",
+  "@saveSheetStorageFull": {
+    "description": "The sheet: the reason is that the storage is full."
+  },
+  "saveSheetPermission": "Diapo no tiene permiso para guardar en la galería. Revisa los permisos del sistema y vuelve a intentarlo.",
+  "@saveSheetPermission": {
+    "description": "The sheet: the reason is a missing permission."
+  },
+  "saveSheetUnknown": "No se han podido guardar ahora. Puedes volver a intentarlo.",
+  "@saveSheetUnknown": {
+    "description": "The sheet: the reason is not known (for example after restarting the app)."
+  },
+  "saveSheetKept": "Mientras tanto se conservan de forma provisional dentro de la app. No borres los datos de la app.",
+  "@saveSheetKept": {
+    "description": "The sheet: where the photos are meanwhile, and what not to do."
+  },
+  "saveSheetRetry": "Reintentar",
+  "@saveSheetRetry": {
+    "description": "Key of the sheet that tries to save the photos again."
+  },
+  "saveSheetLater": "Más tarde",
+  "@saveSheetLater": {
+    "description": "Key of the sheet that closes it without doing anything."
+  }
+}

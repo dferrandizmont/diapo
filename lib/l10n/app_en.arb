@@ -1,0 +1,746 @@
+{
+  "@@locale": "en",
+  "appTitle": "Diapo",
+  "galleryTitle": "Gallery",
+  "settingsTitle": "Settings",
+  "rollTitle": "Roll",
+  "settingCameraSounds": "Camera sounds",
+  "settingSaveOriginal": "Also save the original",
+  "settingSaveOriginalHint": "When possible, also keeps the photo without the film.",
+  "settingSaveLocation": "Save location",
+  "settingGrid": "Grid",
+  "settingLevel": "Level",
+  "settingDateStamp": "Date on the photo",
+  "settingDefaultFilm": "Default film",
+  "settingTheme": "Theme",
+  "settingLanguage": "Language",
+  "settingDateStyle": "Date style",
+  "dateStyleYearFirst": "Year first",
+  "dateStyleDayFirst": "Day first",
+  "dateStyleSemantics": "{style}: {date}",
+  "settingsSectionCamera": "Camera",
+  "settingsSectionLook": "Appearance",
+  "settingsSectionAdvanced": "Advanced",
+  "settingsSectionAbout": "About",
+  "themeSystem": "System",
+  "themeLight": "Light",
+  "themeDark": "Dark",
+  "languageSystem": "System",
+  "languageSpanish": "Español",
+  "languageCatalan": "Català",
+  "languageEnglish": "English",
+  "settingsVersion": "Version",
+  "settingsOfflineNote": "Works offline, with no accounts and no ads. Your photos never leave the phone.",
+  "settingsFreeSoftwareNote": "Diapo is free software under the GPL-3.0-only licence. Source code: https://github.com/dferrandizmont/diapo",
+  "settingsLicences": "Licences",
+  "settingsPrivacyPolicy": "Privacy policy",
+  "settingsLegalNotice": "Legal notice",
+  "cameraCounterLabel": "Loose photos",
+  "cameraCounterSemantics": "{film}, loose photos",
+  "flashOff": "Off",
+  "flashAuto": "Auto",
+  "flashOn": "On",
+  "flashParty": "Party",
+  "flashKeyLabel": "Flash: {mode}",
+  "switchCameraLabel": "Switch camera",
+  "shutterLabel": "Take photo",
+  "formatKeyLabel": "Format {format}",
+  "formatKeyHint": "Changes the shape of the frame",
+  "viewfinderLabel": "Camera viewfinder",
+  "filmCarouselLabel": "Films",
+  "filmCartridgeHint": "Press and hold for fine tuning",
+  "tunePanelLabel": "Fine tuning of {film}",
+  "tuneSubtitle": "Fine tuning",
+  "tuneClose": "Close",
+  "tuneGrain": "Grain",
+  "tuneHalation": "Halation",
+  "tuneLeak": "Light leak",
+  "tuneVignette": "Vignette",
+  "tuneDateStamp": "Date imprint",
+  "tuneCinemaBands": "Cinema bands",
+  "tuneFormat": "Format",
+  "whiteFrameHint": "White frame when saved",
+  "focusLockedLabel": "Focus and exposure locked. Tap to release",
+  "zoomLabel": "{zoom}x",
+  "cameraPermissionDenied": "Camera permission is needed to take photos. You can grant it in the system settings.",
+  "cameraOpenSettings": "Open settings",
+  "cameraUnavailable": "The camera cannot be opened.",
+  "cameraRetry": "Try again",
+  "shotSaved": "Photo saved",
+  "shotSaveFailed": "The photo could not be saved.",
+  "filmsLoadFailed": "The films could not be loaded.",
+  "filmsLoading": "Loading the films",
+  "rollReadyTitle": "You can develop your roll now",
+  "rollReadyBody": "{count, plural, =1{Open the app to develop your photo. Keep it open until it finishes.} other{Open the app to develop your {count} photos. Keep it open until it finishes.}}",
+  "@rollReadyBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "Readiness notification; count is the photos taken, fewer than the roll length when it was closed early. Photos develop when the app is open."
+  },
+  "rollKeyLoad": "Load roll",
+  "rollKeyOpen": "Roll loaded, {count, plural, =1{one frame left} other{{count} frames left}}",
+  "@rollKeyOpen": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rollKeyLeft": "Left {count}",
+  "@rollKeyLeft": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "rollKeyPaused": "Disposable camera paused, {count, plural, =1{one frame left} other{{count} frames left}}",
+  "@rollKeyPaused": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rollKeyPausedTitle": "Disposable paused",
+  "rollCounterLabel": "Left",
+  "rollCounterSemantics": "{count, plural, =0{No frames left} =1{One frame left} other{{count} frames left}}",
+  "@rollCounterSemantics": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rollFilmLocked": "The film is fixed while a roll is loaded",
+  "rollClosedNotice": "Roll finished",
+  "rollActionFailed": "That did not work. Try again.",
+  "rollLoadTitle": "Load a roll",
+  "rollFilmRow": "Film",
+  "rollLengthLabel": "Frames",
+  "rollDelayLabel": "Wait to develop",
+  "delayInstant": "Now",
+  "delayOneHour": "1 hour",
+  "delayNextMorning": "Next morning",
+  "delayThreeDays": "3 days",
+  "rollLoadAction": "Load roll",
+  "rollLoadNote": "While a roll is loaded you will not see your photos, only how many are left.",
+  "rollLossWarning": "The photos of a roll you have not developed exist only on this phone. If you uninstall the app, clear its data or move to another phone, they are lost.",
+  "disposableOption": "Disposable camera",
+  "disposableOptionNote": "27 photos to share the camera",
+  "disposableStartTitle": "Disposable camera",
+  "disposableStartBody": "It has 27 photos and a fixed film. Nobody sees the photos or touches the settings: to leave, hold the exit stamp for a few seconds. When it is full, you develop it like a roll.",
+  "disposableStartAction": "Start",
+  "disposableCounterCaption": "Photos left",
+  "disposableFlashLabel": "Flash",
+  "disposableExitWord": "Exit",
+  "disposableExitHint": "Hold down",
+  "disposableExitSemantics": "Leave the disposable camera. Hold down for two seconds.",
+  "disposableExitTitle": "Leave the disposable camera?",
+  "disposableExitBody": "{count, plural, =0{No photos are left.} =1{1 photo is left and is kept for later.} other{{count} photos are left and are kept for later.}} You can carry on from the roll key.",
+  "@disposableExitBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "disposableExitConfirm": "Leave",
+  "disposableExitStay": "Stay",
+  "disposableStrip": "{count} photos · use and throw away",
+  "@disposableStrip": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "disposableDone": "The disposable is finished",
+  "disposableResume": "Back to the disposable camera",
+  "disposableAdvanceLabel": "Advance",
+  "disposableFinishAction": "Finish roll",
+  "disposableFinishInstantNote": "This disposable develops right away once you finish it.",
+  "disposableFinishWarning": "Once finished, you cannot take more photos with it.",
+  "disposableFinishKeepWait": "Keep the wait",
+  "disposablePausedNote": "The disposable is half used: the camera does not use it. To load another roll, go back to it, finish it or throw it away.",
+  "rollRowSubtitle": "{date} · {count}",
+  "rollRecentTitle": "Recent rolls",
+  "rollStateWaiting": "Waiting",
+  "rollStateDeveloping": "Developing",
+  "rollStateDeveloped": "Developed",
+  "rollStateLost": "Lost",
+  "rollFramesCount": "{count, plural, =1{1 frame} other{{count} frames}}",
+  "@rollFramesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rollRowSemantics": "{film}, {frames}, {state}, {date}",
+  "@rollRowSemantics": {
+    "placeholders": {
+      "film": {
+        "type": "String"
+      },
+      "frames": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "rollOpenTitle": "Roll in the camera",
+  "rollOpenSummary": "{film} · {length} frames",
+  "@rollOpenSummary": {
+    "placeholders": {
+      "film": {
+        "type": "String"
+      },
+      "length": {
+        "type": "int"
+      }
+    }
+  },
+  "rollDevelopsLine": "Wait to develop: {delay}",
+  "@rollDevelopsLine": {
+    "placeholders": {
+      "delay": {
+        "type": "String"
+      }
+    }
+  },
+  "rollCloseAction": "Close roll",
+  "rollDevelopNowAction": "Develop now",
+  "rollDiscardAction": "Throw away the roll",
+  "rollDevelopNowTitle": "Develop now?",
+  "rollDevelopNowBody": "{count, plural, =0{This roll has no photos.} =1{The photo on this roll will be developed now.} other{The {count} photos on this roll will be developed now.}} The wait ends now and this cannot be undone.",
+  "rollDevelopKeepWaiting": "Keep waiting",
+  "rollDiscardTitle": "Throw away the roll?",
+  "rollDiscardBody": "The photos of this roll will be lost for good. There is no undo.",
+  "rollDiscardConfirm": "Throw away",
+  "dialogCancel": "Cancel",
+  "rollNameEdit": "Edit roll name",
+  "rollNameTitle": "Roll name",
+  "rollNameLabel": "Name",
+  "rollNameNote": "It is optional. Without a name, the roll is called \"{fallback}\".",
+  "@rollNameNote": {
+    "placeholders": {
+      "fallback": {
+        "type": "String"
+      }
+    }
+  },
+  "rollNameSave": "Save",
+  "rollNameCounter": "{count} of {max} characters",
+  "@rollNameCounter": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "rollWaitingTitle": "Roll waiting",
+  "rollReadyOn": "You can develop from {date} at {time}",
+  "@rollReadyOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "rollWaitingNote": "Until then your photos stay encrypted on this phone.",
+  "rollDevelopingTitle": "Developing",
+  "rollDevelopProgressSemantics": "{done} of {total} frames developed",
+  "@rollDevelopProgressSemantics": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "rollKeepOpen": "Keep the app open until it finishes.",
+  "rollStillOpenTitle": "This roll is still in the camera",
+  "rollLostTitle": "This roll cannot be developed",
+  "rollLostBody": "The key that protected its photos is gone, so they cannot be recovered.",
+  "rollDiscardedTitle": "This roll was thrown away",
+  "rollMissingTitle": "This roll cannot be found",
+  "rollShareSheetAction": "Share contact sheet",
+  "rollShareSheetRendering": "Preparing the sheet",
+  "rollShareSheetError": "The sheet could not be prepared. Try again.",
+  "rollShareSheetFailed": "The share menu could not be opened.",
+  "rollShareSheetPreview": "Preview of the contact sheet of roll {number}",
+  "@rollShareSheetPreview": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "contactSheetTitle": "Contact sheet",
+  "rollDevelopedOn": "Developed on {date}",
+  "@rollDevelopedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "rollFrameFailed": "Failed",
+  "rollFrameMissing": "Deleted",
+  "frameSemantics": "Frame {number}",
+  "@frameSemantics": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "frameFailedSemantics": "Frame {number}, could not be developed",
+  "@frameFailedSemantics": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "frameDevelopingSemantics": "Frame {number}, developing",
+  "@frameDevelopingSemantics": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "frameMissingSemantics": "Frame {number}, no longer in the gallery",
+  "@frameMissingSemantics": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "frameOpenHint": "Opens the photo",
+  "viewerPosition": "{index} of {total}",
+  "@viewerPosition": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "viewerSemantics": "Photo {index} of {total}",
+  "@viewerSemantics": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "viewerUnavailable": "The photo cannot be shown.",
+  "rollNumberTitle": "Roll {number}",
+  "@rollNumberTitle": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "galleryEmptyTitle": "No photos yet",
+  "galleryEmptyBody": "The photos you take will show up here. Those from a roll, once you develop it.",
+  "galleryDevelopingLabel": "Developing",
+  "galleryLooseLabel": "Loose photos",
+  "galleryToday": "Today",
+  "galleryYesterday": "Yesterday",
+  "galleryCardHint": "Opens the photos",
+  "galleryLoadFailed": "The gallery could not be loaded.",
+  "galleryImportRow": "Develop photos from your phone",
+  "@galleryImportRow": {
+    "description": "Row of the gallery that opens the photo picker to develop photos already taken."
+  },
+  "galleryImportHint": "Pick photos from your gallery and give them a film",
+  "@galleryImportHint": {
+    "description": "Second line of the row of the gallery that develops photos of the phone."
+  },
+  "importTitle": "Develop photos",
+  "@importTitle": {
+    "description": "Title of the screen that develops photos of the gallery."
+  },
+  "importPickFailed": "Could not open your photos.",
+  "@importPickFailed": {
+    "description": "Shown when the photo picker of the system could not open."
+  },
+  "importPickLimit": "Only {count} photos can be developed at a time. The first ones were taken.",
+  "@importPickLimit": {
+    "description": "Shown when more photos were chosen than can be developed at once. count: the limit.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importCloseLabel": "Leave without developing",
+  "@importCloseLabel": {
+    "description": "Screen reader text of the key that leaves the import screen without developing anything."
+  },
+  "importCounter": "{current} of {total}",
+  "@importCounter": {
+    "description": "Position of the photo shown, for example 2 of 5. Printed on the top bar.",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importPhotoSemantics": "Photo {current} of {total}, with the film {film}",
+  "@importPhotoSemantics": {
+    "description": "Screen reader text of the photo being developed.",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "film": {
+        "type": "String"
+      }
+    }
+  },
+  "importCompareHint": "Hold the photo to see the original",
+  "@importCompareHint": {
+    "description": "Hint of the photo: holding it shows the photo without the film."
+  },
+  "importOriginalPill": "Original",
+  "@importOriginalPill": {
+    "description": "Label shown over the photo while it is held, to say it is the original without the film."
+  },
+  "importTuneLabel": "Fine tuning",
+  "@importTuneLabel": {
+    "description": "Screen reader text of the key that opens the fine tuning of the film."
+  },
+  "importStripLabel": "Photos to develop",
+  "@importStripLabel": {
+    "description": "Screen reader text of the strip of chosen photos."
+  },
+  "importStripItem": "Photo {current} of {total}",
+  "@importStripItem": {
+    "description": "Screen reader text of a photo of the strip.",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importDevelopAction": "{count, plural, =1{Develop the photo} other{Develop all {count} photos}}",
+  "@importDevelopAction": {
+    "description": "Key that develops the chosen photos. count: how many.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importProgress": "Developing {current} of {total}",
+  "@importProgress": {
+    "description": "Title of the panel shown while the photos are developed.",
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importCancelling": "Cancelling",
+  "@importCancelling": {
+    "description": "Shown while a cancelled export finishes the photo in progress and undoes the rest."
+  },
+  "importPartialTitle": "Only partly developed",
+  "@importPartialTitle": {
+    "description": "Title when some photos were developed and others not."
+  },
+  "importPartialBody": "{done} of {total} photos were developed. The others could not be read or saved.",
+  "@importPartialBody": {
+    "description": "Explains how many photos were developed. done: developed; total: chosen.",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importFailedTitle": "Could not develop",
+  "@importFailedTitle": {
+    "description": "Title when no photo could be developed."
+  },
+  "importFailedBody": "No photo was saved. Try other photos or try again.",
+  "@importFailedBody": {
+    "description": "Explains that nothing was saved."
+  },
+  "importOpenGallery": "Go to the gallery",
+  "@importOpenGallery": {
+    "description": "Key that leaves the import screen to the gallery once the export has ended with problems."
+  },
+  "importUnreadable": "This photo cannot be read",
+  "@importUnreadable": {
+    "description": "Shown in place of a photo that cannot be read."
+  },
+  "importRejected": "{count, plural, =1{One photo is too big and was left out.} other{{count} photos are too big and were left out.}}",
+  "@importRejected": {
+    "description": "Shown when photos were left out of the import for being too big to open. count: how many.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importNoDate": "No date: none will be printed",
+  "@importNoDate": {
+    "description": "Shown over a photo that has no date when the film asks for the date imprint."
+  },
+  "importLeftoverTitle": "Some photos stayed",
+  "@importLeftoverTitle": {
+    "description": "Title when photos that had to be removed after a cancel or a failure are still in the gallery of the phone."
+  },
+  "importLeftoverBody": "{count, plural, =1{One photo could not be removed from the gallery of the phone. It is in the Diapo folder and you can delete it from there.} other{{count} photos could not be removed from the gallery of the phone. They are in the Diapo folder and you can delete them from there.}}",
+  "@importLeftoverBody": {
+    "description": "Explains how many photos could not be removed. count: how many.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "galleryDayMissingTitle": "This day cannot be found",
+  "viewerShare": "Share",
+  "viewerDelete": "Delete",
+  "viewerDeleteTitle": "Delete this photo?",
+  "viewerDeleteBody": "It will be deleted from Diapo and from your phone's gallery. This cannot be undone.",
+  "viewerDeleteConfirm": "Delete",
+  "viewerActionFailed": "That did not work. Try again.",
+  "viewerOriginalKept": "Photo deleted, but its original is still in Pictures/Diapo/Originales.",
+  "galleryPlaceholder": "The gallery is not here yet.",
+  "onboardingTitle1": "A camera, not a filter.",
+  "onboardingBody1": "You pick the film before you shoot and see it live in the viewfinder. Your photos never leave your phone.",
+  "onboardingTitle2": "Pick a film.",
+  "onboardingBody2": "Swipe the cartridges to change film and see the result live in the viewfinder.",
+  "onboardingTitle3": "A roll: photos you can't peek at.",
+  "onboardingBody3": "With a roll, photos stay hidden until you develop it. When the wait you chose is over, we let you know and you open the app to develop them.",
+  "onboardingSkip": "Skip",
+  "onboardingNext": "Next",
+  "onboardingStart": "Start shooting",
+  "onboardingChipNoAccount": "No account",
+  "onboardingChipNoWatermark": "No watermark",
+  "onboardingChipOnDevice": "On your phone",
+  "onboardingArtCamera": "A viewfinder with a scene on film. No account, no watermark, all on your phone.",
+  "onboardingArtFilm": "A viewfinder with a film-look scene and, below it, five film cartridges.",
+  "onboardingRollHidden": "Taken · hidden until developed",
+  "onboardingReminder": "Alert when you can develop",
+  "onboardingArtRoll": "The counter of a roll with 9 of 24 photos taken and hidden, a choice of how long to wait, and an optional alert.",
+  "settingsHowItWorks": "How it works",
+  "settingsRateTitle": "Rate Diapo",
+  "settingsRateSubtitle": "A review helps others find it",
+  "onboardingStepSemantics": "Step {step} of {total}",
+  "settingSaveLocationHint": "The place is written into the photo's data (EXIF), only while the camera is open, and is never sent anywhere. Off by default.",
+  "@settingSaveLocationHint": {
+    "description": "Description of the save location setting: where it goes, when, and that it stays on the phone."
+  },
+  "settingSaveLocationApproximate": "You only granted approximate location, so the place will be approximate.",
+  "@settingSaveLocationApproximate": {
+    "description": "Extra line under the save location setting when only approximate location is granted."
+  },
+  "settingSaveLocationRevoked": "The location is not being saved because the permission was removed.",
+  "@settingSaveLocationRevoked": {
+    "description": "Warning under the save location setting when it is on but the permission was removed."
+  },
+  "settingSaveLocationOpenSettings": "Open system settings",
+  "@settingSaveLocationOpenSettings": {
+    "description": "Action under the save location setting that opens the system settings of the app."
+  },
+  "locationPermissionNeeded": "Location permission is needed to save where photos are taken.",
+  "@locationPermissionNeeded": {
+    "description": "Shown when the user refuses the location permission after turning the setting on."
+  },
+  "locationPermissionBlocked": "Location permission is blocked. Turn it on in the system settings.",
+  "@locationPermissionBlocked": {
+    "description": "Shown when the location permission is blocked and only the system settings can grant it."
+  },
+  "locationPermissionBlockedAction": "Settings",
+  "@locationPermissionBlockedAction": {
+    "description": "Button of the message that opens the system settings."
+  },
+  "settingsSectionBackup": "Your settings, no photos",
+  "@settingsSectionBackup": {
+    "description": "Title of the section of the settings with export and import."
+  },
+  "settingsExport": "Export settings",
+  "@settingsExport": {
+    "description": "Row that saves the settings and the film tuning to a file."
+  },
+  "settingsExportHint": "Saves a file with your settings and the tuning of each film. It does not save your photos: it is not a backup.",
+  "@settingsExportHint": {
+    "description": "Explains the export row."
+  },
+  "settingsImport": "Import settings",
+  "@settingsImport": {
+    "description": "Row that restores the settings and the film tuning from a file."
+  },
+  "settingsImportHint": "Reads a file exported earlier and applies it. It does not bring photos back.",
+  "@settingsImportHint": {
+    "description": "Explains the import row."
+  },
+  "settingsImportConfirmTitle": "Import settings?",
+  "@settingsImportConfirmTitle": {
+    "description": "Title of the confirmation before importing settings."
+  },
+  "settingsImportConfirmBody": "Your current settings and film tuning will be replaced by the ones in the file.",
+  "@settingsImportConfirmBody": {
+    "description": "Body of the confirmation before importing settings."
+  },
+  "settingsImportConfirmAction": "Import",
+  "@settingsImportConfirmAction": {
+    "description": "Button that confirms importing settings."
+  },
+  "settingsExportDone": "Settings exported.",
+  "@settingsExportDone": {
+    "description": "Shown after the settings file was saved."
+  },
+  "settingsImportDone": "Settings imported.",
+  "@settingsImportDone": {
+    "description": "Shown after the settings were imported."
+  },
+  "settingsImportSkippedFilms": "{count, plural, =1{One film this version does not know was left out.} other{{count} films this version does not know were left out.}}",
+  "@settingsImportSkippedFilms": {
+    "description": "Added to the import message when the file had films this version does not know. count: how many.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsImportLocationStaysOff": "Location is still off; turn it on here if you want it.",
+  "@settingsImportLocationStaysOff": {
+    "description": "Added to the import message: an import never turns location on."
+  },
+  "settingsImportOriginalStaysOff": "Also save the original is still off; turn it on here if you want it.",
+  "@settingsImportOriginalStaysOff": {
+    "description": "Added to the import message: an import never turns saving originals on."
+  },
+  "settingsBackupTooLarge": "The file is too big to be a Diapo settings backup.",
+  "@settingsBackupTooLarge": {
+    "description": "Import error: the file is too big."
+  },
+  "settingsBackupInvalidJson": "The file cannot be read: it is not in a valid format.",
+  "@settingsBackupInvalidJson": {
+    "description": "Import error: the file is not readable JSON."
+  },
+  "settingsBackupWrongFormat": "This file is not a Diapo settings backup.",
+  "@settingsBackupWrongFormat": {
+    "description": "Import error: the file is not a Carrete settings backup."
+  },
+  "settingsBackupUnsupportedVersion": "This file comes from a newer version of Diapo. Update the app to import it.",
+  "@settingsBackupUnsupportedVersion": {
+    "description": "Import error: the file comes from a newer version."
+  },
+  "settingsBackupInvalidValue": "The file has invalid values and nothing was imported.",
+  "@settingsBackupInvalidValue": {
+    "description": "Import error: the file has values that are not valid."
+  },
+  "settingsBackupBusy": "An export or an import is already running.",
+  "@settingsBackupBusy": {
+    "description": "Error: another export or import is still running."
+  },
+  "settingsBackupStorage": "Could not read or save. Try again.",
+  "@settingsBackupStorage": {
+    "description": "Error: the file or the storage could not be used."
+  },
+  "settingsBackupInterrupted": "The operation was interrupted. Try again.",
+  "@settingsBackupInterrupted": {
+    "description": "Error: the operation was interrupted."
+  },
+  "flashKeyHint": "Tap for the next mode",
+  "rollSheetIntro": "One film for the whole roll. The photos stay hidden until you develop it.",
+  "rollDelayNote": "The wait starts when you close the roll.",
+  "@cameraCounterSemantics": {
+    "placeholders": {
+      "film": {
+        "type": "String"
+      }
+    }
+  },
+  "viewfinderSwipeHint": "Swipe the cartridges to change film",
+  "rollOfferTitle": "Try a roll of 12",
+  "rollOfferBody": "With {film}. The photos stay hidden until you close the roll. Then you develop them right away, with no wait.",
+  "@rollOfferBody": {
+    "placeholders": {
+      "film": {
+        "type": "String"
+      }
+    }
+  },
+  "rollOfferAction": "Load a roll of 12",
+  "rollOfferDismiss": "Not now",
+  "rollLossNote": "They exist only on this phone: they are lost if you uninstall, clear the data or change phone.",
+  "@rollDevelopNowBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingHaptics": "Vibration",
+  "disposableOptionSemantics": "{title} · {detail}",
+  "@disposableOptionSemantics": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "detail": {
+        "type": "String"
+      }
+    }
+  },
+  "swipeHintClose": "Dismiss tip",
+  "saveStatusSaving": "{count, plural, =1{Saving 1 photo} other{Saving {count} photos}}",
+  "saveStatusPending": "Some photos are waiting to be saved",
+  "saveSheetTitle": "Photos waiting",
+  "saveSheetCount": "{count, plural, =1{1 photo is waiting to be saved.} other{{count} photos are waiting to be saved.}}",
+  "saveSheetStorageFull": "The phone has run out of space. Free some space and try again.",
+  "saveSheetPermission": "Diapo is not allowed to save to the gallery. Check the permissions of the system and try again.",
+  "saveSheetUnknown": "They could not be saved just now. You can try again.",
+  "saveSheetKept": "Meanwhile they are kept temporarily inside the app. Do not clear the data of the app.",
+  "saveSheetRetry": "Try again",
+  "saveSheetLater": "Later"
+}

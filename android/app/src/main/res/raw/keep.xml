@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- flutter_local_notifications looks the roll-ready icon up by name, which
+     resource shrinking cannot see: without this the release build drops it and
+     the plugin fails to initialise (no permission prompt, no reminder). -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/ic_roll_ready" />

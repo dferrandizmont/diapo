@@ -1,0 +1,16 @@
+<footer class="ft">
+  <div class="wrap ft-in">
+    <div class="ft-brand">
+      {% set author_parts = t.author.split('DanielMF') %}<p class="ft-author"><img src="/icon.png" alt="" width="28" height="28"><span>{{ author_parts[0].format(app=c.name) }}<a href="https://mainshai.com">DanielMF</a>{{ author_parts[1] }}</span></p>
+      <p class="ft-small">{{ c.copyright }}</p>
+    </div>
+    <ul class="ft-links">
+      {% if site.open_source %}<li><a href="{{ site.repo_url }}">{{ t.code }} · GitHub</a> <span class="ft-small">{{ c.licence_text }}</span></li>{% endif %}
+      {% if site.free %}<li><a href="https://ko-fi.com/danielmfdev">{{ t.coffee }}</a></li>{% endif %}
+      <li><a href="mailto:{{ contact_email }}">{{ contact_email }}</a></li>
+      <li><a href="{{ route(lang, true) }}">{{ t.privacy_full }}</a></li>
+      <li><a href="{{ c.legal_url }}">{{ c.legal_notice }}</a></li>
+    </ul>
+    <p class="ft-note">{{ t.no_tracking }}</p>
+  </div>
+</footer>
