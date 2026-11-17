@@ -5,6 +5,18 @@ All notable changes to this project are documented here. The format follows
 
 ## Unreleased
 
+## [0.1.2] - 2026-11-17
+
+### Fixed
+
+- On small phones, and with large system text, the disposable camera no longer
+  cuts off its message and keys when the camera permission is denied or the
+  camera is unavailable: the message uses the full width, stays readable at the
+  size of the system text, and the keys scroll into view. The "Disposable"
+  label on the camera no longer breaks in two.
+
+## [0.1.1] - 2026-11-16
+
 ### Added
 
 - A "Buy me a coffee" row in the settings (Android) opens the Ko-fi page in

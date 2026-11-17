@@ -736,12 +736,17 @@ class FilmSticker extends StatelessWidget {
               horizontal: CarreteSpacing.s,
               vertical: CarreteSpacing.xs,
             ),
-            child: Text(
-              CarreteText.upper(name, Localizations.localeOf(context)),
-              style: DisposableText.caption,
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              textAlign: TextAlign.center,
+            // A decorative label of the camera body: large text must not
+            // break its word in two.
+            child: MediaQuery.withClampedTextScaling(
+              maxScaleFactor: DisposableSizes.labelMaxTextScale,
+              child: Text(
+                CarreteText.upper(name, Localizations.localeOf(context)),
+                style: DisposableText.caption,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.center,
+              ),
             ),
           ),
         ),
@@ -752,9 +757,43 @@ class FilmSticker extends StatelessWidget {
 
 /// A notice over the frame: a strip of paper with a yellow shadow.
 class DisposableNotice extends StatelessWidget {
-  const DisposableNotice({required this.text, super.key});
+  const DisposableNotice({required this.text, this.style, super.key});
 
   final String text;
+
+  /// The style of the text. When null, the display face of the mode while the
+  /// longest word of [text] fits a line at the text scale of the system, and
+  /// a narrow face made for reading when it would not (large text on a small
+  /// phone).
+  final TextStyle? style;
+
+  /// The style for [text] on a line of [maxWidth], measured the way the
+  /// [Text] below lays it out: same inherited style, text scale, direction
+  /// and locale.
+  static TextStyle _fittingStyle(
+    BuildContext context,
+    String text,
+    double maxWidth,
+  ) {
+    final display = DisposableText.notice;
+    final measured = DefaultTextStyle.of(context).style.merge(display);
+    final scaler = MediaQuery.textScalerOf(context);
+    final direction = Directionality.of(context);
+    final locale = Localizations.maybeLocaleOf(context);
+    var widest = 0.0;
+    for (final word in text.split(RegExp(r'\s+'))) {
+      if (word.isEmpty) continue;
+      final painter = TextPainter(
+        text: TextSpan(text: word, style: measured, locale: locale),
+        textDirection: direction,
+        textScaler: scaler,
+        locale: locale,
+      )..layout();
+      widest = math.max(widest, painter.width);
+      painter.dispose();
+    }
+    return widest <= maxWidth ? display : DisposableText.noticeReadable;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -767,10 +806,14 @@ class DisposableNotice extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.all(CarreteSpacing.m),
-          child: Text(
-            text,
-            textAlign: TextAlign.center,
-            style: DisposableText.notice,
+          // Measured inside the padding: the width the paragraph really gets.
+          child: LayoutBuilder(
+            builder: (context, constraints) => Text(
+              text,
+              textAlign: TextAlign.center,
+              style:
+                  style ?? _fittingStyle(context, text, constraints.maxWidth),
+            ),
           ),
         ),
       ),

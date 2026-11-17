@@ -126,6 +126,11 @@ abstract final class DisposableSizes {
   /// The width of the label on the cardboard.
   static const double labelMaxWidth = 150;
 
+  /// The most the text scale of the system grows the label on the cardboard:
+  /// it is part of the drawing of the camera, and past this its one word
+  /// would break.
+  static const double labelMaxTextScale = 1.5;
+
   /// The height of the paper strip on the cardboard.
   static const double strip = 40;
 
@@ -250,6 +255,17 @@ abstract final class DisposableText {
 
   /// The text of a notice over the frame.
   static TextStyle get notice => _display(15, DisposableColors.ink);
+
+  /// The text of a notice when the display face would not fit its words at
+  /// the text scale of the system: a narrow face made for reading.
+  static TextStyle get noticeReadable => const TextStyle(
+    fontFamily: CarreteFonts.text,
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    height: 1.2,
+    color: DisposableColors.ink,
+    decoration: TextDecoration.none,
+  );
 
   /// The text of a key of a dialog.
   static TextStyle get key => _text(14, DisposableColors.ink);

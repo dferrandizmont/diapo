@@ -26,6 +26,8 @@ CLAUDE.md
 .claude/
 qa/
 docs/reviews/
+docs/ios/brief-swift.md
+docs/ios/swift-implementation.md
 docs/security/
 docs/competencia.md
 docs/legal/NOTES.md

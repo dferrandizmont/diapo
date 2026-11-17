@@ -1,0 +1,1 @@
+The disposable camera no longer cuts off its message and keys when the camera permission is missing or the camera is unavailable, on small phones or with large system text: they now scroll into view.

@@ -1,0 +1,1 @@
+Film names fit with large system text, the hint about swiping the films goes away when you swipe them, the disposable camera without camera permission has an "Open settings" key, and deleting the last photo of a day takes you back to the gallery. New "Buy me a coffee" row in Settings opens Ko-fi in your browser: the app still has no internet permission.

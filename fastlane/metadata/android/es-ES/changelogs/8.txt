@@ -1,0 +1,1 @@
+Nombres de película que caben con el texto grande del sistema, el aviso de deslizar las películas se va al deslizarlas, la cámara desechable sin permiso de cámara tiene el botón «Abrir los ajustes» y al borrar la última foto de un día vuelves a la galería. Nueva fila «Invítame a un café» en Ajustes, que abre Ko-fi en el navegador: la app sigue sin permiso de internet.

@@ -1,0 +1,1 @@
+La càmera d'un sol ús ja no talla el missatge ni els botons quan falta el permís de càmera o la càmera no està disponible, en mòbils petits o amb el text gran del sistema: ara es poden desplaçar.

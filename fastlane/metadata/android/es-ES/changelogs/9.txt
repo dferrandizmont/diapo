@@ -1,0 +1,1 @@
+La cámara desechable ya no corta su mensaje ni sus botones cuando falta el permiso de cámara o la cámara no está disponible, en móviles pequeños o con el texto grande del sistema: ahora se pueden desplazar.

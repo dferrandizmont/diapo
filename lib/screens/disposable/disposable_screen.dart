@@ -417,16 +417,37 @@ class _DisposableScreenState extends ConsumerState<DisposableScreen>
         );
         return Stack(
           children: [
-            Positioned.fromRect(
-              key: const ValueKey('disposable-frame'),
-              rect: frame,
-              child: _buildFrame(
-                recipe: recipe,
-                look: look,
-                resources: resources,
-                stampText: stampText,
-                reduced: reduced,
-              ),
+            ValueListenableBuilder<CameraServiceState>(
+              valueListenable: _camera.state,
+              builder: (context, cam, _) {
+                final failure = cam.failure;
+                // Without a camera there is no picture to frame: the panel
+                // takes the whole window between the top band and the
+                // cardboard, not the aspect-locked frame, so it keeps its
+                // width on a small phone with large text.
+                if (failure != null) {
+                  return Positioned(
+                    key: const ValueKey('disposable-failure'),
+                    left: 0,
+                    right: 0,
+                    top: topReserved,
+                    bottom: cardboardHeight,
+                    child: _buildFailure(failure),
+                  );
+                }
+                return Positioned.fromRect(
+                  key: const ValueKey('disposable-frame'),
+                  rect: frame,
+                  child: _buildFrame(
+                    cam: cam,
+                    recipe: recipe,
+                    look: look,
+                    resources: resources,
+                    stampText: stampText,
+                    reduced: reduced,
+                  ),
+                );
+              },
             ),
             Positioned(
               left: 0,
@@ -568,21 +589,20 @@ class _DisposableScreenState extends ConsumerState<DisposableScreen>
     );
   }
 
-  Widget _buildFrame({
-    required Recipe recipe,
-    required ResolvedLook look,
-    required FilmResources? resources,
-    required String? stampText,
-    required bool reduced,
-  }) {
+  /// The panel of a camera that cannot start: what happened and the ways out.
+  ///
+  /// Centred while it fits; with large text on a small phone it is taller than
+  /// the window, so it scrolls instead of overflowing. The window is exactly
+  /// the visible part of the screen: nothing overlaps its bottom.
+  Widget _buildFailure(CameraFailure failure) {
     final l10n = AppLocalizations.of(context);
-    return ValueListenableBuilder<CameraServiceState>(
-      valueListenable: _camera.state,
-      builder: (context, cam, _) {
-        if (cam.failure != null) {
-          final denied = cam.failure == CameraFailure.permissionDenied;
-          final system = ref.read(systemSettingsProvider);
-          return Center(
+    final denied = failure == CameraFailure.permissionDenied;
+    final system = ref.read(systemSettingsProvider);
+    return LayoutBuilder(
+      builder: (context, constraints) => SingleChildScrollView(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(minHeight: constraints.maxHeight),
+          child: Center(
             child: Padding(
               padding: const EdgeInsets.all(CarreteSpacing.xl),
               child: Column(
@@ -611,41 +631,52 @@ class _DisposableScreenState extends ConsumerState<DisposableScreen>
                 ],
               ),
             ),
-          );
-        }
-        return Semantics(
-          label: l10n.viewfinderLabel,
-          container: true,
-          child: ClipRect(
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                if (cam.ready && cam.previewSize != null)
-                  FilmShaderView(
-                    resources: resources,
-                    filmId: recipe.id,
-                    look: look,
-                    seed: reduced ? null : _grainSeed,
-                    child: _coverPreview(cam.previewSize!),
-                  ),
-                if (stampText != null) DateStampOverlay(text: stampText),
-                const DisposableCorners(),
-                if (!reduced)
-                  IgnorePointer(
-                    child: AnimatedBuilder(
-                      animation: _advance,
-                      builder: (context, _) => ColoredBox(
-                        color: DisposableColors.flash.withValues(
-                          alpha: _flashOpacity(_advance.value),
-                        ),
-                      ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildFrame({
+    required CameraServiceState cam,
+    required Recipe recipe,
+    required ResolvedLook look,
+    required FilmResources? resources,
+    required String? stampText,
+    required bool reduced,
+  }) {
+    final l10n = AppLocalizations.of(context);
+    return Semantics(
+      label: l10n.viewfinderLabel,
+      container: true,
+      child: ClipRect(
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            if (cam.ready && cam.previewSize != null)
+              FilmShaderView(
+                resources: resources,
+                filmId: recipe.id,
+                look: look,
+                seed: reduced ? null : _grainSeed,
+                child: _coverPreview(cam.previewSize!),
+              ),
+            if (stampText != null) DateStampOverlay(text: stampText),
+            const DisposableCorners(),
+            if (!reduced)
+              IgnorePointer(
+                child: AnimatedBuilder(
+                  animation: _advance,
+                  builder: (context, _) => ColoredBox(
+                    color: DisposableColors.flash.withValues(
+                      alpha: _flashOpacity(_advance.value),
                     ),
                   ),
-              ],
-            ),
-          ),
-        );
-      },
+                ),
+              ),
+          ],
+        ),
+      ),
     );
   }
 
